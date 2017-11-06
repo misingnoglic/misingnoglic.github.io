@@ -2,7 +2,7 @@
 layout: post
 title:  "Your Next Technical Interview Should be Solved with Python"
 subtitle: "Why Python is the superior interviewing language"
-date:   2017-11-04 23:56:45
+date:   2017-11-06 23:56:45
 categories: [Interviews, Python, Technical]
 ---
 
@@ -92,7 +92,7 @@ def isPalindrone(s):
 	return True
 {% endhighlight %}  
 
-The differences aren't so stark in this case, but it's still easier to read, and fewer lines and method calls to write (s.length() vs len(s), and s.charAt(i) vs s[i]. 
+The differences aren't so stark in this case, but it's still easier to read, and fewer method calls to write, with s.length() vs len(s) and s.charAt(i) vs s[i]. 
 
 ## Question 1:
 
@@ -113,7 +113,7 @@ public char firstNonRepeated(String s){
 		if (!lookup.containsKey(letter){
 			lookup.add(letter,1);
 		} else {
-			lookup.add(letter),lookup.get(letter)+1);
+			lookup.add(letter,lookup.get(letter)+1);
 		}
 	}	 
 	for (int j = 0; j<=s.length-1,j++) {
@@ -124,6 +124,8 @@ public char firstNonRepeated(String s){
 	return ''; 
 }
 {% endhighlight %}
+
+That `lookup.add(letter,lookup.get(letter)+1);` would be a real pain to write out, wouldn't it...
 
 Python:
 
@@ -225,15 +227,16 @@ Quick note - in Python, if L is a list, L[i:] is everything in the list starting
 
 {% highlight python %}
 def permutations(L):
-  if len(L)<2: return [L] 
-  others = permutations(L[1:]) # Everything but the first
-  perm_list = []
-  for other in others: # for each possible permutation
-	    # for each slot to place the first item, place it.
-    for slot in range(len(others)+1): 
-     perm_list.append(other[:slot] + [L[0]] + other[slot:])
-     # If you're uncomfortable with this, you can also just copy other and do insert, like the java method. 
-  return perm_list
+	if len(L)<2: return [L] 
+	others = permutations(L[1:]) # Everything but the first
+	perm_list = []
+	for other in others: # for each possible permutation
+		# for each slot to place the first item, place it.
+		for slot in range(len(others)+1): 
+			new_list = others[:] # copy of others
+			new_list.insert(slot, L[0])
+			perm_list.append(new_list)
+	return perm_list
 {% endhighlight %}
 
 # Final Thoughts
