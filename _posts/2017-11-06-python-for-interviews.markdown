@@ -14,7 +14,7 @@ However, the language you choose does have consequences when it comes to impleme
 
 # Brief Overview of Coding Interviews
 
-If you're already well aquainted with coding interviews, you can skip this section. If you haven't had the joy of interviewing for a software engineering job in the past few years though, I'll give you a brief overview. The basic idea is that either through some software, over the phone, or in person, your interviewer will give you a description of a problem that should be solved with code. For example, they might ask you given a list of people's schedules, to write code to select when the best meeting time is. Another example might be more abstract, such as given a list of numbers to return all the different orderings (or permutations) of those numbers. The point of this exersize is to see how you turn a real life problem into code, what kind of data structures you use to wrangle the data, what kind of algorithm you use to get the answer, how you can turn the algorithm into real code, and just generally seeing how you think and behave when working on a problem. There is some debate into how useful/necessary they are (I'm personally of the opinion that they are useful), but that is not the topic of this post. Rather, they are a system that already exists, so I want to help you do these interviews the best you can. But... how can Python help?
+If you're already well acquainted with coding interviews, you can skip this section. If you haven't had the joy of interviewing for a software engineering job in the past few years though, I'll give you a brief overview. The basic idea is that either through some software, over the phone, or in person, your interviewer will give you a description of a problem that should be solved with code. For example, they might ask you given a list of people's schedules, to write code to select when the best meeting time is. Another example might be more abstract, such as given a list of numbers to return all the different orderings (or permutations) of those numbers. The point of this exercise is to see how you turn a real life problem into code, what kind of data structures you use to wrangle the data, what kind of algorithm you use to get the answer, how you can turn the algorithm into real code, and just generally seeing how you think and behave when working on a problem. There is some debate into how useful/necessary they are (I'm personally of the opinion that they are useful), but that is not the topic of this post. Rather, they are a system that already exists, so I want to help you do these interviews the best you can. But... how can Python help?
 
 # Reason 1: Succinctness
 
@@ -256,9 +256,13 @@ Q: I don't know Python, but your post inspired me to learn it! How can I learn?
 
 A: If you know another programming language, this website is great for getting up to speed with the language in a few short lessons. If you want a more guided tutorial, you can also do the Python Codecademy (which is great for quickly getting up to speed). After that, try doing some programming on codingbat, or if you're more math inclined, there's Project Euler. You can also try implementing previous programming assignments you've had in Python, or just doing your own fun little projects. The author of Cracking the Coding Interview also has solutions to all the problems in Python here. 
 
-Q: But I'm better at Java! Should I still use Python?
+Q: But I'm better/more comfortable with Java! Should I still use Python?
 
-A: If you're more comfortable using another language, then you should probably stick to that language. This was more meant for people who may have taken a beginner Java/C++ class, and then want to use that as their interview language. The barrier of entry to Python isn't bad though, so check it out and see if you can ever see yourself being comfortable with it. 
+A: If you're more comfortable using another language, then you should probably stick to that language. This was more meant for people who may have taken a beginner Java/C++ class, and then want to use that as their interview language. The barrier of entry to Python isn't bad though, so check it out and see if you can ever see yourself being comfortable with it. But in the end, it is a very personal choice, and this is just my opinion. 
+
+Q: But you can do <insert esoteric trick> in Java!
+
+A: Sure, but I guess my point is that the way things are done in Python is the natural way that is expected of beginners and advanced programmers alike, so there's no need to learn any crazy esoteric tricks. 
 
 Q: But if Python is easier, won't my interviewer think less of me for using it. 
 
