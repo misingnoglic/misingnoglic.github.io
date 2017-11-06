@@ -106,22 +106,22 @@ Java:
 
 {% highlight java %}
 import java.util.*;
-public char firstNonRepeated(String s){
+public static char firstNonRepeated(String s){
 	HashMap<Character, Integer> lookup = new HashMap <Character, Integer>();
-	for( int i = 0; i <= s.length-1,i++) {
+	for( int i = 0; i <= s.length()-1;i++) {
 		char letter = s.charAt(i);
-		if (!lookup.containsKey(letter){
-			lookup.add(letter,1);
+		if (!lookup.containsKey(letter)){
+			lookup.put(letter,1);
 		} else {
-			lookup.add(letter,lookup.get(letter)+1);
+			lookup.put(letter,lookup.get(letter)+1);
 		}
 	}	 
-	for (int j = 0; j<=s.length-1,j++) {
-		if(lookup.get(s.charAt(j)==1){
+	for (int j = 0; j<=s.length()-1;j++) {
+		if(lookup.get(s.charAt(j))==1){
 			return s.charAt(j);
 		}
 	}
-	return ''; 
+	return ' '; 
 }
 {% endhighlight %}
 
@@ -170,7 +170,7 @@ public class fib(int n, Map<Integer, Integer> memory){
 		return memory.get(n);
 	}
 	else{
-		memory.put(n, fib(n-1)+fib(n-2));
+		memory.put(n, fib(n-1, memory)+fib(n-2, memory));
 		return memory.get(n);
 	}
 }
@@ -179,7 +179,8 @@ public class fib(int n, Map<Integer, Integer> memory){
 Python
 
 {% highlight python %}
-def fib(n, memory):
+memory = {} # or you can make it a parameter like Java
+def fib(n):
 	if n==0 or n==1: return n
 	if n in memory: return memory[n]
 	else:
@@ -196,25 +197,25 @@ If you haven't seen this problem before, the idea is to do it recursively. If yo
 Java:
 
 {% highlight java %}
-  public static List<List<Integer>> permutations(List<Integer> L){
-  	List<List<Integer>> permList = new ArrayList<List<Integer>>();
-  	if (L.size() < 2){ // For size 0/1, there's only 1 permutation
-  		permList.add(L);
-  		return permList;
-  	}
+public static List<List<Integer>> permutations(List<Integer> L){
+	List<List<Integer>> permList = new ArrayList<List<Integer>>();
+	if (L.size() < 2){ // For size 0/1, there's only 1 permutation
+		permList.add(L);
+		return permList;
+	}
 	List<Integer> tail = L.subList(1,L.size()); // everything but the first
-  	List<List<Integer>> others = permutations(tail);
-  	for (List<Integer> other : others){ // for each possible permutation
-  		// for each slot you can put the first element in
-  		for (int slot = 0; slot<=other.size(); slot++){ 
-  			// make a copy of the list
+	List<List<Integer>> others = permutations(tail);
+	for (List<Integer> other : others){ // for each possible permutation
+		// for each slot you can put the first element in
+		for (int slot = 0; slot<=other.size(); slot++){ 
+			// make a copy of the list
 			List<Integer> newList = new ArrayList<Integer>(other);
-  			newList.add(slot, L.get(0));
-  			permList.add(newList);
-  		}
-  	}
-  	return permList;
-  }
+			newList.add(slot, L.get(0));
+			permList.add(newList);
+		}
+	}
+	return permList;
+}
 {% endhighlight %}
 
 
@@ -233,9 +234,10 @@ def permutations(L):
 	for other in others: # for each possible permutation
 		# for each slot to place the first item, place it.
 		for slot in range(len(others)+1): 
-			new_list = others[:] # copy of others
+			new_list = other[:] # copy of others
 			new_list.insert(slot, L[0])
 			perm_list.append(new_list)
+			# These three lines can also just be perm_list.append(other[:slot]+[L[0]] + other[slot:])
 	return perm_list
 {% endhighlight %}
 
