@@ -4,9 +4,11 @@ sitemap:
   priority: 1.0
 ---
 
-Hello, welcome to my website! 
+Hello, welcome to my website! I can't afford a home in the Bay Area, but I can afford a home page ;)
 
-<img src="https://scontent-sjc2-1.xx.fbcdn.net/v/t31.0-8/20157614_10155502527937512_8203183707880562531_o.jpg?oh=d7c488163c8d2dae2f354ab120526d6a&oe=5A701A9F" alt="My Face" style="width: 600px;"/>
+Click the navigation links above to see what the site has to offer. I suggest About, Blog, or Resources. 
+
+<img src="https://scontent-sjc2-1.xx.fbcdn.net/v/t31.0-8/20157614_10155502527937512_8203183707880562531_o.jpg?oh=d7c488163c8d2dae2f354ab120526d6a&oe=5A701A9F" alt="My Face" style="width: 600px; margin-left:0px"/>
 
 
 - Click "About" to read about me
@@ -18,5 +20,3 @@ Hello, welcome to my website!
 
 
 The template is Daktilo, which you can download [here](https://github.com/kronik3r/daktilo)
-
-I can't afford a home in the Bay Area, but I can afford a home page ;)
