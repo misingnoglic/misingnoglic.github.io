@@ -1,11 +1,8 @@
-- slug: design
-  name: Design
+- slug: tech-interviews
+  name: Tech Interviews
 
-- slug: tools
-  name: Tools
+- slug: python
+  name: Python
 
-- slug: productivity
-  name: Productivity
-  
-- slug: resources
-  name: Resources
+- slug: technical
+  name: Technical

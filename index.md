@@ -14,3 +14,5 @@ Hello, welcome to my website.
 - Click "Home" to come back to this page... I guess
 - Click "Portfolio" to see some of the code things I've made
 - Click "Resume" if you're interested in that. 
+
+The template is Daktilo, which you can download [here](https://github.com/kronik3r/daktilo)
