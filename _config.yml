@@ -1,19 +1,21 @@
 # Site settings
-title: Daktilo
+title: Arya Boudaie's Personal Site
 description: >
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  My long overdue website where I can upload my portfolio, educational resources,
+  and thoughts on various things. 
 
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://hitchhiker.ma" # the base hostname & protocol for your site
+url: "http://www.aryaboudaie.com/" # the base hostname & protocol for your site
 
 author:
-  fullname: Motaquillah Maddane
-  googleplus: https://www.google.com/+MotaquillahMaddane
-  github: kronik3r
-  twitter: electrik_frog
-  # disqus: your_disqus_forum_shortname
+  fullname: Arya Boudaie
+  #googleplus: https://www.google.com/+MotaquillahMaddane
+  github: misingnoglic
+  disqus: aryab-log
+  linkedin: aboudaie
+  twitter: misingnoglic
+  youtube: windowsforvista
+  spotify: misingnoglic
 
 # google_analytics: 'UA-XXXXXXXX-X'
 
@@ -25,5 +27,5 @@ styles: [agate, androidstudio, arta, asceti, atelier-cave.dark, atelier-cave.lig
 exclude: ["README.md", "README.html"]
 
 # Build settings
-highlighter: null
+highlighter: pygments.rb
 markdown: kramdown

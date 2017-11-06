@@ -4,7 +4,11 @@
 
         <ul class="menu">
             <li class="menu__entry"><a href="{{ '/about' | prepend: site.baseurl }}">About</a></li>
-            <li class="menu__entry"><a href="{{ '/' | prepend: site.baseurl }}">Blog</a></li>
+            <li class="menu__entry"><a href="{{ '/blog' | prepend: site.baseurl }}">Blog</a></li>
+			<li class="menu__entry"><a href="{{ '/' | prepend: site.baseurl }}">Home</a></li>
+			<li class="menu__entry"><a href="{{ '/portfolio' | prepend: site.baseurl }}">Portfolio</a></li>
+			<li class="menu__entry"><a href="{{ '/resources' | prepend: site.baseurl }}">Resources</a></li>
+			<li class="menu__entry"><a href="{{ '/resume' | prepend: site.baseurl }}">Resume</a></li>
         </ul>
     </div>
 
@@ -14,10 +18,29 @@
                 <i class="fa fa-github"></i>
             </a>
         {% endif %}
-
-        {% if site.author.twitter %}
+		
+		{% if site.author.linkedin %}
+            <a href="https://linkedin.com/in/{{ site.author.linkedin }}" class="social-links__entry" target="_blank">
+                <i class="fa fa-linkedin"></i>
+            </a>
+        {% endif %}
+		
+		{% if site.author.twitter %}
             <a href="https://twitter.com/{{ site.author.twitter }}" class="social-links__entry" target="_blank">
                 <i class="fa fa-twitter"></i>
+            </a>
+        {% endif %}
+
+		
+		{% if site.author.youtube %}
+            <a href="https://youtube.com/user/{{ site.author.youtube }}" class="social-links__entry" target="_blank">
+                <i class="fa fa-youtube"></i>
+            </a>
+        {% endif %}
+		
+		{% if site.author.spotify %}
+            <a href="https://open.spotify.com/user/{{ site.author.spotify }}" class="social-links__entry" target="_blank">
+                <i class="fa fa-spotify"></i>
             </a>
         {% endif %}
     </ul>
