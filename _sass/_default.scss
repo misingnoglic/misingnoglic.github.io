@@ -106,7 +106,7 @@ strong {
 }
 
 .social-links {
-    float:right;
+	float:left;
     font-size: 24px;
     color: $cloudy;
     list-style-type: none;
@@ -257,7 +257,7 @@ strong {
 
     .navigation,
     .social-links {
-        @include centered-block();
+		@include centered-block();
     }
 
     .social-links {
