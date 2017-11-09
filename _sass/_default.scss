@@ -72,10 +72,6 @@ strong {
     overflow: hidden;
 }
 
-.navigation {
-    float:left;
-}
-
 .logo {
     font-size: 50px;
     font-weight: 700;
@@ -106,10 +102,11 @@ strong {
 }
 
 .social-links {
-	float:left;
+    @include centered-block();
     font-size: 24px;
     color: $cloudy;
     list-style-type: none;
+    padding-left: 0;
 }
 
 .social-links__entry {
@@ -255,8 +252,7 @@ strong {
         width: 80%;
     }
 
-    .navigation,
-    .social-links {
+    .navigation {
 		@include centered-block();
     }
 
