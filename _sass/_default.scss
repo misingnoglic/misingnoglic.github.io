@@ -73,6 +73,7 @@ strong {
 }
 
 .logo {
+	@include centered-block();	
     font-size: 50px;
     font-weight: 700;
     color: $iron;
@@ -80,6 +81,7 @@ strong {
 }
 
 .menu {
+	@include centered-block();
     color: $cloudy;
     font-size: 18px;
     margin:0px;
