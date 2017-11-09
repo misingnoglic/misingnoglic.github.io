@@ -6,6 +6,8 @@ date:   2017-11-06 23:56:45
 categories: [Interviews, Python, Technical]
 ---
 
+Intended audience: Someone with some experience coding and with data structures, looking to study for technical interviews for a software engineering job/internship. 
+
 # Introduction
 
 Ah coding interviews - 45 minute long bursts of time where an interviewer expects you to care about some esoteric problem, so you can show them how you REALLY think. During a coding interview, you’re normally given a wide choice of programming languages to use for solving the problem, usually between C++, Java, and Python. This is mostly because, unless you’re applying for a very specific role at a company, they don’t really care that you know the specifics of any one specific language. Rather - they care that you’re able to take a technical problem that is explained to you, come up with a solution, and then write code to implement that solution. In short, they want to know if you’ll be a good coworker to have at the company, who has good problem solving skills, and will be pleasant to work with. In that regard, language choice doesn’t matter too much, except for choosing the one that you’re most able to express yourself in. 
