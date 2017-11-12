@@ -1,8 +1,8 @@
 # Site settings
 title: Arya Boudaie's Personal Site
 description: >
-  My long overdue website where I can upload my portfolio, educational resources,
-  and thoughts on various things. 
+  The personal site for Arya Boudaie, with his blog, portfolio, educational resources,
+  and other various things.
 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.aryaboudaie.com/" # the base hostname & protocol for your site
