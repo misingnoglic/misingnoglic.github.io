@@ -200,7 +200,7 @@ def fib(n):
 		return memory[n]
 {% endhighlight %}
 
-Note: In Python it is quicker to do `memory.get(n, None)`, which gives you `n` if n in in the dictionary, and `None` otherwise. You can then write code to handle when you got a None. Thanks to reader François Gallard who noted this. 
+Note: In Python it is quicker to do `memory.get(n, None)`, which gives you `n` if n in in the dictionary, and `None` otherwise (see [this comparison](https://repl.it/@misingnoglic/Python-Fibonacci-Dict-Test)). You can then write code to handle when you got a None. Thanks to reader François Gallard who noted this. 
 
 ## Question 3:
 
