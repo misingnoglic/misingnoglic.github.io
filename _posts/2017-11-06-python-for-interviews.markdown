@@ -200,6 +200,8 @@ def fib(n):
 		return memory[n]
 {% endhighlight %}
 
+Note: In Python it is quicker to do `memory.get(n, None)`, which gives you `n` if n in in the dictionary, and `None` otherwise. You can then write code to handle when you got a None. Thanks to reader François Gallard who noted this. 
+
 ## Question 3:
 
 Given a list of numbers, return all permutations (or possible orderings of the elements) of a list. E.g. : {1,2,3} as input will give you { {1,2,3}, {2,1,3} {2,3,1}, {3,2,1}, {1,3,2} and {3,1,2} }
