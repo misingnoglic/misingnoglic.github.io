@@ -5,7 +5,7 @@ description: >
   and other various things.
 
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://www.aryaboudaie.com/" # the base hostname & protocol for your site
+url: "http://www.aryaboudaie.com" # the base hostname & protocol for your site
 
 author:
   fullname: Arya Boudaie
@@ -16,6 +16,7 @@ author:
   twitter: misingnoglic
   youtube: windowsforvista
   spotify: misingnoglic
+  mailinglistlink: https://goo.gl/forms/jzaFhUpZ6x17oOJh2
 
 google_analytics: UA-109265709-1
 

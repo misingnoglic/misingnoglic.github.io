@@ -13,31 +13,37 @@
     </div>
 
     <ul class="social-links">
+        {% if site.author.mailinglistlink %}
+            <a href="{{ site.author.mailinglistlink }}" class="social-links__entry" target="_blank">
+                <i class="fa fa-envelope"></i>
+            </a>
+        {% endif %}
+
         {% if site.author.github %}
             <a href="https://github.com/{{ site.author.github }}" class="social-links__entry" target="_blank">
                 <i class="fa fa-github"></i>
             </a>
         {% endif %}
-		
+
 		{% if site.author.linkedin %}
             <a href="https://linkedin.com/in/{{ site.author.linkedin }}" class="social-links__entry" target="_blank">
                 <i class="fa fa-linkedin"></i>
             </a>
         {% endif %}
-		
+
 		{% if site.author.twitter %}
             <a href="https://twitter.com/{{ site.author.twitter }}" class="social-links__entry" target="_blank">
                 <i class="fa fa-twitter"></i>
             </a>
         {% endif %}
 
-		
+
 		{% if site.author.youtube %}
             <a href="https://youtube.com/user/{{ site.author.youtube }}" class="social-links__entry" target="_blank">
                 <i class="fa fa-youtube"></i>
             </a>
         {% endif %}
-		
+
 		{% if site.author.spotify %}
             <a href="https://open.spotify.com/user/{{ site.author.spotify }}" class="social-links__entry" target="_blank">
                 <i class="fa fa-spotify"></i>
