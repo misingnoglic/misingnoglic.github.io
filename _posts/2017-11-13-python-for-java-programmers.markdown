@@ -518,6 +518,20 @@ x = 2
 print(x==2 or x==3) # True
 {% endhighlight %}
 
+You're gonna love this one too. To negate a boolean, you just put the word `not` in front of it. Again, no parentheses needed. Amazing.
+
+The only time you want to use parentheses is like in Java, to make it clear what order you want everything to happen. As with most languages, whatever you put in the parentheses will come first.
+
+{% highlight python %}
+b = not True
+print(b) # False
+b = (True or False) and False
+print(b) # False
+b = True or (False and False)
+print(b) # True
+{% endhighlight %}
+
+
 Related to booleans, if/else statements are mostly constructed the same way. The only difference is that in python, `else if` is called elif
 
 {% highlight python %}
