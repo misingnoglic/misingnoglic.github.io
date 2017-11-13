@@ -2,20 +2,26 @@
 layout: post
 title:  "Python for Java Programmers - Part 1 - The Big Picture"
 subtitle: "Learning Python as a Second Language"
-date:   2017-11-06 23:56:45
+date:   2017-11-13 23:56:45
 categories: [Java, Python, Technical, Educational]
 ---
 
 
-Intended audience for this post: Someone who has taken a semester/year of Java, and wants to learn how to code in Python. Part 1: Explaining how to install Python, why learn Python, and the big picture differences between the two languages as you get started. I won't go into specific syntax in this part, but will instead just tell you what to look out for when learning Python.
+Intended audience for this post: Someone who has taken a semester/year of Java, and wants to learn how to code in Python.
+
+<b>Part 1:</b> Explaining how to install Python, why learn Python, and the big picture differences between the two languages as you get started. I won't go into specific syntax in this part, but will instead just tell you what to look out for when learning Python.
+
+# Quick Note:
+
+I've made a mailing list! If you'd like to get an email whenever I update the site, [please enter your email here](https://goo.gl/forms/jzaFhUpZ6x17oOJh2). I promise they will be non-intrusive (about once a week)!
 
 # Introduction:
 
-So, you've learned Java, probably from a class or on your own, and you've decided you want to learn now Python. Maybe it's because you learned Python is easier and quicker to write code in, or because you want to get into the fun world of creating websites using something like Flask or Django. Maybe you don't have a specific reason, but want to just see what all the fuss is about. If so, this guide will be perfect for you! Most other introduction to Python to guides which assume no prior experience in programming, which are a complete waste for people like you who already know how to all the fun stuff (loops, arrays, booleans, etc). It's either that, or they go really quickly through the language without much discussion, leaving people who've never learned a new language behind. Instead, I will try to take another approach, by using what you already know to give you a head start into being a Python expert. In this guide, I'll go through a list of all the topics you have learned in Java, and explain how you can do similar things in Python, as well as new tips and tricks to keep you learning!
+So, you've learned Java, probably from a class or on your own, and you've decided you want to learn now Python. Maybe it's because you heard Python is easier and quicker to write code in, or because you want to get into the fun world of creating websites using something like [Flask](http://flask.pocoo.org/) or [Django](https://www.djangoproject.com). Maybe you don't have a specific reason, but want to just see what all the fuss is about. If so, this guide will be perfect for you! Most other introduction to Python to guides which assume no prior experience in programming, which are a complete waste for people like you who already know how to all the fun stuff (loops, arrays, booleans, etc). It's either that, or they go really quickly through the language without much discussion, leaving people who've never learned a new language behind. Instead, I will try to take another approach, by using what you already know to give you a head start into being a Python expert. In this guide, I'll go through a list of all the topics you have learned in Java, and explain how you can do similar things in Python, as well as new tips and tricks to keep you learning!
 
 # Note on learning new languages
 
-As someone who has TAd many classes, one common misconception I've seen of programming is that it's all about learning languages, and once you learn six or seven different languages, then you're good to go. The way of becoming good at programming isn't taking one semester of Java, then one semester of Python, etc... Rather, when you learn one language, it should be fairly easy for you to pick up another one, or at least easy as learning your first one was. Additionally, learning another language should serve some purpose (I'll give you some reasons why you should learn Python), but don't think that after this, you need to be chasing a Ruby or Lisp tutorial (unless you decided you really don't like Python or Java, and want to try new things). Instead, try to expand your knowledge of HOW to do things, or just make some cool programs! Ok, mini rant over. Maybe I'll write a post about this later.
+As someone who has been a TA for many intro to programming classes, one common misconception I've seen of programming is that it's all about learning languages, and once you learn six or seven different languages, then you're good to go. The way of becoming good at programming isn't taking one semester of Java, then one semester of Python, etc... Rather, when you learn one language, it should be fairly easy for you to pick up another one, or at least easy as learning your first one was. Additionally, learning another language should serve some purpose (I'll give you some reasons why you should learn Python), but don't think that after this, you need to be chasing a Ruby or Lisp tutorial (unless you decided you really don't like Python or Java, and want to try new things). Instead, try to expand your knowledge of HOW to do things, or just make some cool programs! Ok, mini rant over. Maybe I'll write a post about this later.
 
 # Reasons why you should learn Python
 
@@ -96,7 +102,7 @@ In Python however, your programs are not compiled, and as such, they are not che
 
 {% highlight python %}
 print("hello")
-print("hello"-1)
+print("hello"-1) # throws error, you can't subtract from strings
 {% endhighlight %}
 
 Gives this output:
@@ -117,15 +123,15 @@ if x==3:
 	print("hello"-1) # this line is never run, so the error is never thrown
 {% endhighlight %}
 
-The following is an embedded snippet on www.repl.it - feel free to run it, and mess around with the code! It may take a second for it to become runnable, though. 
+The following is an embedded snippet on www.repl.it - feel free to run it, and mess around with the code! It may take a second for it to become runnable, though. Try turning the statement in the "if" to `if x==2`.
 
 <iframe height="400px" width="100%" src="https://repl.it/@misingnoglic/Never-Run-Error?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals" width="100%" ></iframe>
 
-One of the benefits of this line by line evaluation of Python however is the REPL, which was described above. Because the programs are interpreted line by line, you can also open your REPL (by typing `python3` or `python` into your command line,  by clicking Tools->Python Console in Pycharm, or just going on [repl.it](http://repl.it/languages/python3) ). This is one feature I suggest you spend a lot of time looking at, as it incredibly speeds up programming by letting you test things on the fly before committing them to your program.
+One of the benefits of this line by line evaluation of Python however is the REPL, which was described above. Because the programs are interpreted line by line, you can also open your REPL (by typing `python3` or `python` into your command line,  by clicking Tools->Python Console in Pycharm, or just going on [repl.it](http://repl.it/languages/python3) ). This is one feature I suggest you spend a lot of time looking at, as it incredibly speeds up programming by letting you test things on the fly before committing them to your program. You can also try it on the right hand side of the repl.it embedded snippets of code.
 
-## Structure of Programs
+# Structure of Programs
 
-### Freedom from Classes
+## Freedom from Classes
 
 In Java, if you want to write any code, it has to be inside of a class, inside of its own file. Just to print out one single statement, you need all of this code:
 
@@ -155,8 +161,10 @@ Additionally, if you want two classes, you have to put them in separate files. T
 {% highlight python %}
 print("Hello")
 print(2+3)
+
 def add_two_nums(x, y):
     return x+y
+
 print(add_two_nums(2,3))
 {% endhighlight %}
 
@@ -165,7 +173,6 @@ print(add_two_nums(2,3))
 ### White Space
 
 In Java, if you want to indicate that a block of code is "inside" another block of code, you will use curly braces to contain that statement within another one. Two examples:
-
 
 {% highlight java %}
 public static void someMethod{
@@ -184,18 +191,19 @@ In general, to be nice to whoever is reading the code in the future, you also in
 In Python, they cut out the middle man, and the indentation is part of the syntax. If you want a block of code to be inside another block of code, you end the line with a colon, and then everything under it gets indented, like such:
 
 {% highlight python %}
-def f(x):
+def f(x): # example function
     return x+2
 {% endhighlight %}
 
 {% highlight python %}
 if x>2:
     print("x is greater than two")
+print("this will always print out")
 {% endhighlight %}
 
-By using indentation instead of curly braces, I think the code is a lot easier to read, and it makes sure nobody annoyingly puts all their code on one line.
+Once the indent level is decreased, Python knows that the block of code is over. By using indentation instead of curly braces, I think the code is a lot easier to read, and it makes sure nobody annoyingly puts all their code on one line.
 
-## Methods vs Function-works-on-different-types
+## Methods vs Functions
 
 In Java, you learned about methods - pieces of code that take in inputs, and return some output. The thing about these methods were that they had to be inside of a class - even if they had no need to be part of a specific object. This lead to the annoying problem of having to make a class just to write your simple method.
 
@@ -203,11 +211,12 @@ In Python, the main way of writing this kind of code is through functions. The d
 
 Here is an example of a simple function:
 {% highlight python %}
-def f(x, y, z):
+def f(x, y, z): # f is the name of the function, x,y,z are the parameters.
   return x+y-z
+print(f(1,2,3)) # would print 0 (1+2-3)
 {% endhighlight %}
 
-The `def` keyword is what triggers the definition of the function, and can be done anywhere in code. Then, anywhere in the same scope as f, you can call f with three parameters, and it will return the inner workings of the computations. Notice how you don't have to declare any types (more on that later).
+The `def` keyword is what triggers the definition of the function, and can be done anywhere in code. To return a value, you use the same `return` keyword as in Java. Once the indentation is over, Python knows that the code for that specific function has ended. Then, anywhere in the same scope as f, you can call f with three parameters, and it will return the inner workings of the computations. Notice how you don't have to declare any types (more on that later).
 
 One cool thing about Python functions is that you can have default values for parameters you don't pass in. For example:
 
@@ -234,7 +243,7 @@ To make code generic to type in Java is a lot of work (see [this slideshow](http
 {% highlight python %}
 x = 2
 print(x+2)
-x = False
+x = False # No problem here
 print(x)
 {% endhighlight %}
 
@@ -253,6 +262,14 @@ print(add("hello ", "world")) # adding two strings concatenates them
 
 This is good, in that it's less bureaucracy to deal with when writing your programs. However, this may let you shoot yourself in the foot. If you pass variables of the wrong type to a function, Python won't catch the error until the code tries doing something it can't do with the inputs.
 
+{% highlight python %}
+def subtract(x, y):
+  return x-y
+
+x = subtract("3", "2") # Will try to call subtract, and will throw error in the return x-y line
+{% endhighlight %}
+
+
 Additionally, since you don't have to declare if a function is void or if it returns something, the language won't check to make sure you didn't forget to return something.
 
 {% highlight python %}
@@ -270,11 +287,11 @@ If you haven't noticed by now, a lot of statements that required parentheses in 
 {% highlight python %}
 x=2
 if x==2:
-	print("x is two!")
+  print("x is two!")
 
 while x<10:
-	print(x)
-	x = x+1
+  print(x)
+  x = x+1
 
 {% endhighlight %}
 
@@ -290,11 +307,11 @@ In Java, the default way of having a bunch of items is the array. In the array, 
 int[] x = new int[5];
 {% endhighlight %}
 
-They're also pretty useless, with not that many methods associated with arrays.
+They're also pretty simple, with not that many methods associated with arrays.
 
-If you wanted to have a list of objects with an undefined length, you could use a List (like an ArrayList). However, these are defined objects, and are not as syntactically easy to use as arrays.
+If you wanted to have a list of objects with an undefined length, you could use a List (like an ArrayList). However, these are just regular objects, and are not as syntactically easy to use as arrays.
 
-In Python, there are no arrays, only lists with the best of all worlds. The lists are very easy to create, use, and manipulate. Here are a few examples of the fun things you can do with lists out of the box:
+In Python, there are no arrays, only lists with the best of all worlds. The lists are very easy to create, use, and manipulate. Just like in Java, their indexing also starts at 0. Here are a few examples of the fun things you can do with lists out of the box:
 
 {% highlight python %}
 L = [4,9,7]
@@ -312,7 +329,7 @@ L4 = L3[1:4] # l3 from index 1 to (not including) index 4
 print(L4) # [9,7,10]
 L5 = L3[1:-1] # L3 from index 1 to (not including) last item.
 print(L5) # [9,7,10,9,9]
-L6 = L3[1:] # L3 from index 1 to the end
+L6 = L3[1:] # L3 from index 1 to the end (leaving out the second parameter)
 print(L6) # [9,7,10,9,9,9]
 
 # sum of each thing in L3
@@ -385,7 +402,6 @@ grades_new = [x+10 for x in grades]
 
 And that's it! grades_new will now be everything in grades, but with 10 added to it.
 
-
 ## Different Loops
 
 In Java, there are three different kinds of loops. There's the for loop:
@@ -415,34 +431,81 @@ for (int i : someListOfInts){
 }
 {% endhighlight %}
 
-However, the for loop and the while loop are basically the same thing. Python sees this, and took out the for loop. Instead you just have the while loop (which is practically identical to the Java while loop), and a for loop that is the same as Java's for each loop. Here's an example (from the previous section).
+However, the for loop and the while loop are basically the same thing. Python sees this, and took out the for loop. Instead you just have the while loop (which is practically identical to the Java while loop), and a for loop that is the same as Java's for each loop. Here's an example of the Python for loop:
 
 {% highlight python %}
-L = [1,2,3]
+L = [1,5,8]
 s = 0
 for item in L: # for each loop
 	s += item
 print(s)
 {% endhighlight %}
 
-The code is basically saying - for each thing in L, call it `item` and do this thing with it.
+The `for item in L:` is basically saying - for each thing in L, call it `item` and do everything in the indented section with `item`.
 
-This is a snippet from www.pythontutor.com - a great website to step through Python code one line at a time and really see what's going on.
+This is a snippet from www.pythontutor.com - a great website to step through Python code one line at a time and really see what's going on, by visualizing all the variables all at once. It's a great way to find bugs in your code, or figure out why a script is doing something in a certain way!
 
-<iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=L%20%3D%20%5B1,2,3%5D%0As%20%3D%200%0Afor%20item%20in%20L%3A%20%23%20for%20each%20loop%0A%09s%20%2B%3D%20item%0Aprint%28s%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=false&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+<iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=L%20%3D%20%5B1,5,8%5D%0As%20%3D%200%0Afor%20item%20in%20L%3A%20%23%20for%20each%20loop%0A%09s%20%2B%3D%20item%0Aprint%28s%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=false&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
-You can run this to see what it does step by step. Basically - the "for item in L" is telling the loop - "For each thing in L, call it item, and do the stuff indented under me." So first it sets item equal to 1, then 2, then 3.
+You can run this to see what it does step by step. You can see how `item` first equals 1, then 5, then 8.
 
-If you want a for loop that just goes through a series of numbers, Python programmers use this function called range to do that.
+If you want a for loop that just goes through a series of numbers, Python programmers use this function called `range()` to do that.
 
 {% highlight python %}
 for i in range(1,10): # for each loop
 	print(i)
 {% endhighlight %}
 
+Range is a special function in python that returns a list from the first argument to (not including) the last argument. So range(1,10) is the same as [1,2,3,4,5,6,7,8,9]. This allows us to have a for loop that's similar to Java's.
+
+Range can actually take either one, two, or three parameters:
+
+`range(10)` - list from zero to 10, not including 10.
+`range(2,10)` - list from 2 to 10, not including 10
+`range(1,10, 2)` - list from 2 to 10, not including 10 and skipping by 2
+
+
 <iframe height="400px" width="100%" src="https://repl.it/@misingnoglic/For-with-Range?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals" width="100%" ></iframe>
 
-Range is a special function in python that returns a list from the first argument to (not including) the last argument. So range(1,10) is the same as [1,2,3,4,5,6,7,8,9]. This allows us to have a for loop that's similar to Java's.
+If you've noticed, these are the same parameters that are taken in by the list slicing (e.g. where L[2:10] gives all the items in L from index 2 to 10, not including 10).
+
+## Dictionaries
+
+In Python, if you want to make some sort of mapping between two things, like a HashMap in Java, you can use a dictionary. Dictionaries are extremely easy to use, and extremely versatile. To create one, we use this syntax:
+
+{% highlight python %}
+dna_mapping = {"A": "T", "T":"A", "G":"C", "C":"G"}
+{% endhighlight %}
+
+This example uses an idea from biology, where each letter (signifying a DNA nucleotide) is mapped to another letter. A maps to T, T maps to A, G maps to C, and C maps to G. To create a dictionary, you wrap it in `{ }` curly braces, and have a list of pairs key:value, separated by commas, like above. Then, you can easily look up the value associated with any given key, by using the same syntax as getting an element from a list, but putting the key in the square braces, like such:
+
+{% highlight python %}
+base = "A"
+pair = dna_mapping[base]
+{% endhighlight %}
+
+`pair` will then equal "T", as "T" is the value for "A" in the dictionary.
+
+You can also add new pairs or update old ones with the same syntax as setting variables:
+
+{% highlight python %}
+dna_mapping["X"] = "Y"
+{% endhighlight %}
+
+The dictionary will then be updated with the pair x:y.
+
+If you want to loop through each key in the dictionary, it's the same syntax as looping through a list:
+
+{% highlight python %}
+for key in dna_mapping:
+  print("The pair of "+key+" is "+dna_mapping[key])
+{% endhighlight %}
+
+Dictionaries are great when you have some kind of pairing data that you want to store, to easily look up later. Here is a full example of using a dictionary:
+
+<iframe height="400px" width="100%" src="https://repl.it/@misingnoglic/Dictionary-Example?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals" width="100%" ></iframe>
+
+Sorry if this was rushed, I will write more on dictionaries in part two!
 
 ## Boolean Logic in English
 
@@ -451,7 +514,39 @@ This one is pretty quick, but worth mentioning here anyway. In Java, to combine 
 {% highlight python %}
 print(True and False) # False
 print(True or False) # True
+x = 2
+print(x==2 or x==3) # True
 {% endhighlight %}
+
+Related to booleans, if/else statements are mostly constructed the same way. The only difference is that in python, `else if` is called elif
+
+{% highlight python %}
+def ticket_price(speed):
+  if speed<50:
+    return 0
+  elif speed<60:
+    return 50
+  else:
+    return 100
+{% endhighlight %}
+
+Again, more on this in part 2.
+
+## Getting/Converting User input
+
+In Java, to get user input, you probably learned to make a Scanner object, and then call various methods to get the user input, such as `nextLine()` or `nextInt()`
+
+In Python, all input is just gotten from the `input()` function, which you do not need to import. As a parameter to the input function, you give the prompt for the user. For example, if you wanted to get a user's name, you would have the following code.
+
+{% highlight python %}
+name = input("Hello, please enter your name: ")
+{% endhighlight %}
+
+The issue with this is that whatever you get from `input()` will be a string. Thankfully, it is very easy to convert a string to a different type. Just wrap the string around the type you want it to be, such as  `int()` to turn it into an integer, or  `float()` to turn it into a floating point number (like a double in Java). Here is an example of getting user input.
+
+<iframe height="400px" width="100%" src="https://repl.it/@misingnoglic/Input-Example?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals" width="100%" ></iframe>
+
+Note: If you're using version 2 of Python (which I highly discourage), you should use `raw_input`.
 
 ## Stylistic Naming Conventions
 
@@ -465,8 +560,10 @@ int largestNumber = 2;
 largest_number = 2
 {% endhighlight %}
 
-
+If you're curious, [this document](https://www.python.org/dev/peps/pep-0008/) is the official Python style guide, known as PEP8. PEP8 is like a sacred text for Python programmers, as it was written by our [Benevolent Dictator for Life](https://en.wikipedia.org/wiki/Benevolent_dictator_for_life), [Guido Van Rossum](https://en.wikipedia.org/wiki/Guido_van_Rossum), the creator of Python. There is also [Google's Python Style Guide](https://google.github.io/styleguide/pyguide.html), which is pretty widely used.
 
 # Conclusion
 
-I hope this article gave you a good overview of all the different things to expect when looking at Python code, so you wouldn't feel too left out. You might not have a solid grasp at Pyhton fundementals, but in the next part, I will write about how to actually get to writing some Python - with direct translations from what you know from Java! Please let me know if you have any questions in the comments below, or if you think there are any mistakes/confusing bits to it. I am very new at writing tutorials like this, but I want to get really good at it!
+I hope this article gave you a good overview of all the different things to expect when looking at Python code, so you wouldn't feel too left out. You might not have a solid grasp at Python fundamentals, but in the next part, I will write about how to actually get to writing some Python - with direct translations from what you know from Java! You've seen that Python gives you a lot of freedom, but with this freedom comes the responsibility to make sure you keep writing good code! Please let me know if you have any questions in the comments below, or if you think there are any mistakes/confusing bits to it. I am very new at writing tutorials like this, but I want to get really good at it!
+
+Again, if you want to be notified when part 2 comes out, please sign up for my [email updates here](https://goo.gl/forms/jzaFhUpZ6x17oOJh2)! See you next time.
