@@ -22,3 +22,5 @@ Click the navigation links above to see what the site has to offer. I suggest [A
 
 
 The template is Daktilo, which you can download [here](https://github.com/kronik3r/daktilo)
+
+Contact: [arya@aryaboudaie.com](mailto:arya@aryaboudaie.com)
