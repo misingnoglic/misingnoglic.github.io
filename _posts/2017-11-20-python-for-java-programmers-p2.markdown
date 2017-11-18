@@ -114,7 +114,7 @@ print(not True) # False (! in Java)
 
 # If Statements
 
-The wording of `if` statements is mostly the same as Java. The only difference is that `else if` is spelled `elif` in order to have its own keyword. The only difference is the structure. Look for example at this code, which assigns a ticket price based on how fast you're going:
+The wording of `if` statements is mostly the same as Java, the only difference is that `else if` is spelled `elif` in order to have its own keyword. In terms of structure, there are no parentheses needed around the keywords, cleaning them up. Additionally, all the code for each block is just indented under the statement. Look for example at this code, which assigns a ticket price based on how fast you're going:
 
 {% highlight python %}
 speed = 50
@@ -130,8 +130,118 @@ else:
 print(ticket_price)
 {% endhighlight %}
 
-Try changing the value of
+Try changing the value of speed, and see if the code does what you think it will:
 
 <iframe height="400px" width="100%" src="https://repl.it/@misingnoglic/SpeedTicketIfElse?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals" width="100%" ></iframe>
 
 The way that the `if` statements work is that if the thing in the `if` is true, it will execute all the code indented under the line with the if statement. This is a departure from Java, which uses curly braces to contain pieces of code. If this doesn't make sense, PLEASE read the part 1 to this. Thank you :)
+
+If your if statement is only one line, you can also put it all on one line, like this:
+
+{% highlight python %}
+if x<10: print("x is less than 10")
+else: print("x is not less than 10")
+{% endhighlight %}
+
+Some people prefer this style when writing short if statements, others prefer always having it always be indented on the next line. It's really a matter of preference, just make sure you have some consistency.
+
+If statements can also be nested in other if statements - they just need to be indented inside the if statement they're nested in. I'm not saying this is the best way to write code, I'm just saying it is possible.
+
+{% highlight python %}
+if x<0:
+  if y<0: print("both x and y are negative")
+  else: print("only x is negative")
+else:
+  print("x is not negative")
+{% endhighlight %}
+
+In all, booleans and if/else statements are fairly similar between Java and Python, so your skills should transfer fairly easily!
+
+# Functions
+
+As discussed in part 1, functions are to Python what static methods are to Java. The main great thing about functions is that they do not need to be attached to a specific class. They can be defined anywhere in your program, and then called anywhere after the definition. You also don't need to announce any types. Here is an example of a few functions, just to jog your memory:
+
+{% highlight python %}
+def add(x, y):
+  return x+y
+
+x = add(2,3)
+print(x) # 5
+
+def print_name(name):
+  print("Hello "+name)
+
+print_name("Arya") # Hello Arya
+
+
+{% endhighlight %}
+
+Functions are defined with the `def` keyword - after writing def, you write the name of the function, and then in parentheses you put the parameters, and then add a colon. Just like if statements, everything indented under the first line is part of the function. Just like Java, functions end when you `return` some variable (which gets passed back to whatever called the function), or when you reach the end of the function and nothing is returned (like a `void` method in Java).
+
+Just like `if` statements, if your function is only one line, you can define it all on the same line.
+
+{% highlight python %}
+def f(x): return x**2
+print(f(10)) # 100
+{% endhighlight %}
+
+Also mentioned in the Part 1 was the "default" parameters of the function. These let you set a default for a parameter should you not pass it, and lets you write less code. The syntax is as following:
+
+{% highlight python %}
+def print_hello(name, uppercase=False): # caps is the default argument, if it isn't passed, it's set to False
+  if uppercase:
+    print("HELLO "+name.upper())
+  else:
+    print("hello "+name)
+
+print("Arya", True) # HELLO Arya
+print("christa") # hello christa (Nothing passed for 2nd argument)
+print("snow", False) # hello snow
+{% endhighlight %}
+
+Just make sure that your parameters with defaults are listed after the ones with no defaults (you can think about why that's needed).
+
+When calling functions, instead of just putting them in order, you can also name the parameters explicitly, like this:
+
+{% highlight python %}
+def pow(base, exponent):
+  return base**exponent
+
+x = pow(base=2, exponent=3)
+print(x) # 8
+{% endhighlight %}
+
+This is helpful when you're writing code and don't want people to have to remember what the arguments to the functions are when it's called. By naming them explicitly, you also don't have to have them in the right order (though your code will be nicer if they are!). The common style is to not name the arguments that are necessary, and name the arguments that have defaults.
+
+{% highlight python %}
+# Score function for some game
+def score(points, seconds, multiplier=1):
+  return (points/seconds)*multiplier
+
+x = score(100, 10, multiplier=3)
+print(x)
+{% endhighlight %}
+
+In the end, you have to use your best judgement for naming arguments - deciding the fine line between being too verbose and being helpful. We don't want this to turn into Java.
+
+The other thing to know about functions is that they are `first class objects`. This means that they are treated the same way as any other type, and you can do the same things to them. For example, you can assign a variable to a function.
+
+{% highlight python %}
+def f(x): return x**2 # x squared
+g = f # g is now a variable for f
+print(g(10)) # 100
+{% endhighlight %}
+
+You can also write functions that accept other functions as parameters. This is useful, for example, when using the `sorted` function, which returns a sorted list. One of its optional parameters is `key`, which is the function used to compare the different items. If left blank, it just sorts them from smallest to largest, but if you apply a `key` function, it will sort it according to that key. Let's say for example, you want to sort a list of numbers by their absolute value. You can do this:
+
+{% highlight python %}
+L = [1, 3, 4, -1, 12, 7, -5, 6]
+L2 = sorted(L)
+print(L2) # [-5, -1, 1, 3, 4, 6, 7, 12]
+L3 = sorted(L, key=abs) # using the key abs(), which returns the absolute value of a number
+print(L3) # [1, -1, 3, 4, -5, 6, 7, 12]
+{% endhighlight %}
+
+Let's use another example. Let's say we want to sort a list of strings, but by alphabetical order.
+
+# Built In Functions
