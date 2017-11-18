@@ -348,6 +348,10 @@ print(sorted(L3)) # L3 but sorted (smallest to largest)
 # testing for membership in list (no need to loop)
 print(9 in L3)
 print(11 in L3)
+
+# Using the "sorted" function to return a sorted list
+sorted_l3 = sorted(L3)
+print(sorted_l3) # [4, 7, 9, 9, 9, 9, 10]
 {% endhighlight %}
 
 Again - please feel free to mess with this code and then run it. See what happens! Try it with different lists too.
@@ -379,6 +383,8 @@ print(len(s3))
 
 print("e" in s3)
 print("x" in s3)
+
+print(sorted(s3)) # [' ', 'd', 'e', 'h', 'l', 'l', 'l', 'o', 'o', 'r', 'w']
 {% endhighlight %}
 
 <iframe height="400px" width="100%" src="https://repl.it/@misingnoglic/Fun-with-Strings?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals" width="100%" ></iframe>
