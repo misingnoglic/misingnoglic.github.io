@@ -58,9 +58,9 @@ In Python, you have the same basic types as Java, though there isn't really the 
 3.04 # a float
 {% endhighlight %}
 
-Also note - to comment in Python, you use the `#` sign.
+Also note - to comment in Python, you use the `#` sign. You can also have a multiline comment by putting it in quotes, like a normal string. 
 
-You also have the same operators as Java, though with one extra helpful addition, the `**` operator (which raises one number to another). No need for Math.pow() anymore! Additionally with division,  unlike Java, if you divide two ints, you can get a float back. If you want to do integer division, you can use the `//` operator. Here they all are:
+You also have the same operators as Java, though with one extra helpful addition - the `**` operator which raises one number to another. No need for Math.pow() anymore! Additionally with division,  unlike Java, if you divide two ints, you can get a float back. If you want to do integer division, you can use the `//` operator. Here they all are:
 
 {% highlight python %}
 print(5+2) # addition
@@ -70,6 +70,15 @@ print(5/2) # normal division: 2.5
 print(5//2) # integer division: 2
 print(5**2) # 2 to the power of 3
 {% endhighlight %}
+
+Note: In the old version of Python, the division was integer division, just like in Java. If you're forced to use an old version of Python, you can get the new division by putting this statement at the top of your program:
+
+{% highlight python %}
+from __future__ import print_function
+{% endhighlight %}
+
+We'll talk about import statements later. 
+
 
 # Storing variables:
 
@@ -159,7 +168,7 @@ In all, booleans and if/else statements are fairly similar between Java and Pyth
 
 # Functions
 
-As discussed in part 1, functions are to Python what static methods are to Java. The main great thing about functions is that they do not need to be attached to a specific class. They can be defined anywhere in your program, and then called anywhere after the definition. You also don't need to announce any types. Here is an example of a few functions, just to jog your memory:
+As discussed in part 1, functions are to Python what static methods are to Java. The main great thing about functions is that they do not need to be attached to a specific class. They can be defined anywhere in your program, and then called anywhere after the definition. You also don't need to announce any types of inputs or return outputs. Here is an example of a few functions, just to jog your memory:
 
 {% highlight python %}
 def add(x, y):
@@ -170,6 +179,8 @@ print(x) # 5
 
 def print_name(name):
   print("Hello "+name)
+  
+x = add(5, 10)
 
 print_name("Arya") # Hello Arya
 
