@@ -23,8 +23,8 @@ categories: []
 <div>150x100</div>
 <iframe src="https://www.youtube.com/embed/QcCMfSha9xk" width="150" height="100" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen="" ></iframe>
 <br>
-<div>Playable video 600x450</div>
-<iframe src="3j_7Q7lP3Rs" width="600" height="450" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen="" ></iframe>
+<div>Playable arabic video 600x450</div>
+<iframe src="https://www.youtube.com/embed/3j_7Q7lP3Rs" width="600" height="450" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen="" ></iframe>
 <br>
 
 {% endraw %}
