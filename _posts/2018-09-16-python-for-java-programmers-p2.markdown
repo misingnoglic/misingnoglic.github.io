@@ -2,9 +2,8 @@
 layout: post
 title:  "Python for Java Programmers - Part 2 - The Nitty Gritty"
 subtitle: "Variables, Types, If Statements, and Functions"
-date:   2018-09-15 23:56:45
+date:   2018-09-16 23:10:00
 categories: [Java, Python, Technical, Educational]
-hide: true
 ---
 
 # Introduction
@@ -22,8 +21,7 @@ With that out of the way, let's get started!
 
 # Installing and Running Python Programs
 
-This was discussed in part 1, so if you already have everything installed, sorry for the repetition. You want to first download a distribution of Python online. I recommend the 3.7 version of Miniconda, which is Python plus
-a bunch of libraries that are annoying to install. [You can download it from here.](https://conda.io/miniconda.html) If you don't want to download that much stuff, you can also download the vanilla Python from [here](https://www.python.org/downloads/). For either of these, be sure to download the 3.7 version, and when installing, be sure to select the option for adding it to the command line. It's been a while since I installed either of these, so please [email me](mailto:arya@aryaboudaie.com) if you have any questions.  
+This was discussed in part 1, so if you already have everything installed, sorry for the repetition. You want to first download a distribution of Python online. I recommend the 3.7 version of Miniconda, which is Python plus a bunch of libraries that are annoying to install. [You can download it from here.](https://conda.io/miniconda.html) If you don't want to download that much stuff, you can also download the vanilla Python from [here](https://www.python.org/downloads/). For either of these, be sure to download the 3.7 version, and when installing, be sure to select the option for adding it to the command line. It's been a while since I installed either of these, so please [email me](mailto:arya@aryaboudaie.com) if you have any questions.
 
 Once you have it installed, you should be able to open up the Command Prompt (on Windows), or the Terminal (on Mac or Linux), and when it pops up, type `python3` for Mac, or `python` for windows, and hit enter. I'll refer to the command as `python3` for now, and I'll be talking about the Terminal, though Windows users should know to type `python` and to use Command Prompt.
 
@@ -93,7 +91,16 @@ x = 2  # an integer
 y = 3.04  # a float
 {% endhighlight %}
 
-Also note - to comment in Python, you use the `#` sign. You can also have a multiline comment by putting it in quotes, like a normal string.
+Also note - to comment in Python, you use the `#` sign. You can also have a multiline comment by putting it triple quotes, like this:
+
+{% highlight python %}
+"""
+This is a long comment that can span
+multiple lines. It's technically just
+a string that is not stored to any variable.
+"""
+x = 2
+{% endhighlight %}
 
 {% highlight python %}
 x = 2  # an integer
