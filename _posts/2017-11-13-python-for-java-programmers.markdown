@@ -15,6 +15,9 @@ Intended audience for this post: Someone who has taken a semester/year of Java, 
 
 I've made a mailing list! If you'd like to get an email whenever I update the site, [please enter your email here](https://goo.gl/forms/jzaFhUpZ6x17oOJh2). I promise they will be non-intrusive (about once a week)!
 
+* TOC
+{:toc}
+
 # Introduction:
 
 So, you've learned Java, probably from a class or on your own, and you've decided you want to learn now Python. Maybe it's because you heard Python is easier and quicker to write code in, or because you want to get into the fun world of creating websites using something like [Flask](http://flask.pocoo.org/) or [Django](https://www.djangoproject.com). Maybe you don't have a specific reason, but want to just see what all the fuss is about. If so, this guide will be perfect for you! Most other introduction to Python to guides which assume no prior experience in programming, which are a complete waste for people like you who already know how to all the fun stuff (loops, arrays, booleans, etc). It's either that, or they go really quickly through the language without much discussion, leaving people who've never learned a new language behind. Instead, I will try to take another approach, by using what you already know to give you a head start into being a Python expert. In this guide, I'll go through a list of all the topics you have learned in Java, and explain how you can do similar things in Python, as well as new tips and tricks to keep you learning!
