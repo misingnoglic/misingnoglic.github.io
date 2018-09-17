@@ -6,6 +6,11 @@ date:   2018-09-16 23:10:00
 categories: [Java, Python, Technical, Educational]
 ---
 
+# Table of Contents
+
+* TOC
+{:toc}
+
 # Introduction
 
 **Note: If you haven't read part 1, please do so [here](https://aryaboudaie.com/java/python/technical/educational/2017/11/13/python-for-java-programmers.html). If it's been a while (I did write it last year), just give it a quick skim!**
