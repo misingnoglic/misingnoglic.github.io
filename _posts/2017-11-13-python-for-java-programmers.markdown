@@ -15,7 +15,8 @@ Intended audience for this post: Someone who has taken a semester/year of Java, 
 
 I've made a mailing list! If you'd like to get an email whenever I update the site, [please enter your email here](https://goo.gl/forms/jzaFhUpZ6x17oOJh2). I promise they will be non-intrusive (about once a week)!
 
-* TOC
+# Table of Contents
+
 {:toc}
 
 # Introduction:
