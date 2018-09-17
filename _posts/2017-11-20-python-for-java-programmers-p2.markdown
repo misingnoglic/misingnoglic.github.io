@@ -22,8 +22,8 @@ With that out of the way, let's get started!
 
 # Installing and Running Python Programs
 
-This was discussed in part 1, so if you already have everything installed, sorry for the repetition. You want to first download a distribution of Python online. I recommend the 3.6 version of Anaconda, which is Python plus
-a bunch of libraries that are annoying to install. [You can download it from here.](https://www.anaconda.com/download/) If you don't want to download that much stuff, you can also download the vanilla Python from [here](https://www.python.org/downloads/). For either of these, be sure to download the 3.7 version, and when installing, be sure to select the option for adding it to the command line. It's been a while since I installed either of these, so please [email me](mailto:arya@aryaboudaie.com) if you have any questions.  
+This was discussed in part 1, so if you already have everything installed, sorry for the repetition. You want to first download a distribution of Python online. I recommend the 3.7 version of Miniconda, which is Python plus
+a bunch of libraries that are annoying to install. [You can download it from here.](https://conda.io/miniconda.html) If you don't want to download that much stuff, you can also download the vanilla Python from [here](https://www.python.org/downloads/). For either of these, be sure to download the 3.7 version, and when installing, be sure to select the option for adding it to the command line. It's been a while since I installed either of these, so please [email me](mailto:arya@aryaboudaie.com) if you have any questions.  
 
 Once you have it installed, you should be able to open up the Command Prompt (on Windows), or the Terminal (on Mac or Linux), and when it pops up, type `python3` for Mac, or `python` for windows, and hit enter. I'll refer to the command as `python3` for now, and I'll be talking about the Terminal, though Windows users should know to type `python` and to use Command Prompt.
 
@@ -95,6 +95,11 @@ y = 3.04  # a float
 
 Also note - to comment in Python, you use the `#` sign. You can also have a multiline comment by putting it in quotes, like a normal string.
 
+{% highlight python %}
+x = 2  # an integer
+y = 3.04  # a float
+{% endhighlight %}
+
 You also have the same operators as Java, though with one extra helpful addition - the `**` operator which raises one number to another. No need for Math.pow() anymore! Additionally with division,  unlike Java, if you divide two ints, you can get a float back. If you want to do integer division, you can use the `//` operator. Here they all are:
 
 {% highlight python %}
@@ -131,7 +136,7 @@ h = "200"
 print(int(h)+100)  # 300
 {% endhighlight %}
 
-<iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=a%20%3D%20100%0Ab%20%3D%20float%28a%29%20%20%23%20Turns%20b%20into%20the%20decimal%20version%20of%20a%0Aprint%28b%29%20%20%23%20100.0%0Ac%20%3D%20200.5%0Ad%20%3D%20int%28c%29%0Aprint%28d%29%20%20%23%20200%0Ae%20%3D%20str%28d%29%20%20%23%20Turns%20e%20into%20the%20string%20version%20of%20d%0Aprint%28e%29%20%20%23%20'200'%0Aprint%28e%5B0%5D%29%20%20%23%20'2'%0Af%20%3D%20%22150.6%22%0Ag%20%3D%20float%28f%29%0Aprint%28g%20%2B%20100%29%20%20%23%20250.6%0Ah%20%3D%20%22200%22%0Aprint%28int%28h%29%2B100%29%20%20%23%20300&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=a%20%3D%20100%0Ab%20%3D%20float%28a%29%20%20%23%20Turns%20b%20into%20the%20decimal%20version%20of%20a%0Aprint%28b%29%20%20%23%20100.0%0Ac%20%3D%20200.5%0Ad%20%3D%20int%28c%29%0Aprint%28d%29%20%20%23%20200%0Ae%20%3D%20str%28d%29%20%20%23%20Turns%20e%20into%20the%20string%20version%20of%20d%0Aprint%28e%29%20%20%23%20'200'%0Aprint%28e%5B0%5D%29%20%20%23%20'2'%0Af%20%3D%20%22150.6%22%0Ag%20%3D%20float%28f%29%0Aprint%28g%20%2B%20100%29%20%20%23%20250.6%0Ah%20%3D%20%22200%22%0Aprint%28int%28h%29%2B100%29%20%20%23%20300&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 # Booleans
 
@@ -414,7 +419,7 @@ print(y)  # Still 20
 
 Try to follow the pythontutor step by step for this, and try to see where everything is passed. But the basic idea is that the x and y variables inside of `f` have nothing to do with the variables outside of `f`. When you pass `y` into `f`, it's called `x` inside of `f`, and that `x` has nothing to do with the `x` outside of `f`.
 
-<iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=x%20%3D%2010%0Ay%20%3D%2020%0Adef%20f%28x%29%3A%0A%20%20%20%20y%20%3D%20x%20%2B%202%0A%20%20%20%20return%20y%2B2%0A%0Az%20%3D%20f%28y%29%0Aprint%28x%29%20%20%23%20Still%2010%0Aprint%28y%29%20%20%23%20Still%2020&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=true&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=x%20%3D%2010%0Ay%20%3D%2020%0Adef%20f%28x%29%3A%0A%20%20%20%20y%20%3D%20x%20%2B%202%0A%20%20%20%20return%20y%2B2%0A%0Az%20%3D%20f%28y%29%0Aprint%28x%29%20%20%23%20Still%2010%0Aprint%28y%29%20%20%23%20Still%2020&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=true&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 This is similar to Java, but I wanted to bring it up now, because of the next point, which is not at all similar to Java.
 
@@ -442,7 +447,7 @@ print(y)  # y is still 2, even though x is now 4.
 
 You can see it visualized on www.pythontutor.com here:
 
-<iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=x%20%3D%202%0Ay%20%3D%20x%20%0Ax%2B%3D2%0Aprint%28y%29%20%20%23%20y%20is%20still%202,%20even%20though%20x%20is%20now%204.&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=true&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=x%20%3D%202%0Ay%20%3D%20x%20%0Ax%2B%3D2%0Aprint%28y%29%20%20%23%20y%20is%20still%202,%20even%20though%20x%20is%20now%204.&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=true&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 Another thing to remember is that when you pass variables to a function, that is another way of naming variables. So in this code:
 
@@ -456,7 +461,7 @@ print(f(x))  # 4
 print(x)  # 2
 {% endhighlight %}
 
-<iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=x%20%3D%202%0Adef%20f%28num%29%3A%0A%20%20num%20%2B%3D%202%0A%20%20return%20num%0A%0Aprint%28f%28x%29%29%20%20%23%204%0Aprint%28x%29%20%20%23%202&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=true&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=x%20%3D%202%0Adef%20f%28num%29%3A%0A%20%20num%20%2B%3D%202%0A%20%20return%20num%0A%0Aprint%28f%28x%29%29%20%20%23%204%0Aprint%28x%29%20%20%23%202&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=true&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 In this code snippet, when the variable `x` is passed into the function `f`, the variable `num` inside of `f` points to the same 2 as `x` does. However, when we reassign num with `num += 2`, the original `x` is unaffected, because += reassigns. So far, this acts exactly like Java does with ints, but the reasons are completely different. And the true is same even for "complex" data like lists. For example:
 
@@ -470,7 +475,7 @@ print(nums2)  # [1, 2, 3, 5]
 
 When you add a list to a list, it returns a new list with the two lists added together.
 
-<iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=nums%20%3D%20%5B1,%202,%203%5D%0Anums2%20%3D%20nums%0Anums2%20%3D%20nums%20%2B%20%5B5%5D%0Aprint%28nums%29%20%20%23%20%5B1,%202,%203%5D%0Aprint%28nums2%29%20%20%23%20%5B1,%202,%203,%205%5D&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=false&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=nums%20%3D%20%5B1,%202,%203%5D%0Anums2%20%3D%20nums%0Anums2%20%3D%20nums%20%2B%20%5B5%5D%0Aprint%28nums%29%20%20%23%20%5B1,%202,%203%5D%0Aprint%28nums2%29%20%20%23%20%5B1,%202,%203,%205%5D&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=false&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 So what happens if instead of reassigning, we do something else? Take this code for example:
 
@@ -482,7 +487,7 @@ print(nums)  # [1, 2, 3, 5]
 print(nums2)  # [1, 2, 3, 5]
 {% endhighlight %}
 
-<iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=nums%20%3D%20%5B1,%202,%203%5D%0Anums2%20%3D%20nums%0Anums2.append%285%29%0Aprint%28nums%29%20%20%23%20%5B1,%202,%203,%205%5D%0Aprint%28nums2%29%20%20%23%20%5B1,%202,%203,%205%5D&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=false&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=nums%20%3D%20%5B1,%202,%203%5D%0Anums2%20%3D%20nums%0Anums2.append%285%29%0Aprint%28nums%29%20%20%23%20%5B1,%202,%203,%205%5D%0Aprint%28nums2%29%20%20%23%20%5B1,%202,%203,%205%5D&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=false&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 With this code, after we assign nums2 to nums, they both point to the same object in memory. So when we call `nums2.append(5)` (which appends a 5 to the end of the list), since both variables point to the same list, both variables will be pointing to the list with the 5 appended to the end!
 
