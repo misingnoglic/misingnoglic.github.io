@@ -2,7 +2,7 @@
 layout: post
 title:  "Python for Java Programmers - Part 2 - The Nitty Gritty"
 subtitle: "Variables, Types, If Statements, and Functions"
-date:   2019-09-15 23:56:45
+date:   2018-09-15 23:56:45
 categories: [Java, Python, Technical, Educational]
 hide: true
 ---
