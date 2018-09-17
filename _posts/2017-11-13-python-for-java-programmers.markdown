@@ -11,13 +11,14 @@ Intended audience for this post: Someone who has taken a semester/year of Java, 
 
 <b>Part 1:</b> Explaining how to install Python, why learn Python, and the big picture differences between the two languages as you get started. I won't go into specific syntax in this part, but will instead just tell you what to look out for when learning Python.
 
+# Table of Contents
+
+* TOC
+{:toc}
+
 # Quick Note:
 
 I've made a mailing list! If you'd like to get an email whenever I update the site, [please enter your email here](https://goo.gl/forms/jzaFhUpZ6x17oOJh2). I promise they will be non-intrusive (about once a week)!
-
-# Table of Contents
-
-{:toc}
 
 # Introduction:
 
