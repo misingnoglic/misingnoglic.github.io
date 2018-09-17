@@ -8,6 +8,14 @@ sitemap:
 ---
 Note: Please feel free to use any resources on this page for any personal learning, or for lesson teachings. I only ask that you credit me (preferably with a link back to this website), as well as informing me that you're using it (just so I know what's being used and where). If you'd like to use anything here for commercial purposes, please email me at arya@aryaboudaie.com.
 
+# Videos
+
+I've created a YouTube series for doing well on the AP Computer Science FRQ section. You can view my videos below:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/m0mxm0Iw4J8?list=PLo88jo7YYILbvZpNgC5VRIG7JklKqyNQs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+Hopefully I'll make more videos soon!
+
 # Slideshows
 
 ## Review Slideshows for Java at Brandeis University
