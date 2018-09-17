@@ -2,8 +2,9 @@
 layout: post
 title:  "How to turn your Python code into a website!"
 subtitle: "Introduction to Flask!"
-date:   2017-11-20 23:56:45
+date:   2019-11-20 23:56:45
 categories: [Python, Technical, Educational, Web, Flask]
+hide: true
 ---
 
 Note: This post requires you know some basic Python. You should be comfortable with what functions are and how to write them. [Here](https://www.w3schools.com/python/python_functions.asp) is a quick refresher!
@@ -139,4 +140,4 @@ The `<name>` in the route URL is a placeholder - any name you put there will be 
 
 Note that the variable passed though the URL is a string. If you want it to be another type, you can manually convert it. You can also specify the type in the URL like [this](http://flask.pocoo.org/docs/1.0/quickstart/#variable-rules).
 
-Let's say we have a normal Python function 
+Let's say we have a normal Python function
