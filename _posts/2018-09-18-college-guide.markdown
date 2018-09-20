@@ -20,6 +20,8 @@ I was a pretty math-minded person, so this way of teaching programming really re
 
 I owe a lot of my growth in programming, love of computer science, and thoughts about CS education to this teacher. Before taking this class, I didn't think I was really good at any specific topics, and had no idea what I wanted to do with the rest of my life. After this class, I still didn't really know what "computer science" was, but I knew that I at least wanted to give it a shot!
 
+Not much happened my senior year of college. Despite knowing that I wanted to study CS< 
+
 
 
 
