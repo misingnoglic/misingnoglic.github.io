@@ -6,7 +6,7 @@ date:   2018-09-16 00:10:00
 categories: [Java, Python, Technical, Educational]
 ---
 
-**Note: If you haven't read [part 1]() or [part 2](), please do so! This post will be building off the previous material, and I promise they're at least semi-entertaining/useful.**
+**Note: If you haven't read [part 1](https://aryaboudaie.com/java/python/technical/educational/2017/11/13/python-for-java-programmers.html) or [part 2](https://aryaboudaie.com/java/python/technical/educational/2018/09/16/python-for-java-programmers-p2.html), please do so! This post will be building off the previous material, and I promise they're at least semi-entertaining/useful.**
 
 # Introduction
 
