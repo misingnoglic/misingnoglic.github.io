@@ -212,6 +212,37 @@ You can play with it here:
 
 Now imagine you had a list of people you wanted to hire, but didn't have room for. You have now a list of `potential_employees`, and whenever you have room to hire someone, you want to hire the person who's been waiting the longest. You could do `potential_employees.pop(0)` to remove them from potential_employees, and then add them to `employees`! That's a much better example! If you use a list in the `Last In First Out` (LIFO) model, it's called a `Stack`, and the list is used in the `First in First Out` (FIFO) model, it's called a Queue. These are good CS words to know, if you aren't already familiar.
 
+### range(stop)
+
+`range()` is a function that returns an "range object", which is kind of like a list that isn't evaluated until you actually need the item you're asking from it.
+
+`range(stop)` will return an iterator from 0 up until the stop number. Just like list indexing, you can also give it a start, and a skip. For convenience I'll convert them to lists, but when you use them you mostly won't have to:
+
+{% highlight python %}
+>>> list(range(5))
+[0, 1, 2, 3, 4]
+>>> list(range(1, 5))
+[1, 2, 3, 4]
+>>> list(range(20, 100, 5))
+[20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95]
+>>> list(range(10,0,-1))
+[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+{% endhighlight %}
+
+If you give range() one parameter, it will return the range object from 0 until the parameter (not including the parameter). If you give it two parameters, it will return an object starting from the first parameter up to the second parameter. If you give it three parameters, it will use the third one as a `skip`, so it will skip by that number for each entry. So `range(1, 5)` will give the numbers `[1, 2, 3, 4]`, and `range(20, 100, 5)` will give all the numbers from 20 up to 100, skipping by 5 every time.
+
+If you don't convert it into a list, a range object will just show you this:
+
+{% highlight python %}
+>>> x = range(100)
+>>> print(x)
+range(0, 100)
+{% endhighlight %}
+
+So it hasn't actually computed anything. So why did the creators of Python decide to make range lazy? Let's say you wanted to do something for every number from 0 to a billion. If range() wasn't lazy, it would have to store each item from 0 to a billion in a list somewhere in memory, which would be highly inefficient. It's much easier to just not get the number until you need it, and then convert it into a list if you really need it as a list.
+
+(Note, in the 2.x version of Python, range() returned a list, and you needed to use xrange() to return a range object).
+
 ### remove(item)
 
 nums.remove(item) will remove the first instance of `item` from `nums`. This is fairly self explanatory.
@@ -224,7 +255,13 @@ print(nums)  # [1, 3]
 
 ### reverse()
 
-We'll get to this one later.
+We'll get to this one later, when we talk about iterators. For now though, if you want to reverse a list, you have to convert it into a list like this:
+
+{% highlight python %}
+nums = [1, 2, 3]
+reversed_nums = list(reversed(nums))
+{% endhighlight %}
+
 
 ### sort()
 
@@ -332,7 +369,9 @@ There is one more feature of lists though that's too awesome to not mention.
 
 I'll just say this: list comprehensions are amazing. If you can master list comprehensions, you'll be able to take something that took several lines of Java to build, and do it in a single line. They're seriously quick, readable, and easy to start using once you get how they work. They have the added benefit of avoiding bugs as well! Ok - I think I've hyped them up enough - now what exactly do they do?
 
-List comprehensions let you create a new list out of an old list, without using any sort of loops. For example: let's say we have a list of grades for a test, and we want to curve everyone up by 10 points. In Java, that would look something like this:
+### Mapping
+
+List comprehensions let you create a new list out of an old list, without using any sort of loops. If you give the list comprehension some kind of function to `map` onto the list, you'll get the new list. For example: let's say we have a list of grades for a test, and we want to curve everyone up by 10 points. In Java, that would look something like this:
 
 {% highlight java %}
 // let's say we already have our list of grades
@@ -353,8 +392,240 @@ Ok, let's break this down:
 
 If you read the list comprehension as it looks, "x plus ten for x in grades," I think it will start to make sense.
 
-TODO: add some examples.
+Example: You have a list of grades out of 100, and you want to turn it into a list of decimal grades:
 
-Example: First element of every list in list.
+{% highlight python %}
+new_grades = [x/100 for x in grades]
+{% endhighlight %}
 
-List comprehensions can also help you filter down lists, based on criteria. For example: let's say you have a list of students, where each student is represented as a list of `[name, has_extra_time]`, where `has_extra_time` is a boolean
+You can also use the range() function in list comprehensions to create a new list from an iterator returned by range. For example, if you want all of the numbers from 1 to 100 squared, you can do:
+
+{% highlight python %}
+squared = [x*2 for x in range(10)]
+{% endhighlight %}
+
+Your expression doesn't even have to involve `x`. For example, if you wanted a list of 100 zeroes, you could do something like this:
+
+{% highlight python %}
+zeroes = [0 for x in range(100)]
+{% endhighlight %}
+
+Notice how the function part doesn't involve `x`, even though we called each item in the list `x`. This is equivalent to if we did the following:
+
+{% highlight python %}
+def f(x):
+  return 0
+
+
+zeroes = [f(x) for x in range(100)]
+{% endhighlight %}
+
+In the end, we get a list of 100 zeroes.
+
+### Filtering
+
+Lists comprehensions can also be used to filter lists based on some criteria. Here's a toy example - if you have a list, and you want to get all of the even numbers from that list:
+
+{% highlight python %}
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+even_nums = [x for x in nums if x%2==0]
+{% endhighlight %}
+
+Or all of the numbers greater than 50:
+
+{% highlight python %}
+big_nums = [x for x in nums if x>50]
+{% endhighlight %}
+
+To break this down:
+
+- `x for x in nums` just means to return just x, not some modification of x. If it was `x+2 for x in nums`, it would be adding 2 to each number.
+- `if x > 50` will only put the numbers in the list if they are greater than 50.
+
+So the full form of the list comprehension is as follows (though the `if` part is optional):
+
+{% highlight python %}
+new_list = [f(item) for item in old_list if some_criteria(item)]
+{% endhighlight %}
+
+Where `f(item)` is some function that takes in `item` and returns something new, and `some_criteria` is some function that returns a boolean. You don't need to create a new function - as you see from the above examples you can just put the expressions in directly.
+
+You can also use `range` in a list comprehension with filtering. For example, if you had a function `is_prime` which returned if a number is prime, you could do something like this to get all the primes from 1 to 150:
+
+{% highlight python %}
+primes = [x for x in range(1,150) if is_prime(x)]
+{% endhighlight %}
+
+### Going through nested lists.
+
+A lot of times while programming, you will be dealing with functions and APIs that return nested lists to you. List comprehensions allow you to navigate through those lists and return the data you want in the format you want it in. For example, let's say you have a list of students, where each student is represented by a list of two items, their name and their grade in the class. So something like this:
+
+{% highlight python %}
+students = [["Sam", 80], ["Carly", 90], ["Dmitri", 65], ["Parisa", 100]]
+{% endhighlight %}
+
+If you want to get a list of all the students whose grades are under a 70, you can write a list comprehension like this:
+
+{% highlight python %}
+failing_students = [student[0] for student in students if student[1]<70]
+{% endhighlight %}
+
+Remember that students is a list of lists, so `student` in each case will be a list, where student[0] is the name and student[1] is the grade. To make this more clean, you can even do something like this:
+
+{% highlight python %}
+failing_students = [name for name, grade in students if grade<70]
+{% endhighlight %}
+
+Python lets you assign multiple variables in one line, kind of like this:
+
+{% highlight python %}
+x, y = [1, 2]
+print(x)  # 1
+print(y)  # 2
+{% endhighlight %}
+
+So by doing `for name, grade in students`, it's taking each list of two items in `students` and assigning the first item to `name` and the second item to `grade`.
+
+# Iterators and Looping
+
+Now that you have lists, and I've taught you how to use them without loops, you may still be wondering "well how do I actually loop through the list though?" Sigh... some people never break out of their Java habits.
+
+But seriously, before you write a loop, think "can I do this without a loop?" If the answer is yes, then do it without a loop. However, if your problem is not simple enough to do in a list comprehension, then you may well use a loop.
+
+Python has two kinds of loops. The first one, the `while` loop, works exactly like the Java while loop, except you don't need parentheses. Here's a simple example:
+
+{% highlight python %}
+x = 0
+while x<10:
+  print(x)
+  x += 1
+{% endhighlight %}
+
+This loop has the same issue as Java's, where if you're not careful, your loop can potentially go on forever (e.g. if I forgot to add `1` to `x` every time). There's not much more to say about this kind of loop.
+
+The second kind of loop is the `for` loop. This kind of loop acts like the `for each` loop in Java:
+
+{% highlight java %}
+for (int num : nums){
+  System.out.println(num);
+}
+{% endhighlight %}
+
+The Python one is very similar. Here is the syntax:
+
+{% highlight python %}
+for x in nums:
+  print(x)
+{% endhighlight %}
+
+Just like the list comprehension, if you have a list, you can assign each item to a variable name, and then do something for each item in the list. In the above case, it will print every item of `nums`.
+
+You might wonder why there's nothing like the regular `for` loop in Java, like this:
+
+{% highlight java %}
+for (int i = 0; i<10; i++){
+  System.out.println(i);
+}
+{% endhighlight %}
+
+The reason is that you can mostly handle anything you need to do with these two kinds of loops, plus list comprehensions. If you want to loop through all the numbers from 0 to 10, you can do something like this:
+
+{% highlight python %}
+for i in range(10):
+  print(i)
+{% endhighlight %}
+
+Or if you really need the indexes of items in the list, you can do something like this:
+
+{% highlight python %}
+nums = [1, 2, 3, 4, 5]
+for i in range(len(nums)):
+  if i>0:
+    # Print each item plus the number before it.
+    print(nums[i]+nums[i-1])
+{% endhighlight %}
+
+Remember, range() is a function that is lazy, but for each instance of the loop, it will give you the number in the sequence. You do not need to convert it into a list.
+
+So in the end, if you wanted to make a list out of an old list, you could do something like this:
+
+{% highlight python %}
+nums = [1, 2, 3, 4, 5]
+new_nums = []
+for x in nums:
+  new_nums.append(x*10)
+{% endhighlight %}
+
+But isn't it much nicer to write the equivalent:
+
+{% highlight python %}
+nums = [1, 2, 3, 4, 5]
+new_nums = [x*10 for x in nums]
+{% endhighlight %}
+
+# List like objects.
+
+There are a few objects that behave very similarly to lists, and are worth going through here.
+
+## Tuples
+
+The first object is the `tuple`. The tuple is like a list, but it is `immutable`, meaning its contents cannot be changed. In practice, this means that you cannot append to it, and you cannot change its items at any index. You define it with parentheses. For example, if you wanted to represent a point on an x, y plane, you could do so with tuples, where the first item is the x coordinate, and the second item is the y coordinate.
+
+{% highlight python %}
+point = (3, 2)
+{% endhighlight %}
+
+Actually, you don't even need the parentheses. This is equivalent:
+
+{% highlight python %}
+point = 3, 2
+{% endhighlight %}
+
+This is also useful in functions when you want to return two things.
+
+{% highlight python %}
+def complex_function():
+  ...
+  return answer1, answer2
+{% endhighlight %}
+
+This will return a tuple of (answer1, answer2). Generally you want your functions to just do one thing, but there are times that it's nicer to return two things (for example if you're doing some intense computation that you don't want to redo).
+
+Tuples support the same slicing as Python lists, and can be passed into a for loop as well. Use them like you would any other variables, but when that idea needs to contain multiple parts (kind of like an object without methods). You can also always convert a list to a tuple using the `tuple`, or a tuple to a list using the `list` function.
+
+{% highlight python %}
+t = 1, 2, 3, 4, 5
+print(len(t))  # 5
+print(t[0])  # 1
+print(t[-1])  # 5
+print(t[1:-1])  # (2, 3, 4)
+print(t.count(2))  # 1 (1 instance of 2)
+for x in t:
+  print(x)
+print(list(t))  # [1, 2, 3, 4, 5]
+print(6 in t)  # False
+t[0] = 5  # TypeError: 'tuple' object does not support item assignment
+{% endhighlight %}
+
+## Strings
+
+The other type of object in Python that's similar to a list is a String. This makes sense from a design standpoint, since what are strings but just an object that contains a lot of single characters! But in Java, Arrays and Strings have completely different methods on them! You have to remember that arrays use .length, strings use .length(), and Lists use .size(). Additionally, for Java Strings, you have to use .charAt() to get the character at a certain index, or .substring() to get a substring. With Python, it's the same syntax as a list! You index the same way, slice the same way, even compare them in the same way with `==`. The only difference is like the Tuple, the strings are immutable.
+
+{% highlight python %}
+>>> s = "Hello World"
+>>> "Hello" in s
+True
+>>> s[:5]
+'Hello'
+>>> for letter in s[:5]: print(letter)
+
+H
+e
+l
+l
+o
+>>> s.count("o")
+2
+{% endhighlight %}
+
+Strings also have their own methods that are useful for string manipulation, like `.upper()` and `.lower()`. You can see the full list of those (here)[].
