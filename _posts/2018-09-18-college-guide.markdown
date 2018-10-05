@@ -14,15 +14,43 @@ Please let me know what you think in the comments below, either as someone looki
 
 # What exactly is Computer Science?
 
+## What Computer Science Isn't
+
 So you want to study computer science in college, but what exactly is computer science? Maybe you have some programming experience and really like doing it, so you want to keep doing more of it. Programming is definitely a great skill to have for CS, but don't think that programming is all you do in a computer science major. A famous quote that's (wrongly) attributed to Edsger W. Dijkstra goes something like this:
 
 > Computer Science is no more about computers than astronomy is about telescopes.
 
 The quote is trying to say that while programming is used frequently in computer science, it is just a tool to get to the real science, not the end goal itself. Another common confusion I've noticed is that people think computer science is about languages: learning Python in one class, Java in another, SQL in the next, Haskell in another...
 
-Most colleges will have an introduction to programming class, where you will learn a programming language and how to program. However, after this first class, your other classes will not be that laser focused on the language itself. If a class requires you to use a new language (because it's a better tool for understanding the material of the class), then you'll be learning it quick with the expectation that your previous programming knowledge will help expadite the process.
+Most colleges will have an introduction to programming class, where you will learn a programming language and how to program. However, after this first class, your other classes will not be that laser focused on the language itself. If a class requires you to use a new language (because it's a better tool for understanding the material of the class), then you'll be learning it quick with the expectation that your previous programming knowledge will help expedite the process.
 
-So now that I've talked about what computer science __isnt__, let me talk about what it is.
+## What Computer Actually Is
+
+So now that I've talked about what computer science __isnt__, let me talk about what it is. From the [University of Maryland Computer Science website](https://undergrad.cs.umd.edu/what-computer-science):
+
+> Computer Science is the study of computers and computational systems. Unlike electrical and computer engineers, computer scientists deal mostly with software and software systems; this includes their theory, design, development, and application.
+
+> Principal areas of study within Computer Science include artificial intelligence, computer systems and networks, security, database systems, human computer interaction, vision and graphics, numerical analysis, programming languages, software engineering, bioinformatics and theory of computing.
+
+> Although knowing how to program is essential to the study of computer science, it is only one element of the field. Computer scientists design and analyze algorithms to solve programs and study the performance of computer hardware and software. The problems that computer scientists encounter range from the abstract-- determining what problems can be solved with computers and the complexity of the algorithms that solve them – to the tangible – designing applications that perform well on handheld devices, that are easy to use, and that uphold security measures.
+
+Basically - while you can use programming in computer science, computer science is more interested in studying the problems that can be solved with computers and programming. A lot of computer science is based in math and proofs, for example proving certain features about a certain algorithm. That being said, different programs have different focuses. Some programs are completely based in theory, and expect you to learn everything practical about software engineering on your own time. Other programs are very software engineering focused, and actively try to prepare you for a job after college. And many more are somewhere in between.
+
+Here are some examples of classes that are common to many computer science programs:
+
+* Data Structures & Algorithms - Probably the most ubiquitous of computer science classes, it will teach you about different ways to store and manage data, and different algorithms to compute information about that data. The class will also teach you how to prove different aspects of algorithms in a mathematical sense, such as proving their runtime.
+
+* Operating Systems - This class will teach you about the software, systems, and algorithms required to program an operating system. For example, one of the problems operating systems have to solve is how to run many applications at the same time, each with their own requirements.
+
+* Theory of Computation - A very theoretical class that teaches about what computing is in a mathematical sense. You'll end up learning about how little you need to actually run programs, as well as how to prove that certain problems can't be solved at all.
+
+* Compilers - A class that will teach you about how compilers work
+
+* Software Engineering
+* Graphics
+* Cryptography
+
+The general idea is not teaching you about the tools that are currently being used (since the latest tools become outdated fast), but to teach you about the theory and introductions to the fields in computer science, so you can decide what to specialize in after. Many colleges let you choose your own electives, so after taking your required classes, you can choose what you want to focus on.
 
 # (Quick) Introduction to Myself
 
@@ -32,11 +60,11 @@ I started programming my junior year of high school. I had tried learning progra
 
 I was a pretty math-minded person, so this way of teaching programming really resonated with me, and really made me want to learn as much as I possibly could about programming. As soon as I got started, I knew that I loved solving coding problems, and I would blow off my other work to solve problems on Coding Bat or Project Euler.
 
-I owe a lot of my growth in programming, love of computer science, and thoughts about CS education to this teacher. Before taking this class, I didn't think I was really good at any specific topics, and had no idea what I wanted to do with the rest of my life. After this class, I still didn't really know what "computer science" was, but I knew that I at least wanted to give it a shot! Not much happened my senior year of college. Despite knowing that I wanted to study CS, my school really didn't have anywhere to continue after that class unless you wanted to join robotics (which with my heavy band schedule I did not want to do). I tried to petition my school to create an AP CSA class, but they would not implement that until the year after I left. 
+I owe a lot of my growth in programming, love of computer science, and thoughts about CS education to this teacher. Before taking this class, I didn't think I was really good at any specific topics, and had no idea what I wanted to do with the rest of my life. After this class, I still didn't really know what "computer science" was, but I knew that I at least wanted to give it a shot! Not much happened my senior year of college. Despite knowing that I wanted to study CS, my school really didn't have anywhere to continue after that class unless you wanted to join robotics (which with my heavy band schedule I did not want to do). I tried to petition my school to create an AP CSA class, but they would not implement that until the year after I left.
 
 In terms of colleges, I really did not know that much about college. My GPA was fairly mediocre, so I knew I wouldn't get into anywhere amazing. I pretty much just applied to everywhere under the sun, with the hopes that one of them would work out with financial aid as well as have a good computer science program. I really should have done more research at this point, but everything surprisingly worked out.
 
-I only ended up applying to the school I ended up going to, Brandeis University, because my best friend's parents met there and thought I would like it. Brandeis is a fairly small research university in Waltham Massachusetts 
+I only ended up applying to the school I ended up going to, Brandeis University, because my best friend's parents met there and thought I would like it. Brandeis is a fairly small research university in Waltham Massachusetts
 
 
 Now that I've gone through my story, here are my tips:
