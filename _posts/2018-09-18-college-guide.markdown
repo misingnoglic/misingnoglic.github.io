@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Arya's Guide to Studying Computer Science in College"
-subtitle: "Variables, Types, If Statements, and Functions"
+title:  "Arya's Guide to Studying College in Computer Science: Part 1"
+subtitle: "What is Computer Science, and what should you look for in a good school?"
 date:   2018-09-16 23:10:00
 categories: [Educational]
 ---
@@ -36,7 +36,7 @@ So now that I've talked about what computer science __isnt__, let me talk about 
 
 Basically - while you can use programming in computer science, computer science is more interested in studying the problems that can be solved with computers and programming. A lot of computer science is based in math and proofs, for example proving certain features about a certain algorithm. That being said, different programs have different focuses. Some programs are completely based in theory, and expect you to learn everything practical about software engineering on your own time. Other programs are very software engineering focused, and actively try to prepare you for a job after college. And many more are somewhere in between.
 
-Here are some examples of classes that are common to many computer science programs:
+Here are some examples of classes that are common to many computer science programs, many of which have follow-ups you can take if decide you're interested in that specific field.
 
 * Data Structures & Algorithms - Probably the most ubiquitous of computer science classes, it will teach you about different ways to store and manage data, and different algorithms to compute information about that data. The class will also teach you how to prove different aspects of algorithms in a mathematical sense, such as proving their runtime.
 
@@ -44,34 +44,85 @@ Here are some examples of classes that are common to many computer science progr
 
 * Theory of Computation - A very theoretical class that teaches about what computing is in a mathematical sense. You'll end up learning about how little you need to actually run programs, as well as how to prove that certain problems can't be solved at all.
 
-* Compilers - A class that will teach you about how compilers work
+* Compilers - A class that will teach you about how compilers work. This involves problems like how to parse code from programming languages, and translate it into another language like machine code.
 
-* Software Engineering
-* Graphics
-* Cryptography
+* Software Engineering - This class will teach you about the principles of being a software engineer and the tools you'll need to succeed in a career as a software engineer. This will probably involve learning a programming framework for building software, guidance on how to flesh out an idea and make it useful, and ways to manage the workload of creating functional software.
+
+* Graphics - This class will teach you about the math and rendering that goes on to create computer graphics. It's wild how much is going on behind the scenes there!
+
+* Cryptography - A very math heavy class which will teach you about how to encrypt messages in a mathematical secure way. This is an extremely relevant topic now, with lots of software and political debate about encryption, so it's great to take a class and actually learn what goes behind encrypting messages and data.
+
+* Computational Linguistics - This class will teach you about the field of computational linguistics, which involves using computer science techniques to analyze and parse text. This is especially useful now with all of our voice devices that we can talk to.
+
+* Databases - Sort of like operating systems, this class will teach you about the engineering behind creating a database, how to use one, and what goes on exactly when you query for data.
 
 The general idea is not teaching you about the tools that are currently being used (since the latest tools become outdated fast), but to teach you about the theory and introductions to the fields in computer science, so you can decide what to specialize in after. Many colleges let you choose your own electives, so after taking your required classes, you can choose what you want to focus on.
 
-# (Quick) Introduction to Myself
+Now that you know what computer science is, let me give my tips for finding a good school for you.
 
-Before I start giving advice, I figure that I should give you an overview of my whole experience with programming. Whenever you hear advice from someone, you should know where they're coming from, since that's where their advice comes from! So let me give you a little introduction!
+# Tips on finding a good school
 
-I started programming my junior year of high school. I had tried learning programming before, but it's not like today where there are so many resources online for that, so I was pretty stuck. My high school did not offer a regular computer science class, but we had one teacher that was extremely enthusiastic about teaching coding, so he created his own class called "Computational Math Analysis." It was a really cool class, where we learned all of the topics others were learning in pre-calculus, but with the programming language Python.
+These are my general tips that I like to give when advising people on what school to go to for computer science. Remember that these are not necessarily "correct", but just advice based on my lived experiences. I personally went to Brandeis University, which is a small liberal arts type school near Boston, and double majored in computer science and music. I really liked my experience (which I may blog about later), but there are some things from bigger more established schools that I wish Brandeis had to offer. That being said, here are my suggestions of things to look out for.
 
-I was a pretty math-minded person, so this way of teaching programming really resonated with me, and really made me want to learn as much as I possibly could about programming. As soon as I got started, I knew that I loved solving coding problems, and I would blow off my other work to solve problems on Coding Bat or Project Euler.
+## Tip 1: Find a good school FOR YOU.
 
-I owe a lot of my growth in programming, love of computer science, and thoughts about CS education to this teacher. Before taking this class, I didn't think I was really good at any specific topics, and had no idea what I wanted to do with the rest of my life. After this class, I still didn't really know what "computer science" was, but I knew that I at least wanted to give it a shot! Not much happened my senior year of college. Despite knowing that I wanted to study CS, my school really didn't have anywhere to continue after that class unless you wanted to join robotics (which with my heavy band schedule I did not want to do). I tried to petition my school to create an AP CSA class, but they would not implement that until the year after I left.
+My most important tip is to try and find a school that will be a good fit for you. A lot of people think that the best school they could go to is the one with the best connections and the highest rank on US News rankings. This is __definitely__ not the way to go. First of all, these rankings are mostly meaningless, with many of the points that go into these rankings having nothing to do with your education or computer science in general. It may be more useful for your future to go to a highly esteemed school, but it will be much better for you to go to a school that can help build your skills, your connections, your resume, and all in a healthy and happy way. Of course rankings are somewhat important and indicative of quality, but the difference between a \#20 and a \#40 school may not be worth it. You will not do yourself any favors by being somewhere you hate for four years just to have an impressive school on your resume.
 
-In terms of colleges, I really did not know that much about college. My GPA was fairly mediocre, so I knew I wouldn't get into anywhere amazing. I pretty much just applied to everywhere under the sun, with the hopes that one of them would work out with financial aid as well as have a good computer science program. I really should have done more research at this point, but everything surprisingly worked out.
+## Tip 2: Don't put all your eggs in one basket.
 
-I only ended up applying to the school I ended up going to, Brandeis University, because my best friend's parents met there and thought I would like it. Brandeis is a fairly small research university in Waltham Massachusetts
+By this I mean - don't pick your school only computer science in mind. There may be a school with a great computer science program, but where you don't see yourself as being happy because of the location or size or culture. I'm not saying you shouldn't go to this hypothetical school, but it would be good to consider all of your options. This is for two reasons really.
 
+First of all, even if your heart is dead set on computer science right now, you never know what it will be like once you get to college. You may realize that you like coding, but you really want to use your college years to specialize in something like Biology, and use coding in something like computational biology. You never know where you'll end up in four years, so it's good not to box yourself into a single subject.
 
-Now that I've gone through my story, here are my tips:
+The other reason is simply that if you love computer science, you still want to make sure that you're getting the well rounded education you deserve. You must have interests besides computer science, and you owe it to yourself to go to the school that supports you fully the best. For example, if you love playing music, you may want to consider somewhere with a good music program, or at least a decent music department that a super technical school may not have. So make a list of all the things
 
-# Tip 1: Find a good school FOR YOU.
+## Tip 3: Make sure the school has a decent Computer Science program!
 
-My most important tip is to try and find a school that will be a good fit for you. A lot of people think that the best school they could go to is the one with the best connections and the highest rank on  
+Computer Science is a hot topic right now, and a lot of schools are trying to cash in on the trend. This means you have to be alert, and make sure the school you're trying to go to has a program for computer science that will help you grow your skills and make you marketable once you're graduated. Most computer science programs are fairly fine, but there are a few things to check out first.
 
+First of all, make sure the school has an actual computer science major. There are a lot of "spinoff" majors, that sound like things such as "information systems", "computer systems", "computer information systems", "computer management", "information technology", and other names of this sort. These are different things, and great things to study if you want to, but they are __not__ computer science.
 
-<iframe src="https://www.youtube.com/embed/IGQBtbKSVhY" width="600" height="450" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen="" ></iframe>
+Second of all, check out their computer science program and course offerings. You can go to most university websites and see the classes they offer that semester, as well as the classes that they normally offer. See how well they correlate to the list I put above, as well as how they compare to other universities. Do
+
+Additionally, look through some of the professors. It's a good sign if they got their PhDs at good schools, and have good backgrounds in computer science. Another thing to check for is research that they actively work on, but note that if they are working at a primarily teaching school, then research may not be a focus of theirs. Doing a quick Google search should bring up their university website, or at least their LinkedIn profile.
+
+Another great thing to check for is student life for computer science majors. Does the school host a hackathon every year? Is there a hacker club that has lots of fun events, educational events, career events or hack nights? Does the student body have a track record for mentoring younger students and teaching them how to develop their skills and advance through college? Remember that your classes will primarily be about theory, so a good student CS club should be able to balance that by giving you the resources to learn about practical coding, and what you need to get your next internship or job.
+
+Finally, check out the recruiting on campus for computer science jobs. Do local companies actively come to your university to recruit? What about big tech companies like Google, Amazon, and Microsoft? Does your the school have a career fair? How big is it, and who comes? Does your school have an career center, and do they have specific help related to software jobs? The world of software recruiting is very different from other fields, so it's very useful to have people that know what they're talking about. Finally, where are people from that school going to after they graduate? Doing a quick LinkedIn search should help you find out if people are going to good companies and getting software engineer jobs after studying at your school.
+
+A lot of these questions you can find out on your own by doing your own research, but a lot of them can only be answered by talking to people who study computer science at the school you're researching. Don't be afraid to go to a Facebook group like [Hackathon Hackers](https://www.facebook.com/groups/hackathonhackers/) or [Ladies Storm Hackathons](https://www.facebook.com/groups/LadiesStormHackathons/) and ask to speak to someone who goes to the school you're interested in to ask them these questions. Current students and alumni are the best ones to talk to, since they'll have no incentive to butter things up for you, unlike someone in admissions.
+
+This seems like a lot of research, but college is a huge investment, so you want to make sure you're going to a great place for you, and that you have all the information you need to make the right decision for you.
+
+## Tip 4: Ask the right questions to get you to the right place.
+
+Once you have a decent idea of what you're looking for in terms of a good school for you, you can start thinking about all the things that are important to you, and try to find schools that match those profiles. I'm going to list some big topics here, with some pros and cons, so hopefully you can try to chart yourself somewhere on this list.
+
+### Big school versus small school
+
+Probably the most iconic college decision is whether you'd rather go to a small school with a small student body, or a larger school with massive numbers of students. There are probably a billion think pieces on which is better in a general sense, so I'll just give some thoughts about these types of schools in general. At a big school, you're likely to have more professors to choose from, more computer science classes you can take (especially the specialized ones), and it's more likely that companies will come to your school to recruit, since there are more people there. That being said, it will be harder to stand out at a larger school, since there are so many people, and it will be harder to make personal connections with professors. A smaller school will likely offer you more individualized attention, smaller class sizes that are easier to get into, and in general make it easier to stand out and be unique. A big school may have more opportunities, but it will be easier to seize those opportunities at a smaller school with less competition.
+
+### Well Known for Computer Science vs Not
+
+There are some schools that are just known for being amazing for computer science. Schools like UC Berkeley, Georgia Tech, University of Michigan, and others may come into mind right now. It may seem like a no-brainer to go to one of those, and maybe it is, but you should at least think about both sides of the coin. At one of these prestigious computer science schools, you can expect top professors doing cutting edge research, genius students with huge egos who are building startups their freshman year, and difficult classes that will grow and challenge you. This may sound like a dream come true for some people, and a nightmare for others, since it may foster competitiveness and create burnout. The classes will be tough, and you will probably not be the smartest person in the room. In general though, these schools will look the best on resumes, will have the best recruiting for top companies, and will have great student clubs and hackathons that you can learn from. Going to a school that isn't considered the "best" for computer science may mean taking a downgrade on those perks, but in general it will be less competitive and stressful, meaning you could even take some non CS classes that interest you. A less well known school will also make it easier to stand out to your professors or to recruiters that make it there, since there is less competition. In the end, it's all about preference here, plus where you get accepted to.
+
+### Technical vs Non Technical school.
+
+There are certain schools that have a very "technical" aspect to them, meaning they are more focused on technical STEM fields, rather than a full liberal arts education. If you're someone who wants to be totally focused on STEM, these schools could be a great environment for you! However, I'm very happy with the fully rounded liberal arts education I got from Brandeis, and I feel like the skills I learned in my humanities classes have really helped me grow as a software engineer.
+
+ In general, these technical schools will be very rigorously focused on technical skill
+
+# Conclusion
+
+Future topics I may blog about, depending on interest from others:
+
+* Interviewing people who went to different schools.
+* How to succeed as a computer science major.
+* How to get your first software engineering internship.
+* What to do after your first CS class.
+* Why humanities is important for Software Engineers.
+
+Topics I am currently working on:
+
+* Python for Java Programmers 3
+* How to make website with Python in 7 lines of code using Flask.
