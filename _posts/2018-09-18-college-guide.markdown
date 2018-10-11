@@ -82,7 +82,7 @@ Computer Science is a hot topic right now, and a lot of schools are trying to ca
 
 First of all, make sure the school has an actual computer science major. There are a lot of "spinoff" majors, that sound like things such as "information systems", "computer systems", "computer information systems", "computer management", "information technology", and other names of this sort. These are different things, and great things to study if you want to, but they are __not__ computer science.
 
-Second of all, check out their computer science program and course offerings. You can go to most university websites and see the classes they offer that semester, as well as the classes that they normally offer. See how well they correlate to the list I put above, as well as how they compare to other universities. Do
+Second of all, check out their computer science program and course offerings. You can go to most university websites and see the classes they offer that semester, as well as the classes that they normally offer. See how well they correlate to the list I put above, as well as how they compare to other universities. What is required to major? Do they offer good courses that you could see yourself enjoying?
 
 Additionally, look through some of the professors. It's a good sign if they got their PhDs at good schools, and have good backgrounds in computer science. Another thing to check for is research that they actively work on, but note that if they are working at a primarily teaching school, then research may not be a focus of theirs. Doing a quick Google search should bring up their university website, or at least their LinkedIn profile.
 
@@ -90,9 +90,7 @@ Another great thing to check for is student life for computer science majors. Do
 
 Finally, check out the recruiting on campus for computer science jobs. Do local companies actively come to your university to recruit? What about big tech companies like Google, Amazon, and Microsoft? Does your the school have a career fair? How big is it, and who comes? Does your school have an career center, and do they have specific help related to software jobs? The world of software recruiting is very different from other fields, so it's very useful to have people that know what they're talking about. Finally, where are people from that school going to after they graduate? Doing a quick LinkedIn search should help you find out if people are going to good companies and getting software engineer jobs after studying at your school.
 
-A lot of these questions you can find out on your own by doing your own research, but a lot of them can only be answered by talking to people who study computer science at the school you're researching. Don't be afraid to go to a Facebook group like [Hackathon Hackers](https://www.facebook.com/groups/hackathonhackers/) or [Ladies Storm Hackathons](https://www.facebook.com/groups/LadiesStormHackathons/) and ask to speak to someone who goes to the school you're interested in to ask them these questions. Current students and alumni are the best ones to talk to, since they'll have no incentive to butter things up for you, unlike someone in admissions.
-
-This seems like a lot of research, but college is a huge investment, so you want to make sure you're going to a great place for you, and that you have all the information you need to make the right decision for you.
+A lot of these questions you can find out on your own by doing your own research, but a lot of them can only be answered by talking to people who study computer science at the school you're researching. Don't be afraid to go to a Facebook group like [Hackathon Hackers](https://www.facebook.com/groups/hackathonhackers/) or [Ladies Storm Hackathons](https://www.facebook.com/groups/LadiesStormHackathons/) and ask to speak to someone who goes to the school you're interested in to ask them these questions. Current students and alumni are the best ones to talk to, since they'll have no incentive to butter things up for you, unlike someone in admissions. This seems like a lot of research, but college is a huge investment, so you want to make sure you're going to a great place for you, and that you have all the information you need to make the right decision for you.
 
 ## Tip 4: Ask the right questions to get you to the right place.
 
@@ -110,19 +108,28 @@ There are some schools that are just known for being amazing for computer scienc
 
 There are certain schools that have a very "technical" aspect to them, meaning they are more focused on technical STEM fields, rather than a full liberal arts education. If you're someone who wants to be totally focused on STEM, these schools could be a great environment for you! However, I'm very happy with the fully rounded liberal arts education I got from Brandeis, and I feel like the skills I learned in my humanities classes have really helped me grow as a software engineer.
 
- In general, these technical schools will be very rigorously focused on technical skill
+In general, these technical schools will be very rigorously focused on a technical STEM education, meaning that there will be few to no general education requirements for your classes. Instead, a CS major may have you taking classes in engineering, physics, or chemistry, even though these classes have little to do with an actual computer science degree. The curriculum will be very focused, and by putting in the work you will get the technical education that the school has designed. These schools are also seen as more "nerdy" than schools that are less technical. Studying at a non technical school will allow you to take more humanities classes, and get a more rounded education. There is also a lower chance that you'll have to take those random science classes like chemistry. I'm not trying to make one sound better or worse, but if in your head one of these sounded better, there's a good chance that you would like that type of school!
+
+These are the big questions I had in mind, but I'm sure there's plenty others. Let me know what other categories you've been considering in the comments!
 
 # Conclusion
 
-Future topics I may blog about, depending on interest from others:
+In conclusion, there's a lot of factors that go into choosing whether you want to study computer science, and what type of school is right for you. Don't stress out too much over this though! I hardly did any research before choosing Brandeis University, and I still think I ended up in the right place for me. College is such a personal choice, so I hope I made it easier and not harder for you to do research about computer science schools. In the end, it's all about your personal preferences, and what school seems best for you in the end. 
+
+Thank you everyone, I hope this was helpful! Please leave a comment letting me know what you think, or just shoot me an email! If you liked this post, please share it with your friends or on an applicable Facebook group or subreddit, as I don't do that much advertising. Word of mouth really does help my posts reach wider audiences! 
+
+
+Future related topics I may blog about, depending on interest from others. Shoot me an email if any of these sound interesting!
 
 * Interviewing people who went to different schools.
 * How to succeed as a computer science major.
 * How to get your first software engineering internship.
 * What to do after your first CS class.
 * Why humanities is important for Software Engineers.
+* Different types of CS jobs.
 
 Topics I am currently working on:
 
 * Python for Java Programmers 3
 * How to make website with Python in 7 lines of code using Flask.
+
