@@ -16,6 +16,8 @@ Hey everyone! I know normally these blogs are geared towards an older audience, 
 
 I was asked to talk at two separate high school AP Computer Science classes, and I talked to the students about what it really means to study Computer Science in college. Being a recent college graduate, I still remember a lot of the questions and anxieties I had about choosing a college and what to expect. I had taken one programming class in my junior year, and beside that I really didn't know what computer science really was, or what it meant to be studying it really. I decided to write this post so that I can spread my experience to many more people than just two classrooms, and make sure y'all know what you're getting into!
 
+This post is in two parts - the first will explain what computer science is, and the second will be my five tips to choosing a great computer science school for you.
+
 Please let me know what you think in the comments below, either as someone looking into college or as someone whose been through the process. You can always [shoot me an email](mailto:arya@aryaboudaie.com) as well! If you're a teacher, let me know if you'd like me to come talk to your class :)
 
 # What Exactly is Computer Science?
