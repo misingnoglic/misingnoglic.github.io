@@ -4,6 +4,7 @@ title:  "Arya's Guide to Studying College in Computer Science: Part 1"
 subtitle: "What is Computer Science, and what should you look for in a good school?"
 date:   2018-09-16 23:10:00
 categories: [Educational]
+hide: true
 ---
 
 Hey everyone! I know normally these blogs are geared towards an older audience, but I'm hoping to use this blog as a way to make computer science more inclusive at all levels! So to all my high school age readers, welcome, and I hope this post is useful to you! If this is out of your age range, I'd love for you to still read this and share your own experiences, as everyone's experience with college is unique and personal.
