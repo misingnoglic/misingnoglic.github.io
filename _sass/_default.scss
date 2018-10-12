@@ -53,8 +53,8 @@ blockquote {
         font-size: 20px;
         color: $cloudy;
         font-weight: 400;
-        &:before { content: "“ "; }
-        &:after { content: " ”"; }
+        &:before { content: open-quote; }
+        &:after { content: close-quote; }
     }
 }
 
