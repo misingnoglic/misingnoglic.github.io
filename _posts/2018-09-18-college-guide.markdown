@@ -7,19 +7,24 @@ categories: [Educational]
 hide: true
 ---
 
+# Table of Contents
+
+* TOC
+{:toc}
+
 Hey everyone! I know normally these blogs are geared towards an older audience, but I'm hoping to use this blog as a way to make computer science more inclusive at all levels! So to all my high school age readers, welcome, and I hope this post is useful to you! If this is out of your age range, I'd love for you to still read this and share your own experiences, as everyone's experience with college is unique and personal.
 
 I was asked to talk at two separate high school AP Computer Science classes, and I talked to the students about what it really means to study Computer Science in college. Being a recent college graduate, I still remember a lot of the questions and anxieties I had about choosing a college and what to expect. I had taken one programming class in my junior year, and beside that I really didn't know what computer science really was, or what it meant to be studying it really. I decided to write this post so that I can spread my experience to many more people than just two classrooms, and make sure y'all know what you're getting into!
 
 Please let me know what you think in the comments below, either as someone looking into college or as someone whose been through the process. You can always [shoot me an email](mailto:arya@aryaboudaie.com) as well! If you're a teacher, let me know if you'd like me to come talk to your class :)
 
-# What exactly is Computer Science?
+# What Exactly is Computer Science?
 
 ## What Computer Science Isn't
 
 So you want to study computer science in college, but what exactly is computer science? Maybe you have some programming experience and really like doing it, so you want to keep doing more of it. Programming is definitely a great skill to have for CS, but don't think that programming is all you do in a computer science major. A famous quote that's (wrongly) attributed to Edsger W. Dijkstra goes something like this:
 
-> Computer Science is no more about computers than astronomy is about telescopes.
+> Computer science is no more about computers than astronomy is about telescopes.
 
 The quote is trying to say that while programming is used frequently in computer science, it is just a tool to get to the real science, not the end goal itself. Another common confusion I've noticed is that people think computer science is about languages: learning Python in one class, Java in another, SQL in the next, Haskell in another...
 
@@ -27,15 +32,13 @@ Most colleges will have an introduction to programming class, where you will lea
 
 ## What Computer Actually Is
 
-So now that I've talked about what computer science __isnt__, let me talk about what it is. From the [University of Maryland Computer Science website](https://undergrad.cs.umd.edu/what-computer-science):
+So now that I've talked about what computer science __isn't__, let me talk about what it is. From the [University of Maryland Computer Science Department website](https://undergrad.cs.umd.edu/what-computer-science), I found this really good quote:
 
-> Computer Science is the study of computers and computational systems. Unlike electrical and computer engineers, computer scientists deal mostly with software and software systems; this includes their theory, design, development, and application.
-
-> Principal areas of study within Computer Science include artificial intelligence, computer systems and networks, security, database systems, human computer interaction, vision and graphics, numerical analysis, programming languages, software engineering, bioinformatics and theory of computing.
+> Computer Science is the study of computers and computational systems. Unlike electrical and computer engineers, computer scientists deal mostly with software and software systems; this includes their theory, design, development, and application. Principal areas of study within Computer Science include artificial intelligence, computer systems and networks, security, database systems, human computer interaction, vision and graphics, numerical analysis, programming languages, software engineering, bioinformatics and theory of computing.
 
 > Although knowing how to program is essential to the study of computer science, it is only one element of the field. Computer scientists design and analyze algorithms to solve programs and study the performance of computer hardware and software. The problems that computer scientists encounter range from the abstract-- determining what problems can be solved with computers and the complexity of the algorithms that solve them – to the tangible – designing applications that perform well on handheld devices, that are easy to use, and that uphold security measures.
 
-Basically - while you can use programming in computer science, computer science is more interested in studying the problems that can be solved with computers and programming. A lot of computer science is based in math and proofs, for example proving certain features about a certain algorithm. That being said, different programs have different focuses. Some programs are completely based in theory, and expect you to learn everything practical about software engineering on your own time. Other programs are very software engineering focused, and actively try to prepare you for a job after college. And many more are somewhere in between.
+Basically - while programming is a useful skill in computer science, computer science is more interested in studying the problems that can be solved with computers and programming. A lot of computer science is based in math and proofs, for example proving certain features about a certain algorithm. That being said, different computer science programs have different focuses. Some are completely based in theory, and expect you to learn everything practical about software engineering on your own time. Other programs are very software engineering focused, and actively try to prepare you for a job after college. And many more are somewhere in between, so it's a matter of finding the right program for you.
 
 Here are some examples of classes that are common to many computer science programs, many of which have follow-ups you can take if decide you're interested in that specific field.
 
@@ -61,7 +64,7 @@ The general idea is not teaching you about the tools that are currently being us
 
 Now that you know what computer science is, let me give my tips for finding a good school for you.
 
-# Tips on finding a good school
+# Tips on Finding a Good School
 
 These are my general tips that I like to give when advising people on what school to go to for computer science. Remember that these are not necessarily "correct", but just advice based on my lived experiences. I personally went to Brandeis University, which is a small liberal arts type school near Boston, and double majored in computer science and music. I really liked my experience (which I may blog about later), but there are some things from bigger more established schools that I wish Brandeis had to offer. That being said, here are my suggestions of things to look out for.
 
@@ -77,9 +80,9 @@ First of all, even if your heart is dead set on computer science right now, you 
 
 The other reason is simply that if you love computer science, you still want to make sure that you're getting the well rounded education you deserve. You must have interests besides computer science, and you owe it to yourself to go to the school that supports you fully the best. For example, if you love playing music, you may want to consider somewhere with a good music program, or at least a decent music department that a super technical school may not have. So make a list of all the things
 
-## Tip 3: Make sure the school has a decent Computer Science program!
+## Tip 3: Make Sure the School Has a Decent Computer Science Program!
 
-Computer Science is a hot topic right now, and a lot of schools are trying to cash in on the trend. This means you have to be alert, and make sure the school you're trying to go to has a program for computer science that will help you grow your skills and make you marketable once you're graduated. Most computer science programs are fairly fine, but there are a few things to check out first.
+Computer science is a hot topic right now, and a lot of schools are trying to cash in on the trend. This means you have to be alert, and make sure the school you're trying to go to has a program for computer science that will help you grow your skills and make you marketable once you're graduated. Most computer science programs are fairly fine, but there are a few things to check out first.
 
 First of all, make sure the school has an actual computer science major. There are a lot of "spinoff" majors, that sound like things such as "information systems", "computer systems", "computer information systems", "computer management", "information technology", and other names of this sort. These are different things, and great things to study if you want to, but they are __not__ computer science.
 
@@ -115,7 +118,7 @@ These are the big questions I had in mind, but I'm sure there's plenty others. L
 
 # Conclusion
 
-In conclusion, there's a lot of factors that go into choosing whether you want to study computer science, and what type of school is right for you. Don't stress out too much over this though! I hardly did any research before choosing Brandeis University, and I still think I ended up in the right place for me. College is such a personal choice, so I hope I made it easier and not harder for you to do research about computer science schools. In the end, it's all about your personal preferences, and what school seems best for you in the end. 
+In conclusion, there's a lot of factors that go into choosing whether you want to study computer science, and what type of school is right for you. Don't stress out too much over this though! I hardly did any research before choosing Brandeis University, and I still think I ended up in the right place for me. College is such a personal choice, so I hope I made it easier and not harder for you to do research about computer science schools. In the end, it's all about your personal preferences, and what school seems best for you in the end. I know I didn't name that many specific schools there, but to be honest there's a lot of damn great CS schools out there, many which I know very little about! If there's some interest, I can try to gather people I know who went to different schools, and interview them about their own experiences in the frame of these questions.
 
 Thank you everyone, I hope this was helpful! Please leave a comment letting me know what you think, or just shoot me an email! If you liked this post, please share it with your friends or on an applicable Facebook group or subreddit, as I don't do that much advertising. Word of mouth really does help my posts reach wider audiences! 
 
