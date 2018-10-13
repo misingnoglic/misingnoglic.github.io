@@ -199,7 +199,7 @@ nums.insert(-1, 300)  # Insert 300 before index -1 (second to last item).
 print(nums)  # [100, 1, 200, 2, 300, 3]
 {% endhighlight %}
 
-<iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=nums%20%3D%20%5B1,%202,%203%5D%0Anums.insert%280,%20100%29%20%20%23%20Insert%20100%20at%20the%20beginning.%0Anums.insert%282,%20200%29%20%20%23%20Insert%20200%20before%20index%202.%0Anums.insert%28-1,%20300%29%20%20%23%20Insert%20300%20before%20index%20-1%20%28second%20to%20last%20item%29.%0Aprint%28nums%29%20%20%23%20%5B100,%201,%20200,%202,%20300,%203%5D&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=nums%20%3D%20%5B1,%202,%203%5D%0Anums.insert%280,%20100%29%20%20%23%20Insert%20100%20at%20the%20beginning.%0Anums.insert%282,%20200%29%20%20%23%20Insert%20200%20before%20index%202.%0Anums.insert%28-1,%20300%29%20%20%23%20Insert%20300%20before%20index%20-1%20%28second%20to%20last%20item%29.%0Aprint%28nums%29%20%20%23%20%5B100,%201,%20200,%202,%20300,%203%5D&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 You might be thinking - but what if you want to add the item to the end? Well, just use `append`!
 
@@ -235,7 +235,7 @@ def fire_employee(employees):
 
 You can play with it here - try to match the print statements to the calls to pop and append.
 
-<iframe width="1000" height="600" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=employees%20%3D%20%5B%5D%0Adef%20hire_employee%28employees,%20employee%29%3A%0A%20%20employees.append%28employee%29%0A%20%20print%28employee%2B%22%20was%20hired.%22%29%0A%0Adef%20fire_employee%28employees%29%3A%0A%20%20fired_employee%20%3D%20employees.pop%28%29%0A%20%20print%28fired_employee%2B%22%20was%20fired.%22%29%0A%20%20print%28%22Leftover%20employees%3A%20%22%29%0A%20%20print%28employees%29%0A%0Ahire_employee%28employees,%20%22John%22%29%0Ahire_employee%28employees,%20%22Mark%22%29%0Ahire_employee%28employees,%20%22Cassidy%22%29%0Ahire_employee%28employees,%20%22Hassan%22%29%0Ahire_employee%28employees,%20%22Cindy%22%29%0Afire_employee%28employees%29%0Ahire_employee%28employees,%20%22Victor%22%29%0Afire_employee%28employees%29%0Afire_employee%28employees%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+<iframe width="1000" height="600" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=employees%20%3D%20%5B%5D%0Adef%20hire_employee%28employees,%20employee%29%3A%0A%20%20employees.append%28employee%29%0A%20%20print%28employee%2B%22%20was%20hired.%22%29%0A%0Adef%20fire_employee%28employees%29%3A%0A%20%20fired_employee%20%3D%20employees.pop%28%29%0A%20%20print%28fired_employee%2B%22%20was%20fired.%22%29%0A%20%20print%28%22Leftover%20employees%3A%20%22%29%0A%20%20print%28employees%29%0A%0Ahire_employee%28employees,%20%22John%22%29%0Ahire_employee%28employees,%20%22Mark%22%29%0Ahire_employee%28employees,%20%22Cassidy%22%29%0Ahire_employee%28employees,%20%22Hassan%22%29%0Ahire_employee%28employees,%20%22Cindy%22%29%0Afire_employee%28employees%29%0Ahire_employee%28employees,%20%22Victor%22%29%0Afire_employee%28employees%29%0Afire_employee%28employees%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 <!-- <iframe height="900px" width="100%" src="https://repl.it/@misingnoglic/Python-Employee-Firing-Pop-Example?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe> -->
 
@@ -592,7 +592,7 @@ while x<10:
   x += 1
 {% endhighlight %}
 
-<iframe width="800" height="300" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=x%20%3D%200%0Awhile%20x%3C10%3A%0A%20%20print%28x%29%0A%20%20x%20%2B%3D%201&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=true&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+<iframe width="800" height="300" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=x%20%3D%200%0Awhile%20x%3C10%3A%0A%20%20print%28x%29%0A%20%20x%20%2B%3D%201&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=true&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 This loop has the same issue as Java's, where if you're not careful, your loop can potentially go on forever (e.g. if I forgot to add `1` to `x` every time). There's not much more to say about this kind of loop. Note that there isn't a `do while` loop in Python.
 
@@ -655,7 +655,7 @@ def index_of_first_even(nums):
 x = index_of_first_even([1, 3, 6, 4])  # returns 2
 {% endhighlight %}
 
-<iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=def%20index_of_first_even%28nums%29%3A%0A%20%20for%20index,%20num%20in%20enumerate%28nums%29%3A%0A%20%20%20%20if%20num%252%3D%3D0%3A%20return%20index%0A%20%20return%20-1%20%20%23%20Not%20found%0A%0Ax%20%3D%20index_of_first_even%28%5B1,%203,%206,%204%5D%29%20%20%23%20returns%202&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20index_of_first_even%28nums%29%3A%0A%20%20for%20index,%20num%20in%20enumerate%28nums%29%3A%0A%20%20%20%20if%20num%252%3D%3D0%3A%20return%20index%0A%20%20return%20-1%20%20%23%20Not%20found%0A%0Ax%20%3D%20index_of_first_even%28%5B1,%203,%206,%204%5D%29%20%20%23%20returns%202&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 If you want to loop over two lists of equal length at the same time, instead of using the indexes, you can use the `zip` function, which zips two lists together.
 
@@ -683,7 +683,7 @@ nums2 = [10, 20, 30]
 sums = [n1+n2 for n1, n2 in zip(nums1, nums2)]
 {% endhighlight %}
 
-<iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=nums1%20%3D%20%5B1,%202,%203%5D%0Anums2%20%3D%20%5B10,%2020,%2030%5D%0Afor%20n1,%20n2%20in%20zip%28nums1,%20nums2%29%3A%0A%20%20print%28n1%2Bn2%29%0Asums%20%3D%20%5Bn1%2Bn2%20for%20n1,%20n2%20in%20zip%28nums1,%20nums2%29%5D%0Aprint%28sums%29%0A&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=nums1%20%3D%20%5B1,%202,%203%5D%0Anums2%20%3D%20%5B10,%2020,%2030%5D%0Afor%20n1,%20n2%20in%20zip%28nums1,%20nums2%29%3A%0A%20%20print%28n1%2Bn2%29%0Asums%20%3D%20%5Bn1%2Bn2%20for%20n1,%20n2%20in%20zip%28nums1,%20nums2%29%5D%0Aprint%28sums%29%0A&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 <iframe height="400px" width="100%" src="https://repl.it/@misingnoglic/MeatyShrillMisrac?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
