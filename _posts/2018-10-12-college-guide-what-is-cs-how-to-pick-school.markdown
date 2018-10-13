@@ -20,6 +20,8 @@ This post is in two parts - the first will explain what computer science is, and
 
 Please let me know what you think in the comments below, either as someone looking into college or as someone whose been through the process. You can always [shoot me an email](mailto:arya@aryaboudaie.com) as well! If you're a teacher, let me know if you'd like me to come talk to your class :)
 
+Note that this post is primarily speaking to an American audience. I don't know that much about college or university outside of the US, sorry!
+
 # What Exactly is Computer Science?
 
 ## What Computer Science Isn't
