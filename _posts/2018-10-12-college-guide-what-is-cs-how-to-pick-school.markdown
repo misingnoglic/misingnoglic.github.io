@@ -32,7 +32,7 @@ The quote is trying to say that while programming is used frequently in computer
 
 Most colleges will have an introduction to programming class, where you will learn a programming language and how to program. However, after this first class, your other classes will not be that laser focused on the language itself. If a class requires you to use a new language (because it's a better tool for understanding the material of the class), then you'll be learning it quick with the expectation that your previous programming knowledge will help expedite the process.
 
-## What Computer Sciecne Actually is
+## What Computer Science Actually is
 
 So now that I've talked about what computer science __isn't__, let me talk about what it is. From the [University of Maryland Computer Science Department website](https://undergrad.cs.umd.edu/what-computer-science), I found this really good quote:
 
