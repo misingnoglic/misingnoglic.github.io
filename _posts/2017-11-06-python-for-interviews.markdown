@@ -8,6 +8,11 @@ categories: [Interviews, Python, Technical]
 
 Intended audience: Someone with some experience coding and with data structures, looking to study for technical interviews for a software engineering job/internship.
 
+# Table of Contents
+
+* TOC
+{:toc}
+
 # Introduction
 
 Ah coding interviews - 45 minute long bursts of time where an interviewer expects you to care about some esoteric problem, so you can show them how you REALLY think. During a coding interview, you’re normally given a wide choice of programming languages to use for solving the problem, usually between C++, Java, and Python. This is mostly because, unless you’re applying for a very specific role at a company, they don’t really care that you know the specifics of any one specific language. Rather - they care that you’re able to take a technical problem that is explained to you, come up with a solution, and then write code to implement that solution. In short, they want to know if you’ll be a good coworker to have at the company, who has good problem solving skills, and will be pleasant to work with. In that regard, language choice doesn’t matter too much, except for choosing the one that you’re most able to express yourself in.
@@ -18,7 +23,7 @@ However, the language you choose does have consequences when it comes to impleme
 
 If you're already well acquainted with coding interviews, you can skip this section. If you haven't had the joy of interviewing for a software engineering job in the past few years though, I'll give you a brief overview. The basic idea is that either through some software, over the phone, or in person, your interviewer will give you a description of a problem that should be solved with code. For example, they might ask you given a list of people's schedules, to write code to select when the best meeting time is. Another example might be more abstract, such as given a list of numbers to return all the different orderings (or permutations) of those numbers. The point of this exercise is to see how you turn a real life problem into code, what kind of data structures you use to wrangle the data, what kind of algorithm you use to get the answer, how you can turn the algorithm into real code, and just generally seeing how you think and behave when working on a problem. There is some debate into how useful/necessary they are (I'm personally of the opinion that they are useful), but that is not the topic of this post. Rather, they are a system that already exists, so I want to help you do these interviews the best you can. But... how can Python help?
 
-# Reason 1: Succinctness
+# Reason 1: Succinctness of Python
 
 The first reason why I suggest using Python is that it is much more succinct in expressing simple coding statements. The whole philosophy behind Python is to make it as easy to read as it is to write. That shows when you're solving the programming puzzles that software companies love giving. Since these problems are normally contrived and mostly related to manipulating lists, strings, and other data structures, Python's simple and short syntax gives major advantages to manipulating those data types. When you are at a whiteboard with sweaty hands, trying to write code to use a hashmap, would you rather type something like this
 
@@ -60,14 +65,14 @@ L = [i**3 for i in L]
 
 In short, Python allows for quick string and list manipulation (with the same basic syntax), quick dictionary creation and modification, and many other benefits. Some of these might not seem like a big difference now, but when you’re nervous and given a short time to write code, you don’t want to get stuck on the verbiage in creating a new map, or the necessities of looping through every element of a list. Once you have the idea of how to do the problem in your head, you want to just get the code on the whiteboard/online interview website ASAP, so that you can test, debug, and discuss the solution you’ve come up with. As engineers, we’re not used to writing things with pens, so every character helps you get it done faster and more efficiently. Additionally, sometimes you don't realize that your approach is wrong until you have it in code written down. Finishing your coding faster means getting to that realization quicker, so you can figure out what you need to change. Getting the code on the board fast is good, so you can spend less time on the implementation, and more time on followups or discussions.
 
-# Reason 2: Readability
+# Reason 2: Readability of Python
 
 The next reason I think it’s better to use Python in an interview is because it’s just more damn readable! Just the way the language is structured with whitespace instead of lots of curly braces and parentheses makes it a lot easier to synthesize and digest what you just wrote. When you're trying to find errors or issues with your code, it helps to have everything very expressly written, so that you can see where your issues will pop up, and catch them much quicker. All of the syntax that allows for things to be done much more succinctly also means less information for your brain to take in. The fewer .charAt or .containsKey methods you need to parse, the sooner you can see what you're doing wrong, and apply the fix.  Fewer lines also means fewer steps to debug to get to the root of an error you might have made.
 
 To illustrate my point, I’ll write up solutions to a few interview questions - how I would do them in Java, and how I would do them in Python. You can decide for yourself which would look better. I have done my best to keep the same logic, and not use any tricks that makes Python look much better, unless expressly noted.
 
 # Example Interview Questions
-## Question 0:
+## Question 0
 
 Given a string, return true if it's a palindrome (the same backwards and forwards).
 e.g. isPalindrone("bob") = true
@@ -167,7 +172,7 @@ This looks similar to how the questions "Return the most frequently used number 
 
 Note: For small strings, it might just be more efficient to not use a dictionary. For larger strings where the letter is not near the beginning however, the dictionary makes it much more efficient. Interviewers normally care about the runtime as the problem gets more complex, which is why I recommend the hashing, though I figured I'd mention that here. Thanks to the reader that brought this up.
 
-## Question 2:
+## Question 2
 
 Write the code to print out the nth fibonacci number, recursively but using memoization. By storing the previous answers in a hashmap/dictionary, we can turn an O(2^n) solution to an O(n) solution, since we don't have to recompute the same numbers over and over.
 
@@ -200,9 +205,9 @@ def fib(n):
 		return memory[n]
 {% endhighlight %}
 
-Note: In Python it is quicker to do `memory.get(n, None)`, which gives you `n` if n in in the dictionary, and `None` otherwise (see [this comparison](https://repl.it/@misingnoglic/Python-Fibonacci-Dict-Test)). You can then write code to handle when you got a None. Thanks to reader François Gallard who noted this. 
+Note: In Python it is quicker to do `memory.get(n, None)`, which gives you `n` if n in in the dictionary, and `None` otherwise (see [this comparison](https://repl.it/@misingnoglic/Python-Fibonacci-Dict-Test)). You can then write code to handle when you got a None. Thanks to reader François Gallard who noted this.
 
-## Question 3:
+## Question 3
 
 Given a list of numbers, return all permutations (or possible orderings of the elements) of a list. E.g. : {1,2,3} as input will give you { {1,2,3}, {2,1,3} {2,3,1}, {3,2,1}, {1,3,2} and {3,1,2} }
 
@@ -264,11 +269,14 @@ Disclaimer - I've never actually given an interview before, I've just done a lot
 Also, this is my first blog post ever! Unless you count [the Buzzfeed article I wrote](https://www.buzzfeed.com/misingnoglic/you-wont-believe-what-computers-cant-compute-1j8kv) about CS theory. Please leave a comment below and let me know what you thought, and how I could improve.
 
 
-# FAQ:
+# FAQ
 
 Q: I don't know Python, but your post inspired me to learn it! How can I learn?
 
-A: If you know another programming language, [this website](http://www.learnpython.org) is great for getting up to speed with the language in a few short lessons. If you want a more guided tutorial, you can also do the [Python Codecademy](https://www.codecademy.com/learn/learn-python) (which is great for quickly getting up to speed). After that, try doing some programming on [CodingBat](codingbat.com/python), or if you're more math inclined, there's [Project Euler](https://projecteuler.net/). You can also try implementing previous programming assignments you've had in Python (look at my website's [resources section](http://www.aryaboudaie.com/resources) for some programming assignments I've made), or just doing your own fun little projects. The author of Cracking the Coding Interview also has solutions to all the problems in Python [here](https://github.com/careercup/CtCI-6th-Edition-Python), though they're not always the most pythonic. And who knows, maybe I'll make a post soon about how to learn Python quick from your Java skillset.
+A: First off, you can check out my series on [Python for Java Programmers](https://aryaboudaie.com/java/python/technical/educational/2017/11/13/python-for-java-programmers.html), which I hope can quickly bring people up to speed on the Python programming language if they have Java (or similar) experience.
+
+
+If you know another programming language, [this website](http://www.learnpython.org) is great for getting up to speed with the language in a few short lessons. If you want a more guided tutorial, you can also do the [Python Codecademy](https://www.codecademy.com/learn/learn-python) (which is great for quickly getting up to speed). After that, try doing some programming on [CodingBat](codingbat.com/python), or if you're more math inclined, there's [Project Euler](https://projecteuler.net/). You can also try implementing previous programming assignments you've had in Python (look at my website's [resources section](http://www.aryaboudaie.com/resources) for some programming assignments I've made), or just doing your own fun little projects. The author of Cracking the Coding Interview also has solutions to all the problems in Python [here](https://github.com/careercup/CtCI-6th-Edition-Python), though they're not always the most pythonic.
 
 Q: But I'm better/more comfortable with Java! Should I still use Python?
 
