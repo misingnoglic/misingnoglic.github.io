@@ -4,14 +4,14 @@ title:  "Python for Java Programmers - Part 3 - Collections and Using Them"
 subtitle: "Lists, Strings, Tuples, and Loops"
 date:   2018-09-16 00:10:00
 categories: [Java, Python, Technical, Educational]
-hide: true
+hide: false
 ---
 
 **Note: If you haven't read [part 1](https://aryaboudaie.com/java/python/technical/educational/2017/11/13/python-for-java-programmers.html) or [part 2](https://aryaboudaie.com/java/python/technical/educational/2018/09/16/python-for-java-programmers-p2.html), please do so! This post will be building off the previous material, and I promise they're at least semi-entertaining/useful.**
 
 # Introduction
 
-Hello again! In part 1, we gave a bird's eye overview of the differences of Python and Java, which included lists. In part 2, I talked about functions, and included some stuff about lists, including why updating them inside of the function changes them outside the function. At this point, you may think you know all there is to know about lists. And... you really do know most of it. So instead of just talking about lists, I'm going to be talking all about the different ways to collect and store your data in your programs. And yes, this will include lists, but also a lot of other types of `collections`, as well as how to access the data in them with loops.
+Hello again! In [part 1](https://aryaboudaie.com/java/python/technical/educational/2017/11/13/python-for-java-programmers.html), we gave a bird's eye overview of the differences of Python and Java, which included lists. In [part 2](https://aryaboudaie.com/java/python/technical/educational/2018/09/16/python-for-java-programmers-p2.html), I talked about functions, and included some stuff about lists, including why updating them inside of the function changes them outside the function. At this point, you may think you know all there is to know about lists. And... you really do know most of it. So instead of just talking about lists, I'm going to be talking all about the different ways to collect and store your data in your programs. And yes, this will include lists, but also a lot of other types of `collections`, as well as how to access the data in them with loops.
 
 Data is one of the most important parts of programming - once you have the data you need, you need to somehow store it. The way you store your data could be the difference between clean code that runs efficiently, and slow ugly code that you'll cringe at several years later. Let's go through them, and then we can talk about when to use one over the other.
 
@@ -19,15 +19,17 @@ Data is one of the most important parts of programming - once you have the data 
 
 ## Basics
 
-As a quick reminder, lists are the Python's most common object for data collection. They are similar to the `ArrayList` in Java, where they don't have a specified length, but the syntax for dealing with them is much nicer. There isn't anything like the Java `Array` built into Python, since lists are good enough most of the time (though [they do exist](https://docs.scipy.org/doc/numpy-1.13.0/reference/generated/numpy.array.html) in the library NumPy). Python lists are even more accepting than ArrayLists, as they can be of any type, and objects of multiple types can be in a list.
+As a quick reminder, lists are the Python's most common object for data collection. They are similar to the `ArrayList` in Java, where they don't have a specified length, but the syntax for dealing with them is much nicer. There isn't anything like the Java `Array` built into Python, since lists are good enough most of the time (though [they do exist](https://docs.scipy.org/doc/numpy-1.13.0/reference/generated/numpy.array.html) in the library NumPy). Python lists are even more accepting than ArrayLists, as they can be of any type, and objects of multiple types can be in a list, including lists and dictionaries.
 
 {% highlight python %}
 nums = [1, 3, 5]
+crazy_list = [True, 1.0, 4, "test", [1, 2, 3], {'a': 'b'}]
 {% endhighlight %}
 
 To access an element of a list, you use the same indexing syntax as Java arrays. Python includes a useful extension of this, where you can also index starting from the back with negative indexing. The last item is index -1, the second to last item is index -2, etc...
 
 {% highlight python %}
+nums = [1, 3, 5]
 print(nums[1])  # 3
 print(nums[-2])  # Also 3
 {% endhighlight %}
@@ -53,7 +55,7 @@ full_list = [1, 3, 5, 7, 9, 11, 13]
 print(full_list[1:5])  # [3, 5, 7, 9]
 {% endhighlight %}
 
-This syntax will give you the elements of the list from `start` up until (not including) `stop`. So in this case, you will get back the list with the items at index 1, 2, 3, and 4, so [3, 5, 7, 9].
+This syntax will give you the elements of the list from `start` up until (not including) `stop`. So in this case, `full_list[1:5]` get back the list with the items at index 1, 2, 3, and 4, so [3, 5, 7, 9].
 
 You can also use negative indexes in your list, so nums[1:-1] will give you everything starting at the item at index 1, up until the last element.
 
@@ -180,11 +182,13 @@ nums.insert(index, item) will insert `item` into the index before `index`. Some 
 nums = [1, 2, 3]
 nums.insert(0, 100)  # Insert 100 at the beginning.
 print(nums)  # [100, 1, 2, 3]
-nums.insert(2, 200)  # Insert 100 before index 2.
-print(nums)  # [100, 1, 100, 2, 3]
-nums.insert(2, 300)  # Insert 300 before index -1 (second to last item).
-print(nums)  # [100, 1, 100, 2, 3, 300]
+nums.insert(2, 200)  # Insert 200 before index 2.
+print(nums)  # [100, 1, 200, 2, 3]
+nums.insert(-1, 300)  # Insert 300 before index -1 (second to last item).
+print(nums)  # [100, 1, 200, 2, 300, 3]
 {% endhighlight %}
+
+<iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=nums%20%3D%20%5B1,%202,%203%5D%0Anums.insert%280,%20100%29%20%20%23%20Insert%20100%20at%20the%20beginning.%0Anums.insert%282,%20200%29%20%20%23%20Insert%20200%20before%20index%202.%0Anums.insert%28-1,%20300%29%20%20%23%20Insert%20300%20before%20index%20-1%20%28second%20to%20last%20item%29.%0Aprint%28nums%29%20%20%23%20%5B100,%201,%20200,%202,%20300,%203%5D&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 You might be thinking - but what if you want to add the item to the end? Well, just use `append`!
 
@@ -207,15 +211,15 @@ def fire_employee(employees):
   print(employees)  # All but the last item
 {% endhighlight %}
 
-You can play with it here:
+You can play with it here - try to match the print statements to the calls to pop and append. If you get lost, click the "debugger" arrow on the left to move through the program line by line!
 
-<iframe height="400px" width="100%" src="https://repl.it/@misingnoglic/Python-Employee-Firing-Pop-Example?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="800px" width="100%" src="https://repl.it/@misingnoglic/Python-Employee-Firing-Pop-Example?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-Now imagine you had a list of people you wanted to hire, but didn't have room for. You have now a list of `potential_employees`, and whenever you have room to hire someone, you want to hire the person who's been waiting the longest. You could do `potential_employees.pop(0)` to remove them from potential_employees, and then add them to `employees`! That's a much better example! If you use a list in the `Last In First Out` (LIFO) model, it's called a `Stack`, and the list is used in the `First in First Out` (FIFO) model, it's called a Queue. These are good CS words to know, if you aren't already familiar.
+Now imagine you had a list of people you wanted to hire, but didn't have room for. You have now a list of `potential_employees`, and whenever you have room to hire someone, you want to hire the person who's been waiting the longest. You could do `potential_employees.pop(0)` to remove them from the front of potential_employees, and then add them to `employees`! That's a much better example! If you use a list in the `Last In First Out` (LIFO) model, it's called a `Stack`, and the list is used in the `First in First Out` (FIFO) model, it's called a Queue. These are good CS words to know, if you aren't already familiar.
 
 ### range(stop)
 
-`range()` is a function that returns an "range object", which is kind of like a list that isn't evaluated until you actually need the item you're asking from it.
+`range()` is a function that returns an "range object", which is kind of like a list that isn't evaluated until you actually need the item you're asking from it. It basically works the same as a list in terms of indexing and looping. This type of object is called an `iterator`.
 
 `range(stop)` will return an iterator from 0 up until the stop number. Just like list indexing, you can also give it a start, and a skip. For convenience I'll convert them to lists, but when you use them you mostly won't have to:
 
@@ -240,7 +244,9 @@ If you don't convert it into a list, a range object will just show you this:
 range(0, 100)
 {% endhighlight %}
 
-So it hasn't actually computed anything. So why did the creators of Python decide to make range lazy? Let's say you wanted to do something for every number from 0 to a billion. If range() wasn't lazy, it would have to store each item from 0 to a billion in a list somewhere in memory, which would be highly inefficient. It's much easier to just not get the number until you need it, and then convert it into a list if you really need it as a list.
+So it hasn't actually computed anything. So why did the creators of Python decide to make range lazy? Let's say you wanted to do something for every number from 0 to a billion. If range() wasn't lazy, it would have to store each item from 0 to a billion in a list somewhere in memory, which would be highly inefficient. It's much easier to just not get the number until you need it, and then convert it into a list if you really need it as a list. So if anyone ever tells you being lazy is bad, tell them that sometimes it's the best policy :)
+
+<iframe height="400px" width="100%" src="https://repl.it/@misingnoglic/InexperiencedCornyInstances?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 (Note, in the 2.x version of Python, range() returned a list, and you needed to use xrange() to return a range object).
 
@@ -254,10 +260,9 @@ nums.remove(2)
 print(nums)  # [1, 3]
 {% endhighlight %}
 
-### reverse()
+### reverse(nums)
 
-We'll get to this one later, when we talk about iterators. For now though, if you want to reverse a list, you have to convert it into a list like this:
-
+Like range, `reverse` takes in a list, and returns an iterator for the reverse of the list. So you can loop over it as normal, or turn cast it into a list like this:
 {% highlight python %}
 nums = [1, 2, 3]
 reversed_nums = list(reversed(nums))
@@ -266,7 +271,7 @@ reversed_nums = list(reversed(nums))
 
 ### sort()
 
-`nums.sort()` will sort `nums` in place. This is different from the `sorted` function I talked about in part 2, since that returns a new list. With no parameters, `sort` will just sort the list from smallest to largest.
+`nums.sort()` will sort `nums` in place. This is different from the `sorted` function I talked about in part 2, since `sorted` returns a new list while `sort` just modifies the list it was called on. With no parameters, `sort` will just sort the list from smallest to largest.
 
 {% highlight python %}
 nums = [8, 5, 6, 7, 1, 2, 3]
@@ -286,11 +291,13 @@ print(nums)  # [8, 5, 6, 7, 1, 2, 3]
 
 {% highlight python %}
 nums = [1, 2, 3, 4, 5, 6, 191]
+
 def sort_fn(x):
   if x%2==0:
     return x+100
   else:
     return x
+
 nums.sort(key=sort_fn)
 print(nums)  # [1, 3, 5, 2, 4, 6, 191]
 {% endhighlight %}
@@ -306,6 +313,8 @@ names.sort(key=sort_fn)
 print(names)  # ['Parisa', 'Sam', 'Billy']
 {% endhighlight %}
 
+<iframe height="800px" width="100%" src="https://repl.it/@misingnoglic/SkeletalSubduedVerification?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
 Finally, let's say you have a list of lists (#inception), and you want to sort them by their sum. You could just pass in the built-in function `sum` which returns the sum of a list.
 
 {% highlight python %}
@@ -313,6 +322,8 @@ test_scores = [[90, 80, 75], [100, 150, 0], [200, 300, 0]]
 test_scores.sort(key=sum)  # Sort by sum function
 print(test_scores)  # [[90, 80, 75], [100, 150, 0], [200, 300, 0]]
 {% endhighlight %}
+
+<iframe height="400px" width="100%" src="https://repl.it/@misingnoglic/SelfreliantTealKnowledge?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 `sort` is a great method for dealing with data, as it lets you have it ordered in a predictable way. In case you were wondering what Python's sorting algorithm is, it's not one you learn about normally in classes. It's called [timsort](https://en.wikipedia.org/wiki/Timsort), and it's named after Tim Peters, one of the earliest developers of Python itself. I hope one day I have an algorithm named after myself.
 
@@ -332,25 +343,51 @@ else:
   print("no 9 in nums...")
 {% endhighlight %}
 
-`x in nums` will return a boolean that describes whether the variable `x` is in `nums` or not.
+`x in nums` will return a boolean that describes whether the variable `x` is in `nums` or not. This is one of my favorite python things to show new programmers, since it's amazing how readable this syntax is once you get used to it.
 
-### sorted
+### sorted()
 
 The sorted() function is exactly like the `.sort()` method on lists, except that it returns a new list. It can also take the optional parameters `reversed` and `key`.
 
-### len
+{% highlight python %}
+nums = [1, -3, 2, 5]
+new_nums = sorted(nums)
+print(new_nums)  # -3, 1, 2, 5
+print(sorted(nums, reverse=True))  # 5, 2, 1, -3
+# abs is the built in absolute value function
+print(sorted(nums, key=abs))  # 1, 2, -3, 5
+{% endhighlight %}
+
+<iframe height="400px" width="100%" src="https://repl.it/@misingnoglic/BogusShoddyCosmos?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+
+### len()
 
 len(nums) will just return the length of the list.
 
-### max
+{% highlight python %}
+nums = [1, -3, 2, 5]
+print(len(nums))  # 4
+{% endhighlight %}
 
-max(nums) will  return the largest element of the list. Just like `sorted`, it can take a `key` function as a parameter to determine the `maximum` however you like.
 
-### min
+### max()
 
-min(nums) will  return the smalled element of the list. Can also take a `key` parameter.
+max(nums) will  return the largest element of the list. Just like `sorted`, it can take a `key` function as a parameter to determine the `maximum` however you like. For example, you can pass `abs` (the absolute value function) if you want the number with the largest absolute value.
 
-### sum
+{% highlight python %}
+nums = [1, -7, 2, 5]
+print(max(nums))  # 5
+print(max(nums, key=abs))  # -7
+{% endhighlight %}
+
+<iframe height="400px" width="100%" src="https://repl.it/@misingnoglic/RoughKnowingPostscript?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+### min()
+
+min(nums) will  return the smallest element of the list. Can also take a `key` parameter.
+
+### sum()
 
 sum(nums) will return the sum of the list. Fairly straightforward.
 
@@ -364,11 +401,13 @@ def range(nums):
   return max(nums)-min(nums)
 {% endhighlight %}
 
-There is one more feature of lists though that's too awesome to not mention.
+<iframe height="500px" width="100%" src="https://repl.it/@misingnoglic/SwiftIdenticalSyntax?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+There is one more feature of lists though that's too awesome to not mention though, so hold on tight!
 
 ## List Comprehensions
 
-I'll just say this: list comprehensions are amazing. If you can master list comprehensions, you'll be able to take something that took several lines of Java to build, and do it in a single line. They're seriously quick, readable, and easy to start using once you get how they work. They have the added benefit of avoiding bugs as well! Ok - I think I've hyped them up enough - now what exactly do they do?
+I'll just say this: list comprehensions are amazing and beautiful. If you can master list comprehensions, you'll be able to take something that took several lines of Java to build, and do it in a single line. They're seriously quick, readable, and easy to start using once you get how they work. They have the added benefit of avoiding bugs as well! Ok - I think I've hyped them up enough - now what exactly do they do?
 
 ### Mapping
 
@@ -376,7 +415,7 @@ List comprehensions let you create a new list out of an old list, without using 
 
 {% highlight java %}
 // let's say we already have our list of grades
-int [] new_grades = new int[grades.length];
+int[] new_grades = new int[grades.length];
 for (int i = 0; i<grades.length; i++){
   grades[i]+=10;
 }
@@ -388,6 +427,8 @@ Ok, "not bad" you say. But take a look at this:
 new_grades = [x+10 for x in grades]
 {% endhighlight %}
 
+<iframe height="400px" width="100%" src="https://repl.it/@misingnoglic/BiodegradableRotatingExecutable?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
 Ok, let's break this down:
 `for x in grades` is basically saying "for each thing in grades, call it x." And `x+10` is saying what to do to each of those x's. So basically, this is saying "for each element in grades, add 10 to it." Instead of writing the loop, you just say what you want to happen to each element, and it happens! No chance of an off by one error, or array out of bounds exception.
 
@@ -398,6 +439,8 @@ Example: You have a list of grades out of 100, and you want to turn it into a li
 {% highlight python %}
 new_grades = [x/100 for x in grades]
 {% endhighlight %}
+
+<iframe height="400px" width="100%" src="https://repl.it/@misingnoglic/FancyFrequentChemistry?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 You can also use the range() function in list comprehensions to create a new list from an iterator returned by range. For example, if you want all of the numbers from 1 to 100 squared, you can do:
 
@@ -411,17 +454,25 @@ Your expression doesn't even have to involve `x`. For example, if you wanted a l
 zeroes = [0 for x in range(100)]
 {% endhighlight %}
 
+<iframe height="400px" width="100%" src="https://repl.it/@misingnoglic/AlertWorldlyReciprocal?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
 Notice how the function part doesn't involve `x`, even though we called each item in the list `x`. This is equivalent to if we did the following:
 
 {% highlight python %}
 def f(x):
   return 0
 
-
 zeroes = [f(x) for x in range(100)]
 {% endhighlight %}
 
 In the end, we get a list of 100 zeroes.
+
+As another example, let's get the last character in a list of strings.
+
+{% highlight python %}
+names = ["Billy", "Parisa", "Sam"]
+print([name[-1] for name in names])  # [y, a, m]
+{% endhighlight %}
 
 ### Filtering
 
@@ -431,6 +482,8 @@ Lists comprehensions can also be used to filter lists based on some criteria. He
 nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 even_nums = [x for x in nums if x%2==0]
 {% endhighlight %}
+
+<iframe height="400px" width="100%" src="https://repl.it/@misingnoglic/FelineIndigoMass?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 Or all of the numbers greater than 50:
 
@@ -451,11 +504,19 @@ new_list = [f(item) for item in old_list if some_criteria(item)]
 
 Where `f(item)` is some function that takes in `item` and returns something new, and `some_criteria` is some function that returns a boolean. You don't need to create a new function - as you see from the above examples you can just put the expressions in directly.
 
-You can also use `range` in a list comprehension with filtering. For example, if you had a function `is_prime` which returned if a number is prime, you could do something like this to get all the primes from 1 to 150:
+A complex example - let's get the squared value of all even numbers.
 
 {% highlight python %}
-primes = [x for x in range(1,150) if is_prime(x)]
+crazy_list = [x**2 for x in nums if x%2==0]
 {% endhighlight %}
+
+You can also use `range` in a list comprehension with filtering. For example, if you had a function `is_prime` which returned if a number is prime, you could do something like this to get all the primes from 1 to 1000:
+
+{% highlight python %}
+primes = [x for x in range(1,1000) if is_prime(x)]
+{% endhighlight %}
+
+<iframe height="400px" width="100%" src="https://repl.it/@misingnoglic/EssentialClientsideSynergy?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 ### Going through nested lists.
 
@@ -477,6 +538,8 @@ Remember that students is a list of lists, so `student` in each case will be a l
 failing_students = [name for name, grade in students if grade<70]
 {% endhighlight %}
 
+<iframe height="400px" width="100%" src="https://repl.it/@misingnoglic/MasculineGlamorousComputer?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
 Python lets you assign multiple variables in one line, kind of like this:
 
 {% highlight python %}
@@ -485,7 +548,9 @@ print(x)  # 1
 print(y)  # 2
 {% endhighlight %}
 
-So by doing `for name, grade in students`, it's taking each list of two items in `students` and assigning the first item to `name` and the second item to `grade`.
+So by doing `for name, grade in students`, it's taking each list of two items in `students` and assigning the first item to `name` and the second item to `grade`. This second version is more `pythonic`, since it's more explicit and easier to read and know what's going on.
+
+In the end, list comprehensions are a great tool that you should really work to master, as they'll eliminate many issues involving loops, and they'll elevate your code to the next level. They're also [great for coding interviews](https://aryaboudaie.com/interviews/python/technical/2017/11/06/python-for-interviews.html)!
 
 # Iterators and Looping
 
@@ -501,6 +566,8 @@ while x<10:
   print(x)
   x += 1
 {% endhighlight %}
+
+<iframe width="800" height="300" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=x%20%3D%200%0Awhile%20x%3C10%3A%0A%20%20print%28x%29%0A%20%20x%20%2B%3D%201&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=true&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 This loop has the same issue as Java's, where if you're not careful, your loop can potentially go on forever (e.g. if I forgot to add `1` to `x` every time). There's not much more to say about this kind of loop.
 
@@ -519,7 +586,7 @@ for x in nums:
   print(x)
 {% endhighlight %}
 
-Just like the list comprehension, if you have a list, you can assign each item to a variable name, and then do something for each item in the list. In the above case, it will print every item of `nums`.
+Just like the list comprehension, if you have a list (or any iterator), you can assign each item to a variable name, and then do something for each item in the list. In the above case, it will print every item of `nums`.
 
 You might wonder why there's nothing like the regular `for` loop in Java, like this:
 
@@ -546,12 +613,27 @@ for i in range(len(nums)):
     print(nums[i]+nums[i-1])
 {% endhighlight %}
 
-Remember, range() is a function that is lazy, but for each instance of the loop, it will give you the number in the sequence. You do not need to convert it into a list.
+<iframe height="500px" width="100%" src="https://repl.it/@misingnoglic/EagerThunderousAxis?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-So in the end, if you wanted to make a list out of an old list, you could do something like this:
+Remember, since range() returns an iterator, you do not need to convert it back to a list.
+
+If you need both the index and the item, you can use the `enumerate` function, which gives you both. Here's an example:
 
 {% highlight python %}
-nums = [1, 2, 3, 4, 5]
+def index_of_first_even(nums):
+  for index, num in enumerate(nums):
+    if num%2==0: return index
+  return -1  # Not found
+
+x = index_of_first_even([1, 3, 6, 4])  # returns 2
+{% endhighlight %}
+
+<iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=def%20index_of_first_even%28nums%29%3A%0A%20%20for%20index,%20num%20in%20enumerate%28nums%29%3A%0A%20%20%20%20if%20num%252%3D%3D0%3A%20return%20index%0A%20%20return%20-1%20%20%23%20Not%20found%0A%0Ax%20%3D%20index_of_first_even%28%5B1,%203,%206,%204%5D%29%20%20%23%20returns%202&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+
+In the end, if you wanted to make a list out of an old list, you could do something like this:
+
+{% highlight python %}
+nums = [1, 3, 3, 4, 5]
 new_nums = []
 for x in nums:
   new_nums.append(x*10)
@@ -560,9 +642,11 @@ for x in nums:
 But isn't it much nicer to write the equivalent:
 
 {% highlight python %}
-nums = [1, 2, 3, 4, 5]
+nums = [1, 3, 3, 4, 5]
 new_nums = [x*10 for x in nums]
 {% endhighlight %}
+
+You can even combine list comprehensions with functions like `sum` and `max` to avoid these loops.
 
 # List like objects.
 
@@ -608,9 +692,11 @@ print(6 in t)  # False
 t[0] = 5  # TypeError: 'tuple' object does not support item assignment
 {% endhighlight %}
 
+<iframe height="400px" width="100%" src="https://repl.it/@misingnoglic/BeigePowerfulRuntimeenvironment?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
 ## Strings
 
-The other type of object in Python that's similar to a list is a String. This makes sense from a design standpoint, since what are strings but just an object that contains a lot of single characters! But in Java, Arrays and Strings have completely different methods on them! You have to remember that arrays use .length, strings use .length(), and Lists use .size(). Additionally, for Java Strings, you have to use .charAt() to get the character at a certain index, or .substring() to get a substring. With Python, it's the same syntax as a list! You index the same way, slice the same way, even compare them in the same way with `==`. The only difference is like the Tuple, the strings are immutable.
+The other type of object in Python that's similar to a list is a String. This makes sense from a design standpoint, since what are strings but just an object that contains a lot of single characters! But in Java, Arrays and Strings have completely different methods on them! You have to remember that arrays use .length, strings use .length(), and Lists use .size(). Additionally, for Java Strings, you have to use .charAt() to get the character at a certain index, or .substring() to get a substring. With Python, it's the same syntax as a list! You index the same way, slice the same way, even compare them in the same way with `==`. This is great, since it means you only have to learn one syntax! The only difference is like the Tuple, the strings are immutable.
 
 {% highlight python %}
 >>> s = "Hello World"
@@ -629,4 +715,69 @@ o
 2
 {% endhighlight %}
 
-Strings also have their own methods that are useful for string manipulation, like `.upper()` and `.lower()`. You can see the full list of those (here)[].
+Note that strings can be single quotes, or double quotes. Multiline strings can be three single quotes or three double quotes as well, you just have to be consistent. Note that multiline comments and docstrings are just regular strings.
+
+{% highlight python %}
+>>> s = '''
+This is a very
+long and large string
+'''
+{% endhighlight %}
+
+Strings also have their own methods that are useful for string manipulation, like `.upper()` and `.lower()`. You can see the full list of those (here)[https://www.programiz.com/python-programming/methods/string]. Here are some fun examples, whose results are fairly self explanatory. Note that they don't modify the string (as the string is immutable), but they instead return a new string.
+
+{% highlight python %}
+>>> s = "Hello world"
+>>> s.upper()
+'HELLO WORLD'
+>>> s.lower()
+'hello world'
+>>> s.swapcase()
+'hELLO WORLD'
+>>> s.replace('o', '0')
+'Hell0 w0rld'
+>>> s.startswith('Hell')
+True
+>>> s.title()
+'Hello World'
+{% endhighlight %}
+
+Probably the most useful string function that I know of is `split`, which splits a string into a list, based on whatever separator you give it. If you don't give split a parameter, it just splits on the space. The `split` method allows you to iterate through a string, searching for certain words or phrases.
+
+{% highlight python %}
+>>> s = "This is a long sentence"
+>>> s.split()
+['This', 'is', 'a', 'long', 'sentence']
+>>> sorted(s.split(), key=len)
+['a', 'is', 'This', 'long', 'sentence']
+>>for word in s.split():
+>>  print(word.swapcase())
+tHIS
+IS
+A
+LONG
+SENTENCE
+{% endhighlight %}
+
+Remember that the return value of the `input` function is a string. You can combine `split` with list comprehensions to get all kinds of input though!
+
+{% highlight python %}
+input_str = input("Enter several numbers, separated by spaces: ")
+nums = [int(x) for x in input_str.split()]
+{% endhighlight %}
+
+<iframe height="400px" width="100%" src="https://repl.it/@misingnoglic/RundownSplendidLock?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+Think about how annoying that would be with the Java scanner!
+
+Splitting a string into a list is fairly intuitive, but turning a list back into a string isn't, so I'll show you that here as well. If you want to turn `["Hello", "World"]` into `"Hello World"`, you have to do something like this.
+
+{% highlight python %}
+words = ["Hello", "World"]
+combined = " ".join(words)
+print(combined)  # "Hello World"
+{% endhighlight %}
+
+Basically, you're taking the space string, and joining every word in the list based on it. I know it seems like it would make more sense to have the join method on the list instead of the string, but that's just the way it is. [Here](https://stackoverflow.com/questions/493819/python-join-why-is-it-string-joinlist-instead-of-list-joinstring) is the real reason, in case you are curious. Note that this is more space efficient than writing a loop to create a string, so interviewers love to see stuff like this :)
+
+Strings are super useful, especially for reading files and input, and Python makes them so pleasant to work with! I'll talk more about files, but this post is getting pretty long already!
