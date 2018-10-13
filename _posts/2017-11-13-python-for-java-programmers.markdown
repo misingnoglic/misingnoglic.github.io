@@ -103,7 +103,7 @@ exit status 1
 
 This error is caught by the compiler, and your program has not compiled, since this error was found. Once you fix the error, you'll be able to easily compile and then run the program. The exception to this rule are runtime errors that the compiler can't catch, such as dividing by zero, or trying to go out of bounds on an array - these errors are only thrown after running the code.
 
-In Python however, your programs are not compiled, and as such, they are not checked for errors (besides syntax errors) before running. The way Python will run your code is line by line, and if one line has an error in it, the program won't throw the error until it gets to that line. This means that when you write your Python programs, you should check them for errors first, as you might not catch them as easily as Java would be able to catch them.
+In Python however, your programs are compiled into "python bytecode", and they will not checked for errors (besides syntax errors) before running. Python will run its compiled version line by line, and if one line has an error in it, the program won't throw the error until it gets to that line. This means that when you write your Python programs, you should check them for errors first, as you might not catch them as easily as Java would be able to catch them. For more info on how python really runs programs, see [this blog post](http://www.devshed.com/c/a/python/how-python-runs-programs/).
 
 {% highlight python %}
 print("hello")
@@ -132,7 +132,7 @@ The following is an embedded snippet on www.repl.it - feel free to run it, and m
 
 <iframe height="400px" width="100%" src="https://repl.it/@misingnoglic/Never-Run-Error?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals" width="100%" ></iframe>
 
-One of the benefits of this line by line evaluation of Python however is the REPL, which was described above. Because the programs are interpreted line by line, you can also open your REPL (by typing `python3` or `python` into your command line,  by clicking Tools->Python Console in Pycharm, or just going on [repl.it](http://repl.it/languages/python3) ). This is one feature I suggest you spend a lot of time looking at, as it incredibly speeds up programming by letting you test things on the fly before committing them to your program. You can also try it on the right hand side of the repl.it embedded snippets of code.
+One of the benefits of this line by line evaluation of Python however is the Python Interactive Mode, otherwise known as the REPL, which was described above. Because the programs are interpreted line by line, you can also open your REPL (by typing `python3` or `python` into your command line,  by clicking Tools->Python Console in Pycharm, or just going on [repl.it](http://repl.it/languages/python3) ). This is one feature I suggest you spend a lot of time looking at, as it incredibly speeds up programming by letting you test things on the fly before committing them to your program. You can also try it on the right hand side of the repl.it embedded snippets of code.
 
 # Structure of Programs
 
@@ -585,14 +585,14 @@ int largestNumber = 2;
 largest_number = 2
 {% endhighlight %}
 
-If you're curious, [this document](https://www.python.org/dev/peps/pep-0008/) is the official Python style guide, known as PEP8. PEP8 is like a sacred text for Python programmers, as it was written by our [Benevolent Dictator for Life](https://en.wikipedia.org/wiki/Benevolent_dictator_for_life), [Guido Van Rossum](https://en.wikipedia.org/wiki/Guido_van_Rossum), the creator of Python. There is also [Google's Python Style Guide](https://google.github.io/styleguide/pyguide.html), which is pretty widely used.
+If you're curious, [this document](https://www.python.org/dev/peps/pep-0008/) is the official Python style guide, known as PEP8. PEP8 is like a sacred text for Python programmers, as it was written by the former [Benevolent Dictator for Life](https://en.wikipedia.org/wiki/Benevolent_dictator_for_life), [Guido Van Rossum](https://en.wikipedia.org/wiki/Guido_van_Rossum), the creator of Python. There is also [Google's Python Style Guide](https://google.github.io/styleguide/pyguide.html), which is pretty widely used.
 
 # Conclusion
 
-EDIT: Part 2 is now out! Read it [here](https://aryaboudaie.com/java/python/technical/educational/2018/09/16/python-for-java-programmers-p2.html). 
+EDIT: Part 2 is now out! Read it [here](https://aryaboudaie.com/java/python/technical/educational/2018/09/16/python-for-java-programmers-p2.html).
 
 I hope this article gave you a good overview of all the different things to expect when looking at Python code, so you wouldn't feel too left out. You might not have a solid grasp at Python fundamentals, but in the next part, I will write about how to actually get to writing some Python - with direct translations from what you know from Java! You've seen that Python gives you a lot of freedom, but with this freedom comes the responsibility to make sure you keep writing good code! Please let me know if you have any questions in the comments below, or if you think there are any mistakes/confusing bits to it. If you're already a Python expert, please let me know what I missed. And of course, if I helped you out, please let me know, and share this article with any friends you think might like it. I am very new at writing tutorials like this, but I want to get really good at it!
 
 Again, if you want to be notified when part 2 comes out, please sign up for my [email updates here](https://goo.gl/forms/jzaFhUpZ6x17oOJh2)! See you next time.
 
-Special thanks to my brother and to my friends who read this before and offered their thoughts!
+Special thanks to my brother and to my friends who read this before and offered their thoughts! Also thanks to Chanwoo Park for catching a few mistakes and oversimplifications!
