@@ -2,7 +2,7 @@
 layout: post
 title:  "Python for Java Programmers - Part 3 - Collections and Using Them"
 subtitle: "Lists, Strings, Tuples, and Loops"
-date:   2018-09-16 00:10:00
+date:   2018-10-13 00:10:00
 categories: [Java, Python, Technical, Educational]
 hide: true
 ---
