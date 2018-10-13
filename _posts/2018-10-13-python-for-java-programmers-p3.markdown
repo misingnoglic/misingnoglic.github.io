@@ -795,6 +795,8 @@ def sq1(x):
   return x**2 + 1
 {% endhighlight %}
 
+### String Methods
+
 Strings also have their own methods that are useful for string manipulation, like `.upper()` and `.lower()`. You can see the full list of those [here](https://www.programiz.com/python-programming/methods/string). Here are some fun examples, whose results are fairly self explanatory. Note that they don't modify the string (as the string is immutable), but they instead return a new string.
 
 {% highlight python %}
@@ -847,6 +849,8 @@ nums = [int(x) for x in input_str.split()]
 
 Think about how annoying that would be with the Java scanner!
 
+### Joining a List Into a String
+
 Splitting a string into a list is fairly intuitive, but turning a list back into a string isn't, so I'll show you the preferred method for that. If you want to turn `["Hello", "World"]` into `"Hello World"`, you have to do something like this.
 
 {% highlight python %}
@@ -856,6 +860,46 @@ print(combined)  # "Hello World"
 {% endhighlight %}
 
 Basically, you're taking the space string, and joining every word in the list based on it. I know it seems like it would make more sense to have the join method on the list instead of the string, but that's just the way it is. [Here](https://stackoverflow.com/questions/493819/python-join-why-is-it-string-joinlist-instead-of-list-joinstring) is the real reason, in case you are curious. Note that this is more space efficient than writing a loop to create a string, so interviewers love to see stuff like this. I know it's a strange syntax at first, but you will get used to it.
+
+### Adding Variables to Strings
+
+A common thing to want to do with Python is add variables to strings, so you can create some complex strings. The easiest way to do this is with format strings.
+
+{% highlight python %}
+num = 4
+s = f"{num} squared is {num**2}"
+print(s)  # 4 squared is 16
+{% endhighlight %}
+
+Simply just put an `f` in front of the string (to signify that it's a format string), and then place your variables into the curly braces. Python will automatically format the string for you. This is amazing, but unfortunately this is only supported in Python 3.6 or above, so people with older versions of Python won't be able to run it.
+
+Another common way is by manually calling the format function like this:
+
+{% highlight python %}
+num = 4
+s = "{} squared is {}".format(num, num**2)
+print(s)  # 4 squared is 16
+{% endhighlight %}
+
+Basically you just put `{}` wherever you want to place your variable, and then call `.format` on the string, placing each variable in order. Definitely not as nice, but you'll see this a lot when writing Python.
+
+You can also use the printf formatting that's common with other programming languages like this:
+
+{% highlight python %}
+num = 4
+s = "%d squared is %f" % num, num**2
+print(s)  # 4 squared is 16
+{% endhighlight %}
+
+This is definitely not as nice, so I won't waste too much time explaining them. You can read about this kind of formatting [here](https://docs.python.org/3/library/stdtypes.html#old-string-formatting).
+
+Finally, the clunkiest way you can do it is just by converting your variables to strings and adding them together.
+
+{% highlight python %}
+num = 4
+s = str(num)+" squared is "+str(num**2)
+print(s)  # 4 squared is 16
+{% endhighlight %}
 
 Strings are super useful, especially for reading files and user input, and Python makes them so pleasant to work with! I'll talk more about files, but this post is getting pretty long already!
 
