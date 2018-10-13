@@ -863,7 +863,9 @@ Basically, you're taking the space string, and joining every word in the list ba
 
 ### Adding Variables to Strings
 
-A common thing to want to do with Python is add variables to strings, so you can create some complex strings. The easiest way to do this is with format strings.
+A common thing to want to do with Python is add variables to strings, so you can create some complex strings. I'll show you four ways to do this, from the best to the worst.
+
+The easiest way to do this is with f strings, a fairly new feature introduced to Python.
 
 {% highlight python %}
 num = 4
