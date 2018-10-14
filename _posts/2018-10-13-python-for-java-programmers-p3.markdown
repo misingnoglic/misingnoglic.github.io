@@ -33,11 +33,18 @@ nums = [1, 3, 5]
 crazy_list = [True, 1.0, 4, "test", [1, 2, 3], {'a': 'b'}]
 {% endhighlight %}
 
-Lists are ordered, meaning that the order you insert items into a list matters, and the list's items can be accessed in a specific predefined order. To access an element of a list, you use the same indexing syntax as Java arrays. Python includes a useful extension of this, where you can also index starting from the back with negative indexing. The last item is index -1, the second to last item is index -2, etc...
+Lists are ordered, meaning that the order you insert items into a list matters, and the list's items can be accessed in a specific predefined order. To access an element of a list, you use the same indexing syntax as Java arrays.
 
 {% highlight python %}
 nums = [1, 3, 5]
 print(nums[1])  # 3
+{% endhighlight %}
+
+
+Python includes a useful extension of this, where you can also index starting from the back with negative indexing. The last item is index -1, the second to last item is index -2, etc...
+
+{% highlight python %}
+nums = [1, 3, 5]
 print(nums[-2])  # Also 3
 {% endhighlight %}
 
@@ -49,9 +56,17 @@ So you can access each element two different ways. Here's a visualization of the
 full_list = [1, 3, 5, 7, 9, 11, 13]
 {% endhighlight %}
 
+Just like Java, you can use indexes to modify certain parts of the list.
+
+{% highlight python %}
+nums = [1, 3, 5]
+nums[0] = 100
+print(nums)  # [100, 3, 5]
+{% endhighlight %}
+
 ## Slices
 
-Python also lets you grab a "slice" of a list, or a specific part of a list. Here is the most basic way to do that:
+Python also lets you grab a "slice" of a list, meaning a specific part. Here is the most basic way to do that:
 
 {% highlight python %}
 nums[start:stop]
@@ -62,9 +77,9 @@ full_list = [1, 3, 5, 7, 9, 11, 13]
 print(full_list[1:5])  # [3, 5, 7, 9]
 {% endhighlight %}
 
-This syntax will give you the elements of the list from `start` up until (not including) `stop`. So in this case, `full_list[1:5]` get back the list with the items at index 1, 2, 3, and 4, so [3, 5, 7, 9].
+This syntax will give you the elements of the list from `start` up until (**not including**) `stop`. So in this case, `full_list[1:5]` get back the list with the items at index 1, 2, 3, and 4, so `[3, 5, 7, 9]`.
 
-You can also use negative indexes in your list, so nums[1:-1] will give you everything starting at the item at index 1, up until the last element.
+You can also use negative indexes in your list, so `nums[1:-1]` will give you everything starting at the item at index 1, up until the last element.
 
 {% highlight python %}
 nums = [4, 5, 6, 7]
@@ -100,11 +115,20 @@ print(nums[::2])
 print(nums[::-1])
 {% endhighlight %}
 
+Just as a note: the slices you get back are copies of the original list, so if you modify them, you won't modify the original list. However, if you don't set them to a variable, you can also use slices to redefine whole parts of lists as other lists! Pretty sweet :)
+
+{% highlight python %}
+>>> nums = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+>>> nums[1:8]=[0]  # Replace items from 1-8 with just a 0
+>>> nums
+[10, 0, 18, 19, 20]
+{% endhighlight %}
+
 Here's an interactive REPL you can play with. I suggest clicking the "debugger" button on the left so you can go through it line by line and see what is going on.
 
-<iframe height="500px" width="100%" src="https://repl.it/@misingnoglic/ParallelPrevailingBlock?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="550px" width="100%" src="https://repl.it/@misingnoglic/ParallelPrevailingBlock?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-Just as a note: the slices you get back are copies of the original list, so if you modify them, you won't modify the original list. And there you have it, Python slices!
+And there you have it, Python slices!
 
 ## Methods on lists.
 
