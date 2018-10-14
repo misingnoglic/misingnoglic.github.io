@@ -147,7 +147,7 @@ if __name__ == '__main__':
 
 If that was confusing, the good news is that you don't really need to understand anything but lines 3-5, which defined the route. When you make your own app, you can define more and more routes, for the different URLs of your website. Everything else you can just copy and paste from here.
 
-![Graphic of above](/assets/blog_images/flask/hello_world_explained.PNG)
+![Graphic of above](/assets/blog_images/flask/hello_world_explained.png)
 
 
 # How To Get User Input
@@ -175,7 +175,7 @@ The `<name>` in the route URL is a placeholder - any name you put there will be 
 
 Please excuse my awful art skills, but here is the above in drawn form.
 
-![Graphic of above](/assets/blog_images/flask/url_route.PNG)
+![Graphic of above](/assets/blog_images/flask/url_route.png)
 
 Note that the variable passed though the URL is a string. If you want it to be another type, you can manually convert it. You can also specify the type in the route like [this](http://flask.pocoo.org/docs/1.0/quickstart/#variable-rules). For example, if you want a int, you can do:
 
@@ -218,7 +218,7 @@ if __name__ == '__main__':
 
 <iframe height="400px" width="100%" src="https://repl.it/@misingnoglic/factors-website-1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-![Rendered HTML](/assets/blog_images/flask/factors_360.PNG)
+![Rendered HTML](/assets/blog_images/flask/factors_360.png)
 
 Looking good! At this point we've basically learned how to take any Python function you've already made, and create a web interface for it. Now how do we make it look nice?
 
@@ -242,7 +242,7 @@ If we were to make a HTML page for one of our factors, it would probably look so
 
 The HTML code looks like this when rendered:
 
-![Rendered HTML](/assets/blog_images/flask/factors_html_hardcoded.PNG)
+![Rendered HTML](/assets/blog_images/flask/factors_html_hardcoded.png)
 
 Note - if you want to test what HTML looks like quickly, just throw it into [jsfiddle.net](https://jsfiddle.net/), which is a great website for quickly testing and iterating on HTML.
 
