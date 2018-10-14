@@ -10,7 +10,7 @@ Hello, welcome to my website! I can't afford a home in the Bay Area, but I can a
 
 Click the navigation links above to see what the site has to offer. I suggest [About](/about), [Blog](/blog), or [Resources](/resources).
 
-<img src="https://i.imgur.com/iUyGPRU.jpg" alt="My Face" style="width: 600px; margin-left:0px"/>
+<img src="/assets/blog_images/face.jpg" alt="My Face" style="width: 600px; margin-left:0px"/>
 
 
 - Click ["About"](/about) to read about me
