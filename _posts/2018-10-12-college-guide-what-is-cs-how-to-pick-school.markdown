@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Arya's Computer Science College Guide: Part 1"
-subtitle: "What is Computer Science, and five tips to choosing a school."
+title:  "Arya's Computer Science College Guide"
+subtitle: "What is Computer Science, and five tips to choosing a great CS school for you."
 date:   2018-10-12 00:00:00
 categories: [Educational]
 hide: false
@@ -12,7 +12,7 @@ hide: false
 * TOC
 {:toc}
 
-Hey everyone! I know normally these blogs are geared towards an older audience, but I'm hoping to use this blog as a way to make computer science more inclusive at all levels! So to all my high school age readers, welcome, and I hope this post is useful to you! If this is out of your age range, I'd love for you to still read this and share your own experiences, as everyone's experience with college is unique and personal.
+Hey everyone! I know normally these blogs are geared towards an older audience, but I'm hoping to use this blog as a way to make computer science more inclusive at all levels! So to all my high school age readers, **welcome**, and I hope this post is useful to you! If this is out of your age range, I'd love for you to still read this and share your own experiences, as everyone's experience with college is unique and personal.
 
 I was asked to talk at two separate high school AP Computer Science classes, and I talked to the students about what it really means to study Computer Science in college. Being a recent college graduate, I still remember a lot of the questions and anxieties I had about choosing a college and what to expect. I had taken one programming class in my junior year, and beside that I really didn't know what computer science really was, or what it meant to be studying it really. I decided to write this post so that I can spread my experience to many more people than just two classrooms, and make sure y'all know what you're getting into!
 
