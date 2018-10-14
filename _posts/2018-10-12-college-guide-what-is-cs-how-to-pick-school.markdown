@@ -175,3 +175,5 @@ Topics I am currently working on:
 
 * Python for Java Programmers 3
 * How to make website with Python in 7 lines of code using Flask.
+
+Thanks to my friend Victoria for looking at this post and giving me advice from the perspective of someone who went to UC Berkeley, and thank you to my friend Claire who suggested I talk a little about coming from not that much money and a below average GPA.
