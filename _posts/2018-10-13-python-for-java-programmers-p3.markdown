@@ -285,7 +285,7 @@ nums.sort(key=sort_fn)
 print(nums)  # [1, 3, 5, 2, 4, 6, 191]
 {% endhighlight %}
 
-This basically sorts the list as if every element x of of nums is sort_fn(x), but keeps each element the same. Another example: let's say you have a list of students, but you want to sort it by the last letter in the name to change things up a little. You could do something like this:
+This basically sorts the list as if every element x of nums is sort_fn(x), but keeps each element the same. Another example: let's say you have a list of students, but you want to sort it by the last letter in the name to change things up a little. You could do something like this:
 
 {% highlight python %}
 names = ["Billy", "Parisa", "Sam"]
