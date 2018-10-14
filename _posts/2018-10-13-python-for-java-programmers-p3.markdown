@@ -124,9 +124,14 @@ Just as a note: the slices you get back are copies of the original list, so if y
 [10, 0, 18, 19, 20]
 {% endhighlight %}
 
-Here's an interactive REPL you can play with. I suggest clicking the "debugger" button on the left so you can go through it line by line and see what is going on.
+Here's an interactive REPL you can play with.
 
 <iframe height="550px" width="100%" src="https://repl.it/@misingnoglic/ParallelPrevailingBlock?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+I suggest clicking the "debugger" button on the left so you can go through it line by line and see what is going on. Watch the CEO of repl.it do it here:
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">We&#39;ve recently made it possible to step through programs in embedded <a href="https://twitter.com/replit?ref_src=twsrc%5Etfw">@replit</a>.<br><br>This is from the excellent &quot;Python for Java Programmers&quot; by <a href="https://twitter.com/misingnoglic?ref_src=twsrc%5Etfw">@misingnoglic</a> <a href="https://t.co/FMRF47G21W">pic.twitter.com/FMRF47G21W</a></p>&mdash; Amjad Masad (@amasad) <a href="https://twitter.com/amasad/status/1041815223609384960?ref_src=twsrc%5Etfw">September 17, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 And there you have it, Python slices!
 
