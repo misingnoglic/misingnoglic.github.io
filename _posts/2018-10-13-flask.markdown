@@ -4,7 +4,7 @@ title:  "Make a Website Using Python & Flask!"
 subtitle: "Creating a Python Site from the Bottom Up"
 date:   2018-10-13 00:00:00
 categories: [Python, Technical, Educational, Web, Flask]
-hide: false
+hide: true
 ---
 
 Note: This post requires you know some basic Python. You should be comfortable with what functions are and how to write them. [Here](https://www.w3schools.com/python/python_functions.asp) is a quick refresher! If you're comfortable with Java, you can also read my [Python for Java Programmers](https://aryaboudaie.com/java/python/technical/educational/2017/11/13/python-for-java-programmers.html) series. You should also have Python 3 installed on your computer if you want to follow along (download it [here](https://www.python.org/downloads/release/python-370/)). Finally, you should know some basic HTML, which is a markup language for creating web pages. You can get a refresher to HTML [here](https://www.w3schools.com/html/html_basic.asp) - it's super short and easy! Just be sure to run to try the examples.
