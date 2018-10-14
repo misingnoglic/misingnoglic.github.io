@@ -65,6 +65,6 @@
   <meta property="og:image" content="{{page.image}}" />
   <meta name="twitter:image" content="{{page.image}}" />
 {% else %}
-  <meta property="og:image" content="www.aryaboudaie.com/assets/blog_images/face.jpg" />
-  <meta name="twitter:image" content="www.aryaboudaie.com/assets/blog_images/face.jpg" />
+  <meta property="og:image" content="{{ "/assets/blog_images/face.jpg" | absolute_url }}" />
+  <meta name="twitter:image" content="{{ "/assets/blog_images/face.jpg" | absolute_url }}" />
 {% endif %}
