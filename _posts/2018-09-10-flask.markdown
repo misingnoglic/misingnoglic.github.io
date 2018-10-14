@@ -1,26 +1,35 @@
 ---
 layout: post
-title:  "How to turn your Python code into a website!"
-subtitle: "Introduction to Flask!"
-date:   2019-11-20 23:56:45
+title:  "Make a Website Using Python & Flask!"
+subtitle: "Creating a Python Site from the Bottom Up"
+date:   2018-10-12 23:56:45
 categories: [Python, Technical, Educational, Web, Flask]
-hide: true
+hide: false
 ---
 
-Note: This post requires you know some basic Python. You should be comfortable with what functions are and how to write them. [Here](https://www.w3schools.com/python/python_functions.asp) is a quick refresher!
+Note: This post requires you know some basic Python. You should be comfortable with what functions are and how to write them. [Here](https://www.w3schools.com/python/python_functions.asp) is a quick refresher! If you're comfortable with Java, you can also read my [Python for Java Programmers](https://aryaboudaie.com/java/python/technical/educational/2017/11/13/python-for-java-programmers.html) series. You should also have Python 3 installed on your computer if you want to follow along (download it [here](https://www.python.org/downloads/release/python-370/)). Finally, you should know some basic HTML, which is a markup language for creating web pages. You can get a refresher to HTML [here](https://www.w3schools.com/html/html_basic.asp) - it's super short and easy! Just be sure to run to try the examples.
 
-If you don't know Java, but you know Python, my Python for Java Programmers tutorial would be great for you!
+# Table of Contents
+
+* TOC
+{:toc}
 
 # Introduction
-A lot of people who first get into programming do so because they want to make cool apps. They want to make a website that they can send to friends, or with the whole world even. So they take their first intro CS course, and all though they learn how to muse loops and lists and all that good stuff, they still can't make an app! All they can do really is make an app that takes some input from the command line, but nobody's gonna run that!
+A lot of people who first get into programming do so because they want to make cool apps. They want to make a website that they can send to friends, or with the whole world even. So they take their first intro CS course, and all though they learn how to use loops and lists and all that good stuff, they still can't make an app! All they can do really is make an app that takes some input from the command line, but nobody's gonna run that! They just want to make some cool apps, and maybe even create some quick hackathon projects.
 
-Do you relate to the unnamed person in this article? If so, then read on! I was once like you, doing hackathon projects on the command line [seriously](https://www.youtube.com/watch?v=-xUDdAVbSoM). But then I learned about the beautiful world of web development, and how easy it was to put my Python on the web. And it's made easy by this beautiful framework called Flask.
+Do you relate to the unnamed person in this article? If so, then read on! I was once like you, doing hackathon projects on the command line [(seriously)](https://www.youtube.com/watch?v=-xUDdAVbSoM). But then I learned about the beautiful world of web development, and how easy it was to put my Python on the web. And it's made _super_ easy by this Python framework called Flask.
+
+There are already a lot of Flask tutorials out there ([here](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world) is the most famous one), but they're much more concerned with how to do things the "correct" way. Those are great for learning how to make Flask apps correctly, but make for a horrible experience for beginners just trying to make a quick website. So I thought I would start from the bottom up, and teach you how to get started making quick and easy Flask apps, starting from functions you already know how to make. This post is also great as a guide for teachers who teach Python and want a good way to motivate students, by showing them how to use their Python skills and make websites with them, without learning too much boilerplate. I'll show you how to take your Python functions that you're already making, and put then on the web!
+
+Note: I based this blogpost off a slideshow I made for when I was helping design [COSI 2A](http://cs.brandeis.edu/~arya/senior-thesis.pdf) at Brandeis University for my senior thesis. You can see those slides [here](https://docs.google.com/presentation/d/1AQRvjxiCUtJOOHrDdmRpPyhjSNMWVi4am4vJjlD5Jdo/edit#slide=id.p). You may use them, but please give credit back to my website!
 
 # What is Flask?
 
-Put simply, Flask is a Python "framework" that makes it stupid easy to create websites, while at the same time being powerful enough to be used at companies worldwide. A framework is some software that abstracts complicated ideas away from you, and basically handles all of the business logic of what needs to be in a website. Flask likes to call itself a microframework, meaning that it tries to be as minimalist as possible. This light-weight design means that you can turn your code into a website with very little code!
+![Flask Logo](http://flask.pocoo.org/static/logo/flask.png)
 
-And for some examples of companies and projects that have used Flask, here are a few to hopefully prove to you that it is not just a toy (source)[https://www.quora.com/What-is-the-largest-site-created-using-Flask]:
+Put simply, Flask is a Python [web framework](https://en.wikipedia.org/wiki/Web_framework) that makes it _stupid_ easy to create websites, while at the same time being powerful enough to be used at companies worldwide. A [framework](https://en.wikipedia.org/wiki/Software_framework) is software that abstracts complicated ideas away from you, and basically handles all of the business logic of what needs to be in a website, so you only need to worry about the code for the bits unique to your specific website. Flask likes to call itself a [microframework](https://en.wikipedia.org/wiki/Microframework), meaning that it tries to be as minimalist as possible. This light-weight design means that you can create a website with very little code!
+
+And for some examples of companies and projects that have used Flask, here are a few to hopefully prove to you that it is not just a toy [(source)](https://www.quora.com/What-is-the-largest-site-created-using-Flask):
 
 * LinkedIn
 * Twilio
@@ -29,16 +38,22 @@ And for some examples of companies and projects that have used Flask, here are a
 * Obama's 2012 Campaign
 * Kyruus
 
-Just like Python, Flask is easy enough to be picked up by beginners, but if you put the time into it, you can make a career out of it! Hopefully now you're feeling motivated enough to get started!
+Just like Python, Flask is easy enough to be picked up by beginners, but if you put the time into it, you can make a [career out of it](https://www.indeed.com/salaries/Python-Flask-Developer-Salaries). Hopefully now you're feeling motivated enough to get started!
 
-# How to install Flask
+# How to Install Flask
 
-If you already have Python on your computer, then great! All you need to do is pip install flask. If you're not sure how to do that, just open your terminal or command line, and type:
+If you already have Python on your computer, then great! All you need to do is `pip install flask`. If you're not sure how to do that, just open your terminal or command line, and type:
 
-For OSX/Linux: `pip3 install flask`
-For Windows: `pip install flask`
+* For OSX/Linux: `pip3 install flask`
+* For Windows: `pip install flask`
 
-And it should be installed! You can verify this by trying to run a Python program with just `from flask import Flask` in it. If it runs without error, you're good to go! If you're stuck, feel free to shoot me an email at arya@aryaboudaie.com and I can take a look! You can also follow along without installing anything - the AMAZING website www.repl.it has now developed support for running Flask apps, so you'll be able to see the results of the code in real-time. Still, you should try to run it locally, so you'll be able to tinker around with it and see how it all works. Like my other posts, I'll embed some repl.it pages here for your convenience.
+And it should be installed! You can verify this by trying to run a Python program with just this in it:
+
+{% highlight python %}
+from flask import Flask
+{% endhighlight %}
+
+If it runs without error, you're good to go! If you're stuck, feel free to shoot me an email at [arya@aryaboudaie.com](mailto:arya@aryaboudaie.com) and I can take a look! You can also follow along without installing anything - the **AMAZING** website www.repl.it has now developed support for running Flask apps, so you'll be able to see the results of the code in real-time. Still, you should try to run it locally, so you'll be able to tinker around with it and see how it all works. Like my other posts, I'll embed some repl.it pages here for your convenience. I definitely recommend you try to run it on your own computer though, just to learn how to run that kind of thing.
 
 # Hello World!
 
@@ -62,15 +77,24 @@ if __name__ == '__main__':
   app.run(host='0.0.0.0')
 {% endhighlight %}
 
-You can save this file as flask_test.py and run it in your terminal, and go to "localhost:5000" in your browser to prove that this does actually what I said it would do. "localhost" is not a real website address, but rather an address referring to the "local" code running on your computer. I'll explain more later.
+You can save this file as flask_test.py and run it in your terminal, and it should look something like this:
 
-![Picture of my browser running the Flask code](https://i.imgur.com/1XzuamP.png)
+![Command prompt showing that I ran flask](/assets/blog_images/flask/running_flask.png)
 
-And here is the repl.it embed, run it and try it out!
+
+ Once it's running, open your browser, and go to "localhost:5000" in your browser to prove that this does actually what I said it would do. [localhost](https://www.quora.com/What-is-a-local-host) is not a real website address, but rather an address referring to the "local" code running on your computer.
+
+ ![Website running locally on my laptop](/assets/blog_images/flask/localhost.png)
+
+And here is the repl.it embed - click the run button, and then open the given URL in your browser. There's also a little window where you can see what's going on, but for more complicated websites it'll be good to just open the REPL in another window. Change the string as well to experiment, just be sure to rerun it first!
+
+![What to click to see the website](/assets/blog_images/flask/repl_click.png)
 
 <iframe height="400px" width="100%" src="https://repl.it/@misingnoglic/flask-1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-Let me go through each of these sections, to properly explain what exactly is going on.
+From now on I'll refer to the URL as localhost, but each REPL will have a different URL if you decide to use those.
+
+Let me go through each of these lines, to properly explain what exactly is going on. Besides lines 3-5 though, it's mostly [boilerplate](https://en.wikipedia.org/wiki/Boilerplate_code).
 
 Line 1:
 {% highlight python %}
@@ -84,7 +108,7 @@ Line 2:
 app = Flask(__name__)
 {% endhighlight %}
 
-All this is doing is creating a new "app" which will be run. The app will manage all the different things your website will be able to do. `__name__` is a variable in Python that is automatically defined - you don't really need to worry about why that is passed in. Just know you need this line to create the flask app.
+All this is doing is creating a new "app" which will be run. The app will manage all the different things your website will be able to do. `__name__` is a variable in Python that is automatically defined - you don't really need to worry about why that is passed in. Just know you need this line to create the Flask app.
 
 Lines 3-5:
 {% highlight python %}
@@ -95,7 +119,7 @@ def hello_world():
 
 Surely you'll recognize lines 4 & 5 - they define a function that takes no parameters, and returns the string "Hello World". The only weird part is probably the line 3, `@app.route('/')`.
 
-This syntax is called a decorator, and they are actually pretty interesting. But for the purposes of knowing flask, all you have to know is that adding this line on top of a function definition turns it into a "route." Basically, it means if you go to your website with a slash at the end and nothing else, the code in the hello_world function will be run, and whatever is returned will be shown in your browser. We could add another route like this:
+This syntax is called a decorator, and they are actually pretty interesting. But for the purposes of knowing Flask, all you have to know is that adding this line on top of a function definition turns it into a "route." Basically, it means if you go to your website with a slash at the end and nothing else, the code in the hello_world function will be run, and whatever is returned will be shown in your browser. We could add another route like this:
 
 {% highlight python %}
 @app.route('/test')
@@ -103,7 +127,13 @@ def testing():
     return 'test'
 {% endhighlight %}
 
-And then when we go to localhost:5000/test, we will see just the word test. When you go to a URL on your app, your flask app uses these routes to figure out which function corresponds with your URL.
+And then when we go to localhost:5000/test, we will see just the word test. When you go to a URL on your app, your flask app uses these routes to figure out which function corresponds with your URL. Check it out in this REPL:
+
+<iframe height="400px" width="100%" src="https://repl.it/@misingnoglic/flasktest2?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+Note that the function name doesn't really matter, since you're never actually calling it. You should still pick a good name, however.
+
+If you're curious about what decorators are and how they work, check out [this post](https://realpython.com/primer-on-python-decorators/).
 
 Lines 6-7:
 {% highlight python %}
@@ -111,11 +141,14 @@ if __name__ == '__main__':
   app.run(host='0.0.0.0')
 {% endhighlight %}
 
-`if __name__ == '__main__'` is basically just Python's way of saying "run this code only if I ran it." As I said before, `__name__` is a variable that Python automatically creates, and it's equal to `__main__` when it's you that ran the code (as opposed to another script running the code). You'll see this a lot while doing Python, so it's good to get used to it, though I agree that it's ugly.
+`if __name__ == '__main__'` is basically just [Python's way of saying](https://stackoverflow.com/questions/419163/what-does-if-name-main-do) "run this code only if I ran it." As I said before, `__name__` is a variable that Python [automatically creates](https://www.geeksforgeeks.org/__name__-special-variable-python/), and it's equal to `"__main__"` when it's you that ran the code (as opposed to another script running the code). You'll see this line a lot while doing Python, so it's good to get used to it.
 
-`app.run(host='0.0.0.0')` basically runs the app variable that you've created in line 2. This is what runs all the Flask code that you don't need to see that lets you open localhost:5000 in your browser.
+`app.run(host='0.0.0.0')` basically runs the app variable that you've created in line 2, and the host we passed in makes it run on localhost.
 
-If that was confusing, the good news is that you don't really need to understand anything but lines 3-5, which defined the route. When you make your own app, you can define more and more routes, for the different URLs of your website. Everything else you can just copy and paste from here. Should I have told you that? Maybe.
+If that was confusing, the good news is that you don't really need to understand anything but lines 3-5, which defined the route. When you make your own app, you can define more and more routes, for the different URLs of your website. Everything else you can just copy and paste from here.
+
+![Graphic of above](/assets/blog_images/flask/hello_world_explained.PNG)
+
 
 # How To Get User Input
 
@@ -126,18 +159,243 @@ Good question! The answer is that you can define a route like this, with a varia
 {% highlight python %}
 @app.route('/hello/<name>')
 def hello_name(name):
-    return 'Hello '+ name + ‘!’
+    return 'Hello '+ name + '!'
 {% endhighlight %}
 
-The `<name>` in the route URL is a placeholder - any name you put there will be passed into the "hello_name" function. For example, if you run your flask app with this new route, and then go to the URL localhost:5000/hello/arya , the following steps will happen:
+<iframe height="400px" width="100%" src="https://repl.it/@misingnoglic/Flask-Name-Test?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-1. The browser asks the server at the URL for a response.
- 1. The “server” in this case is your computer.
-3. The server sees this request, and also sees the URL you gave.
-4. The server figures out which function corresponds to the URL you gave, and calls it with the right variables
-5. In this case, the function is hello_name(), with the variable “arya” passed in.
-6. The server returns the string "Hello arya!" which is displayed in the browser.
+The `<name>` in the route URL is a placeholder - any name you put there will be passed into the "hello_name" function. For example, if you run your flask app with this new route, and then go to the URL localhost:5000/hello/arya, the following steps will happen:
 
-Note that the variable passed though the URL is a string. If you want it to be another type, you can manually convert it. You can also specify the type in the URL like [this](http://flask.pocoo.org/docs/1.0/quickstart/#variable-rules).
+* The browser asks the server at the URL for a response.
+  * The “server” in this case is your computer.
+* The server sees this request, and also sees the URL you gave.
+* The server figures out which function corresponds to the URL you gave, and calls it with the right variables.
+  * In this case, the function is hello_name(), with the value "arya" passed through the variable `name`.
+* The server returns the string "Hello arya!" which is returned from hello_name("arya") which is displayed in the browser.
 
-Let's say we have a normal Python function
+Please excuse my awful art skills, but here is the above in drawn form.
+
+![Graphic of above](/assets/blog_images/flask/url_route.PNG)
+
+Note that the variable passed though the URL is a string. If you want it to be another type, you can manually convert it. You can also specify the type in the route like [this](http://flask.pocoo.org/docs/1.0/quickstart/#variable-rules). For example, if you want a int, you can do:
+
+{% highlight python %}
+@app.route('/square/<int:num>')
+def f(num):
+  # No conversion of x needed.
+  return str(x**2)
+{% endhighlight %}
+
+Notice that `<int:num>` will cast the `num` passed in the URL as an int.
+
+Let's say you have a normal Python function that returns some computation. For example, given a number, it returns all the factors of that number, or numbers that divide evenly into your input.
+
+{% highlight python %}
+def factors(num):
+  return [x for x in range(1, num+1) if num%x==0]
+
+print(factors(30))  # [1, 2, 3, 5, 6, 10, 15, 30]
+{% endhighlight %}
+
+I know it's a little dry, but it's a good example of a "school" type of function that one would be asked to code for an assignment or test that takes in a number and returns a list, so for the rest of this tutorial, I will use this `factors` function as an example of a function you would want to turn into a website.
+
+Let's make this into a website!
+
+{% highlight python %}
+from flask import Flask
+app = Flask(__name__)
+
+def factors(num):
+  return [x for x in range(1, num+1) if num%x==0]
+
+@app.route('/factors/<int:num>')
+def factors_route(num):
+    return "The factors of {} are {}".format(num, factors(num))
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0')
+{% endhighlight %}
+
+<iframe height="400px" width="100%" src="https://repl.it/@misingnoglic/factors-website-1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+![Rendered HTML](/assets/blog_images/flask/factors_360.PNG)
+
+Looking good! At this point we've basically learned how to take any Python function you've already made, and create a web interface for it. Now how do we make it look nice?
+
+# Make nice pages with HTML
+
+So now we can send data to the Python code, and the Python code can compute using that data and return data back to the browser. And that's all cool and all, but how can we actually make this look nice?
+
+If you don't already know, HTML is the markup language that allows you to specify what a given webpage will look like. If you haven't already, check out the HTML quick tutorial [here](https://www.w3schools.com/html/html_basic.asp), so you can use this to make our websites.
+
+If we were to make a HTML page for one of our factors, it would probably look something like this. The `<h1>` tag is used to style the header, the `<ul>` tag is used to mark an unordered (bulleted) list, and the `<li>` tags are to designate each list item.
+
+{% highlight html %}
+<h1>The factors of 10 are:</h1>
+<ul>
+  <li>1</li>
+  <li>2</li>
+  <li>5</li>
+  <li>10</li>
+</ul>
+{% endhighlight %}
+
+The HTML code looks like this when rendered:
+
+![Rendered HTML](/assets/blog_images/flask/factors_html_hardcoded.PNG)
+
+Note - if you want to test what HTML looks like quickly, just throw it into [jsfiddle.net](https://jsfiddle.net/), which is a great website for quickly testing and iterating on HTML.
+
+Now this isn't the most stylish website ever, but it's definitely better than the old version where we just returned the string of the list to the browser. At least with HTML it looks like a legitimate website. With some simple CSS and graphics, you could make this look much nicer. If you're interested, Codecademy has [many classes](https://www.codecademy.com/catalog/language/html-css) on HTML/CSS. Teaching HTML/CSS is way beyond the scope of this tutorial but definitely skills worth learning for any future web developer!
+
+The only problem now is how to pass our data to the HTML, so we can return some nice HTML for the factors of any number. We don't want it for just 10, we want this page for any number we give it.
+
+We could write a function to create the HTML string, and that would actually work. It's not pretty, but it works (don't worry too much about understanding this one, there's a better solution upcoming).
+
+{% highlight python %}
+# Our second version, using HTML to make it look nicer
+@app.route('/factors_raw/<int:num>')
+def factors_display_raw_html(n):
+	factors_list = factors(int(n))
+	# First we put the stuff at the top, adding "n" in there
+	html = "<h1> The factors of "+n+" are</h1>"+"\n"+"<ul>"
+
+	# for each factor, we make a <li> item for it
+	for f in factors_list:
+		html += "<li>"+str(f)+"</li>"+"\n"
+	html += "</ul> </body>" # the close tags at the bottom
+	return html
+{% endhighlight %}
+
+<iframe height="400px" width="100%" src="https://repl.it/@misingnoglic/factors-example-website-raw-HTML?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+So this works and generates the HTML for any number we give it, but it's really unreadable and hard to understand. Surely there's a better way to do things than this, right?
+
+Yes. Yes there is...
+
+## HTML Templates
+
+To create HTML pages on the go, Flask supports this HTML templating engine called [Jinja2](http://jinja.pocoo.org/docs/2.10/), which basically lets you put variables and loops inside of HTML in a clean and efficient way. It has kind of a new syntax, but it's fairly easy to work with once you've seen an example. Here is the template we will create for the `factors` webpage.
+
+{% highlight html %}
+{% raw %}
+<h1>The factors of {{ number }} are: </h1>
+<ul>
+  {% for factor in factors %}
+  <li>{{ factor }}</li>
+  {% endfor %}
+</ul>
+{% endraw %}
+{% endhighlight %}
+
+Notice how this template has two variables, `number` and `factors`. We will pass those two variables into this template. You can refer to variables in these Jinja templates by putting them around curly braces.
+
+Additionally, if one of your variables is a list or other iterator, you can loop through it by adding a loop like `{% for item in nums %}`. Notice that unlike Python, when you're ending your loop, you'll need to add an `{% endfor %}` tag. This is just a taste of what these templates can do - they can also do if statements and other cool features like inheriting from other templates. We take advantage of this looping feature in this template by creating a `<li>` element for each item in factors.
+
+Save this file as `factors.html` in a folder called `templates` in the same folder as your Flask code. Then, you can call the route like this in your Python code:
+
+{% highlight python %}
+from flask import render_template
+
+@app.route('/factors/<int:n>')
+def factors_display(n):
+	return render_template(
+		"factors.html",  # name of template
+		number=n,  # value for `number` in template
+		factors=factors(n) # value for `factors` in template
+	)
+{% endhighlight %}
+
+To properly render the template, we can import the render_template function and call it. The first argument is the name of the template in the `templates` folder, which we called `factors.html`. Then, we pass in each of the variables that the template expects as keyword arguments. For `number` we just pass in `n`, and for `factors` we just pass in `factors(n)`. This demonstrates a really important pattern in web development, that logic should stay in one place (the python file), and the design should stay in another (the template). By separating these two, we keep our code easy to read and maintain. Let's see how it works:
+
+<iframe height="400px" width="100%" src="https://repl.it/@misingnoglic/factors-with-Jinja2-Template?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+To see the template file as well, [view my REPL](https://repl.it/@misingnoglic/factors-with-Jinja2-Template) on the repl.it website, and look on the left side for the list of files.
+
+Note - for using templates on repl.it, you need to have at least two python files in your workspace [because of a bug](https://repl.it/talk/ask/Flask-template-problem/5597/15449). The second Python file can be completely empty, but that's why I have the dummy.py file in [the REPL](https://repl.it/@misingnoglic/factors-with-Jinja2-Template).
+
+It's pretty cool that for any URL /factors/n, it will automatically generate the HTML, right? When you go to the URL, the browser will request the webpage from the server. The server will render the HTML by passing in the correct variables, and then return that HTML back to the browser! And of course this doesn't just have to be factors: you can format any input type into any Jinja template you'd likeLook how much you can already do!
+
+# Keeping Track of State
+
+Now we made our website, and can create a nice looking page for any Python function we can think of! That's pretty powerful in of itself - you just give Flask some input through the URL, and then you can get the output as an HTML page.
+
+But what if we want to do something else. What if you want to make some kind of game that requires intermittent user input, and you need to somehow keep track of the user's state. This will allow us to have some data stored throughout the user's session on the website, as sort of a "memory" of what's happened before.
+
+To keep track of previous data, you can use a [`session`](https://en.wikipedia.org/wiki/Session_(computer_science)), which is a temporary storage connected to a certain user's current session. Flask stores the data of a session client-side in a cookie on the browser ([source](https://stackoverflow.com/questions/32084646/flask-session-extension-vs-default-session)). You can use a session object to store data related to that user, which persists through page refreshes and browser crashes. Here's what you have to do to set that up:
+
+At the top of the file, import `session`, and then after creating your app, you should add these additional two lines:
+
+{% highlight python %}
+from flask import Flask, render_template, session
+app = Flask(__name__)
+# Add these extra two lines
+app.secret_key = 'your secret'
+app.config['SESSION_TYPE'] = 'filesystem'
+{% endhighlight %}
+
+***WARNING***: In an actual production, you want to use an ACTUAL secret key that nobody knows. In this case it's fine, since we're just making toy apps, but in a real product, it needs to be an actual secret. This is because the session data could contain private information for a user, and if someone gets access to the cookie AND knows the secret, they'll be able to look at all your users' session data. Do not use this to store any sensitive data such as passwords. If you're curious how Flask uses this secret key, there's a good explanation [here](https://stackoverflow.com/questions/22463939/demystify-flask-app-secret-key) as well as [here](https://www.reddit.com/r/flask/comments/5l2gmf/af_eli5_how_sessions_work_in_flask/).
+
+Once you have that set up, you can use the `session` object just like a python dictionary. Here's an example, where every time you load the home page, it will count up until 10. After 10, it will delete itself and start over.
+
+{% highlight python %}
+@app.route('/')
+def home():
+  # See if x is in the session
+  x = session.get('x', None)
+  if not x:
+    # If it's not there, set it to 1
+    session['x'] = 1
+  elif x>=10:
+    # If it's 10, clear and start over
+    session.clear()
+    return "Session Cleared"
+  else:
+    # If it's there, add 1
+   session['x']+=1
+   # Display current count
+  return str(session['x'])
+{% endhighlight %}
+
+You can see it in action here:
+
+<iframe height="400px" width="100%" src="https://repl.it/@misingnoglic/session-flask-test?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+If you open up the Chrome Developer tools (More Tools->Developer Tools) and click the Application window, then click on "cookies", you can see that the session data is saved as a cookie in your browser, but encrypted with the key you set. When the server reads the cookie, it can use the key to decrypt the cookie and read/modify the information. That way, one user's session does not affect another user's. You can test this by opening another incognito window with the URL. Pretty cool to see how that works!
+
+![Session ID Cookie](/assets/blog_images/flask/session.png)
+
+Here's another example of a website that could use the session. Let's use the session to count the result of every number we send to the route so far.
+
+{% highlight python %}
+@app.route('/<int:x>')
+def count(x):
+  # See if we already instantiated the list
+  s = session.get('sum', None)
+  if not s:
+    # If it's not there, add our first item.
+    session['sum'] = x
+  else:
+    # If it's there, add the current number
+   session['sum']+=x
+   # Display current count
+  return str(session['sum'])
+{% endhighlight %}
+
+<iframe height="400px" width="100%" src="https://repl.it/@misingnoglic/session-flask-test-sum?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+Once you run this, go to localhost:5000/10 and keep refreshing, and notice how the output keeps going up by 10. Enter another number in the URL, and it'll go up by that number too.
+
+These are both kind of toy examples, but you can imagine creating a game that keeps track of stats like HP, items, weapons, etc... Especially combined with templates linking to other routes, this could be a really cool project! Keep in mind that these URLs are not the best way to pass data (you should really use [forms](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iii-web-forms) for that), but in terms of getting started URLs are a great place to be :)
+
+# Conclusion
+
+I hope you found this Flask tutorial easy to follow and comprehensive enough to give you what you need to get started! Of course there is so much I haven't gotten to cover here, such as forms for submitting data (so you don't have to submit through the URL), adding CSS to your templates, storing data in a database, logins, actually uploading your website to a server, and many other topics. If there is something I didn't cover that you want to do, it's easy enough to Google something like "Flask template if statement" to find out what exactly you need to do. If you'd like a more solid tutorial, definitely check out Miguel Grinberg's Flask [Mega-Tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world), where he'll take you through step by step everything you'll need to know about Flask. You can also check out the Flask official [quickstart](http://flask.pocoo.org/docs/1.0/quickstart/), [tutorial](http://flask.pocoo.org/docs/1.0/tutorial/), or [documentation](http://flask.pocoo.org/docs/1.0/). Or if you like my style and want me to rant about cool and useful Flask stuff in no particular order, let me know that this is a topic of interest. Web development in Python holds a special place in my heart, and I hope that I can spread this joy to you as well :)
+
+If you're interested in how the internet works in general, check out my friend [Seth Rait](https://sethrait.com)'s two part blog post on how the internet works - [Part 1](https://sethrait.com/How-the-Internet-Works-Part-I.html) & [Part 2](https://sethrait.com/How-the-Internet-Works-Part-II.html)
+
+If you found this post useful, please share it with any friends who may like it, or on any relevant social medias. I'd also appreciate any feedback in the comments or [in an email](mailto:arya@aryaboudaie.com). You can also [tweet at me](https://twitter.com/misingnoglic)! Also - please share with me any cool websites you've created! I'd love to see them :)
+
+Thank you, and until next time!
+
+-Arya
