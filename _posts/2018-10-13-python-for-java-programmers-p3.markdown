@@ -33,7 +33,7 @@ nums = [1, 3, 5]
 crazy_list = [True, 1.0, 4, "test", [1, 2, 3], {'a': 'b'}]
 {% endhighlight %}
 
-Lists are ordered, meaning that the order you insert items into the liast matters. To access an element of a list, you use the same indexing syntax as Java arrays. Python includes a useful extension of this, where you can also index starting from the back with negative indexing. The last item is index -1, the second to last item is index -2, etc...
+Lists are ordered, meaning that the order you insert items into a list matters, and the list's items can be accessed in a specific predefined order. To access an element of a list, you use the same indexing syntax as Java arrays. Python includes a useful extension of this, where you can also index starting from the back with negative indexing. The last item is index -1, the second to last item is index -2, etc...
 
 {% highlight python %}
 nums = [1, 3, 5]
