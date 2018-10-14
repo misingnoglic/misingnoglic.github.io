@@ -5,7 +5,7 @@ description: >
   and other various things.
 
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://www.aryaboudaie.com" # the base hostname & protocol for your site
+url: "https://www.aryaboudaie.com" # the base hostname & protocol for your site
 
 author:
   fullname: Arya Boudaie
