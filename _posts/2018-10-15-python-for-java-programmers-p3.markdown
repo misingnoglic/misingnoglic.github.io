@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Python for Java Programmers - Part 3 - Lists and More"
+title:  "Python for Java Programmers Part 3 - Using Lists the Python Way"
 subtitle: "In Depth Guide to Lists, Strings, Tuples, and Loops"
 date:   2018-10-15 00:10:00
 categories: [Java, Python, Technical, Educational]
