@@ -2,9 +2,9 @@
 layout: post
 title:  "Python for Java Programmers - Part 3 - Lists and More"
 subtitle: "In Depth Guide to Lists, Strings, Tuples, and Loops"
-date:   2018-10-13 00:10:00
+date:   2018-10-15 00:10:00
 categories: [Java, Python, Technical, Educational]
-hide: true
+hide: false
 ---
 
 **Note: If you haven't read [part 1](https://aryaboudaie.com/java/python/technical/educational/2017/11/13/python-for-java-programmers.html) or [part 2](https://aryaboudaie.com/java/python/technical/educational/2018/09/16/python-for-java-programmers-p2.html), please do so! This post will be building off the previous material, and I promise they're at least semi-entertaining/useful.**
@@ -18,7 +18,9 @@ hide: true
 
 Hello again! In [part 1](https://aryaboudaie.com/java/python/technical/educational/2017/11/13/python-for-java-programmers.html), we gave a bird's eye overview of the differences of Python and Java, which included lists. In [part 2](https://aryaboudaie.com/java/python/technical/educational/2018/09/16/python-for-java-programmers-p2.html), I talked about functions, and included some stuff about lists, including why updating one inside of a function changes it outside the function as well. At this point, you may think you know all there is to know about lists. And you do know a lot of it already! But lists are one of the most important data structures in Python, so it's worth spending a lot of time fully understanding them.
 
-Data is one of the most important parts of programming - once you have the data you need, you need to somehow store it. Lists are by far the most common way to store data in Python, so it's worth it for you to take your time in understanding how they work and how to properly use them. Topics we will cover include list basics, how to slice and index lists, methods on lists, functions related to lists, how to create lists from other lists without loops (list comprehensions), how to loop over a list, and how lists are similar to strings and tuples.
+Data is one of the most important parts of programming - once you have the data you need, you need to somehow store it. Lists are by far the most common way to store data in Python, so it's worth it for you to take your time in understanding how they work and how to properly use them. Topics we will cover include list basics, how to slice and index lists, methods on lists, functions related to lists, how to create lists from other lists without loops (list comprehensions), and how lists are similar to strings and tuples.
+
+We'll be talking about loops too, how they're similar to Java loops, how they're different from Java loops, and how you can use Python features to avoid all the nasty bugs you come across when using loops.
 
 Note: This blog is full of interactive embeds from [repl.it](repl.it) and [pythontutor.org](pythontutor.org). If you see large blank spaces, please refresh the page and don't switch tabs until it's fully loaded.
 
@@ -55,6 +57,8 @@ So you can access each element two different ways. Here's a visualization of the
 # Negative: -7 -6 -5 -4 -3 -2  -1               
 full_list = [1, 3, 5, 7, 9, 11, 13]
 {% endhighlight %}
+
+So much nicer than `nums[nums.length-1]`, right?
 
 Just like Java, you can use indexes to modify certain parts of the list.
 
@@ -939,5 +943,7 @@ Strings are super useful, especially for reading files and user input, and Pytho
 I know this was a LOT to take in, but I promise it all gets easier with practice. You definitely don't need to memorize all of this information about lists, tuples, strings, and loops, but as you program more and more in Python, it will all become second nature.
 
 I hope this deep dive into lists was helpful, and has allowed you to more appreciate the wonderful syntax Python gives when dealing with data. In the next part, I'll talk about other kinds of objects used to store data, and some of their tradeoffs. Please [sign up for my mailing list](https://goo.gl/forms/jzaFhUpZ6x17oOJh2) to be notified when I post the next part. Additionally, please leave a comment and share with your friends if you found this useful.
+
+Just FYI, my next post will be on using Python to create dynamic websites, and it's almost done, so stay tuned.
 
 Thank you everyone!
