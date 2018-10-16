@@ -1,13 +1,16 @@
 ---
 layout: post
-title:  "Make a Website Using Python & Flask!"
-subtitle: "Creating a Python Site from the Bottom Up"
+title:  "Make a Web App Using Python & Flask!"
+subtitle: "Creating a Python Website from the Bottom Up"
 date:   2018-10-13 00:00:00
 categories: [Python, Technical, Educational, Web, Flask]
 hide: true
+image_asset: assets/blog_images/flask/cover_graphic.png
 ---
 
-Note: This post requires you know some basic Python. You should be comfortable with what functions are and how to write them. [Here](https://www.w3schools.com/python/python_functions.asp) is a quick refresher! If you're comfortable with Java, you can also read my [Python for Java Programmers](https://aryaboudaie.com/java/python/technical/educational/2017/11/13/python-for-java-programmers.html) series. You should also have Python 3 installed on your computer if you want to follow along (download it [here](https://www.python.org/downloads/release/python-370/)). Finally, you should know some basic HTML, which is a markup language for creating web pages. You can get a refresher to HTML [here](https://www.w3schools.com/html/html_basic.asp) - it's super short and easy! Just be sure to run to try the examples.
+![logo for this post]({{ page.image_asset | absolute_url }})
+
+Note: This post requires you know some basic Python. You should be comfortable with what functions are and how to write them. [Here](https://www.w3schools.com/python/python_functions.asp) is a quick refresher! It would also be nice if you understood the basics of dictionaries: what they are, how to access elements of one, and how to store information into one. [Here's](http://learnpython.org/en/Dictionaries) a quick guide for that. If you're comfortable with Java, you can read my [Python for Java Programmers](https://aryaboudaie.com/java/python/technical/educational/2017/11/13/python-for-java-programmers.html) series to get up to speed. You should have Python 3 installed on your computer if you want to follow along (download it [here](https://www.python.org/downloads/release/python-370/)), but you can also follow along with the interactive repl.it embeds on the page. Finally, you should know some basic HTML, which is a markup language for creating web pages. It's super easy to get started, and you can get a short refresher to HTML [here](https://www.w3schools.com/html/html_basic.asp).
 
 # Table of Contents
 
@@ -15,11 +18,11 @@ Note: This post requires you know some basic Python. You should be comfortable w
 {:toc}
 
 # Introduction
-A lot of people who first get into programming do so because they want to make cool apps. They want to make a website that they can send to friends, or with the whole world even. So they take their first intro CS course, and all though they learn how to use loops and lists and all that good stuff, they still can't make an app! All they can do really is make an app that takes some input from the command line, but nobody's gonna run that! They just want to make some cool apps, and maybe even create some quick hackathon projects.
+A lot of people who first get into programming do so because they want to make cool apps. They want to make a website that they can send to friends, or even share with the whole world. So they take their first intro CS course, and all though they learn how to use loops and lists and all that good stuff, they still can't make an app! All they can do really is make a program that takes some input from the command line, but nobody's gonna be impressed with that! These people just want to make some cool apps, and maybe even create some quick hackathon projects.
 
-Do you relate to the unnamed person in this article? If so, then read on! I was once like you, doing hackathon projects on the command line [(seriously)](https://www.youtube.com/watch?v=-xUDdAVbSoM). But then I learned about the beautiful world of web development, and how easy it was to put my Python on the web. And it's made _super_ easy by this Python framework called Flask.
+Do you relate to the unnamed person in this article? If so, then read on! I was once like you, doing hackathon projects on the command line [(seriously)](https://www.youtube.com/watch?v=-xUDdAVbSoM). But then I learned about the beautiful world of web development, and how easy it was to put my Python on the web. And it's made _super_ easy by this Python framework called `Flask`.
 
-There are already a lot of Flask tutorials out there ([here](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world) is the most famous one), but they're much more concerned with how to do things the "correct" way. Those are great for learning how to make Flask apps correctly, but make for a horrible experience for beginners just trying to make a quick website. So I thought I would start from the bottom up, and teach you how to get started making quick and easy Flask apps, starting from functions you already know how to make. This post is also great as a guide for teachers who teach Python and want a good way to motivate students, by showing them how to use their Python skills and make websites with them, without learning too much boilerplate. I'll show you how to take your Python functions that you're already making, and put then on the web!
+There are already a lot of Flask tutorials out there ([here](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world) is the most famous one), but they're much more concerned with how to do things the "right" way. Those are great for learning how to make Flask apps for heavy duty websites, but make a horrible experience for beginners just trying to make a quick website. So I thought I would start from the bottom up, and teach you how to get started making quick and easy Flask apps, starting from functions you already know how to make. This post is also great as a guide for teachers who teach Python and want a good way to motivate students, by showing them how to use their Python skills and make [web apps](https://en.wikipedia.org/wiki/Web_application) with them without learning too much boilerplate. I'll show you how to take your Python functions that you're already making, and put then on the web!
 
 Note: I based this blogpost off a slideshow I made for when I was helping design [COSI 2A](http://cs.brandeis.edu/~arya/senior-thesis.pdf) at Brandeis University for my senior thesis. You can see those slides [here](https://docs.google.com/presentation/d/1AQRvjxiCUtJOOHrDdmRpPyhjSNMWVi4am4vJjlD5Jdo/edit#slide=id.p). You may use them, but please give credit back to my website!
 
@@ -29,7 +32,7 @@ Note: I based this blogpost off a slideshow I made for when I was helping design
 
 Put simply, Flask is a Python [web framework](https://en.wikipedia.org/wiki/Web_framework) that makes it _stupid_ easy to create websites, while at the same time being powerful enough to be used at companies worldwide. A [framework](https://en.wikipedia.org/wiki/Software_framework) is software that abstracts complicated ideas away from you, and basically handles all of the business logic of what needs to be in a website, so you only need to worry about the code for the bits unique to your specific website. Flask likes to call itself a [microframework](https://en.wikipedia.org/wiki/Microframework), meaning that it tries to be as minimalist as possible. This light-weight design means that you can create a website with very little code!
 
-And for some examples of companies and projects that have used Flask, here are a few to hopefully prove to you that it is not just a toy [(source)](https://www.quora.com/What-is-the-largest-site-created-using-Flask):
+Here are some examples of companies and projects that have used Flask, to hopefully prove to you that it is not just a toy [(source)](https://www.quora.com/What-is-the-largest-site-created-using-Flask):
 
 * LinkedIn
 * Twilio
@@ -397,6 +400,8 @@ If you're interested in how the internet works in general, check out my friend [
 If you found this post useful, please share it with any friends who may like it, or on any relevant social medias. I'd also appreciate any feedback in the comments or [in an email](mailto:arya@aryaboudaie.com). You can also [tweet at me](https://twitter.com/misingnoglic)! Also - please share with me any cool websites you've created! I'd love to see them :)
 
 Let me know if you like blogs like this, where I talk about more applicable programming topics in a friendly/easy way! I want to write another post about APIs that can make your programs text phone numbers and do sentiment analysis, so let me know if this would interest you.
+
+Thank you to my girlfriend [Christa](https://twitter.com/christacaggiano?lang=en) for making the sweet watercolor logo for this post!
 
 Thank you, and until next time!
 

@@ -58,7 +58,7 @@ So you can access each element two different ways. Here's a visualization of the
 full_list = [1, 3, 5, 7, 9, 11, 13]
 {% endhighlight %}
 
-So much nicer than `nums[nums.length-1]`, right?
+So you can get the last item with `nums[-1]`. So much nicer than `nums[nums.length-1]`, right!?
 
 Just like Java, you can use indexes to modify certain parts of the list.
 

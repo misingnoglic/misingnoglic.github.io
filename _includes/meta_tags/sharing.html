@@ -65,6 +65,9 @@
 {% if page.image %}
   <meta property="og:image" content="{{page.image}}" />
   <meta name="twitter:image" content="{{page.image}}" />
+{% elsif page.image_asset %}
+  <meta property="og:image" content="{{ page.image_asset | absolute_url }}" />
+  <meta name="twitter:image" content="{{ page.image_asset | absolute_url }}" />
 {% else %}
   <meta property="og:image" content="{{ "/assets/blog_images/face.jpg" | absolute_url }}" />
   <meta name="twitter:image" content="{{ "/assets/blog_images/face.jpg" | absolute_url }}" />
