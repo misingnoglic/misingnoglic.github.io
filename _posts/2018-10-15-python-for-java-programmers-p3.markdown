@@ -294,11 +294,11 @@ nums.sort()
 print(nums)  # [1, 2, 3, 5, 6, 7, 8]
 {% endhighlight %}
 
-`sort` can take an optional argument `reversed`, that when set True will sort the list from largest to smallest.
+`sort` can take an optional argument `reverse`, that when set True will sort the list from largest to smallest.
 
 {% highlight python %}
 nums = [8, 5, 6, 7, 1, 2, 3]
-nums.sort(reversed=True)
+nums.sort(reverse=True)
 print(nums)  # [8, 5, 6, 7, 1, 2, 3]
 {% endhighlight %}
 
@@ -398,9 +398,8 @@ So it hasn't actually computed anything. So why did the creators of Python decid
 
 ### reversed(nums)
 
-Sort of like range, `reversed` takes in a list, and returns an `iterator` with the reverse of a list. an `iterator` is another kind of lazy object, that you can look over. I'll talk more about looping at the end of this post, but here's an example:
+Sort of like range, `reversed` takes in a list, and returns an `iterator` with the reverse of a list. an `iterator` is another kind of lazy object that you can loop over. I'll talk more about looping at the end of this post, but here's an example:
 
-an iterator for the reverse of the list. So you can loop over it as normal, or turn cast it into a list like this:
 {% highlight python %}
 nums = [1, 2, 3]
 for i in reversed(nums):
