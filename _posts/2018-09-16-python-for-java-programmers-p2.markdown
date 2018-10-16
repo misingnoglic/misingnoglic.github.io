@@ -706,3 +706,5 @@ help() goes along really well with dir(), for when you're just starting and expl
 # Summary
 
 Damn, that was much longer than I thought it was going to be. I guess it turns out that there's a lot to say about Python! Anyway, I hope that this blog has continued to give you a good understanding of all the nuances with Python, while bridging your knowledge from your understanding of Java. I'm definitely going to write another part to this to talk about lists, strings, dictionaries, and other fun collections, as well as how to make your own classes. If you liked this post, please share it with your friends, and sign up [for my mailing list](https://goo.gl/forms/jzaFhUpZ6x17oOJh2) to get notified about when the next one will come out. Hopefully it will take shorter than 9 months! Thank you again, and see you next time :)
+
+Note: [Part 3](https://aryaboudaie.com/java/python/technical/educational/2018/10/15/python-for-java-programmers-p3.html) has now come out!
