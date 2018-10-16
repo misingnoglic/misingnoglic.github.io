@@ -48,7 +48,7 @@ Those three `>>>` symbols are urging you to type some Python code. So type `prin
 Hello World
 {% endhighlight %}
 
-If you want to write an entire python program out and then run it, you can create it with your favorite text editor (I like [Atom](www.atom.io)) and save it with a `.py` extension. Then open the terminal, CD to the folder with that file, and then type `python3 filename.py` - it should run the file, and print any contents to the terminal. If you'd like to run the program and then have it enter a REPL, you can type `python3 -i filename.py`. Note that unlike Java, there is no compiling step, you just run the program, and the interpreter runs the program line by line.  
+If you want to write an entire python program out and then run it, you can create it with your favorite text editor (I like [Atom](https://www.atom.io)) and save it with a `.py` extension. Then open the terminal, CD to the folder with that file, and then type `python3 filename.py` - it should run the file, and print any contents to the terminal. If you'd like to run the program and then have it enter a REPL, you can type `python3 -i filename.py`. Note that unlike Java, there is no compiling step, you just run the program, and the interpreter runs the program line by line.  
 
 If the last paragraph didn't make sense, or if you'd rather do all of this remotely, you can do it on [www.repl.it](http://repl.it). Just create an account, open a new python3 workspace, and on the left hand side you'll have a text editor, and on the right hand side you'll have the REPL. I love this website a **ton**, and can't recommend it more highly. I'll also be adding snippets from the www.repl.it website that you can run directly on this website, just like my last post.
 
