@@ -274,6 +274,8 @@ You can play with it here - try to match the print statements to the calls to po
 
 Now imagine you had a list of people you wanted to hire, but didn't have room for. You have now a list of `potential_employees`, and whenever you have room to hire someone, you want to hire the person who's been waiting the longest. You could do `potential_employees.pop(0)` to remove them from the front of potential_employees, and then add them to `employees`! That's a much better example! If you use a list in the `Last In First Out` (LIFO) model, it's called a `Stack`, and the list is used in the `First in First Out` (FIFO) model, it's called a `Queue`. These are good CS words to know, if you aren't already familiar. If you're studying for software interviews, correct usage of pop() will be extremely helpful in certain problems!
 
+If this `pop` section didn't make much sense to you, don't worry! Just know that you can use `pop` on a list to remove an item from a specific index. That's it! 
+
 ### remove(item)
 
 nums.remove(item) will remove the first instance of `item` from `nums`. This is fairly self explanatory.
