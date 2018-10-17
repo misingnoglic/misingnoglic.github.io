@@ -4,7 +4,7 @@ title:  "Make a Web App Using Python & Flask!"
 subtitle: "Creating a Python Website from the Bottom Up"
 date:   2018-10-13 00:00:00
 categories: [Python, Technical, Educational, Web, Flask]
-hide: true
+hide: false
 image_asset: assets/blog_images/flask/cover_graphic.png
 ---
 
@@ -249,7 +249,7 @@ The HTML code looks like this when rendered:
 
 Note - if you want to test what HTML looks like quickly, just throw it into [jsfiddle.net](https://jsfiddle.net/), which is a great website for quickly testing and iterating on HTML.
 
-Now this isn't the most stylish website ever, but it's definitely better than the old version where we just returned the string of the list to the browser. At least with HTML it looks like a legitimate website. With some simple CSS and graphics, you could make this look much nicer. If you're interested, Codecademy has [many classes](https://www.codecademy.com/catalog/language/html-css) on HTML/CSS. Teaching HTML/CSS is way beyond the scope of this tutorial but definitely skills worth learning for any future web developer!
+Now this isn't the most stylish website ever, but it's definitely better than the old version where we just returned the string of the list to the browser. At least with HTML it looks like a legitimate website. With some simple CSS and graphics, you could make this look much nicer. If you're interested, Codecademy has [many classes](https://www.codecademy.com/catalog/language/html-css) on HTML/CSS. Teaching HTML/CSS is way beyond the scope of this tutorial but definitely skills worth learning for any future web developer! With both HTML/CSS (front-end) skills, and Python web development skills (back-end), you can make some really sleek web apps!
 
 The only problem now is how to pass our data to the HTML, so we can return some nice HTML for the factors of any number. We don't want it for just 10, we want this page for any number we give it.
 
@@ -389,11 +389,11 @@ def count(x):
 
 Once you run this, go to localhost:5000/10 and keep refreshing, and notice how the output keeps going up by 10. Enter another number in the URL, and it'll go up by that number too.
 
-These are both kind of toy examples, but you can imagine creating a game that keeps track of stats like HP, items, weapons, etc... Especially combined with templates linking to other routes, this could be a really cool project! Keep in mind that these URLs are not the best way to pass data (you should really use [forms](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iii-web-forms) for that), but in terms of getting started URLs are a great place to be :)
+These are both kind of toy examples, but you can imagine creating a game that keeps track of stats like HP, items, weapons, etc... Especially combined with templates linking to other routes, this could be a really cool project! Keep in mind that these URLs are not the best way to pass data (you should really use [forms](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iii-web-forms) for that), but in terms of getting started URLs are a great place to be!
 
 # Conclusion
 
-I hope you found this Flask tutorial easy to follow and comprehensive enough to give you what you need to get started! Of course there is so much I haven't gotten to cover here, such as forms for submitting data (so you don't have to submit through the URL), adding CSS to your templates, storing data in a database, logins, actually uploading your website to a server, using APIs, and many other topics. If there is something I didn't cover that you want to do, it's easy enough to Google something like "Flask template if statement" to find out what exactly you need to do. If you'd like a more solid tutorial, definitely check out Miguel Grinberg's Flask [Mega-Tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world), where he'll take you through step by step everything you'll need to know about Flask. You can also check out the Flask official [quickstart](http://flask.pocoo.org/docs/1.0/quickstart/), [tutorial](http://flask.pocoo.org/docs/1.0/tutorial/), or [documentation](http://flask.pocoo.org/docs/1.0/). Or if you like my style and want me to rant about cool and useful Flask stuff in no particular order, let me know that this is a topic of interest. Web development in Python holds a special place in my heart, and I hope that I can spread this joy to you as well :)
+I hope you found this Flask tutorial easy to follow and comprehensive enough to give you what you need to get started! Of course there is so much I haven't gotten to cover here, such as forms for submitting data (so you don't have to submit through the URL), adding CSS to your templates, storing data in a database, logins, actually uploading your website to a server, using APIs, and many other topics. If there is something I didn't cover that you want to do, it's easy enough to Google something like "Flask template if statement" to find out what exactly you need to do. If you'd like a more solid tutorial, definitely check out Miguel Grinberg's Flask [Mega-Tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world), where he'll take you through step by step everything you'll need to know about Flask. You can also check out the Flask official [quickstart](http://flask.pocoo.org/docs/1.0/quickstart/), [tutorial](http://flask.pocoo.org/docs/1.0/tutorial/), or [documentation](http://flask.pocoo.org/docs/1.0/). Or if you like my style and want me to rant about cool and useful Flask stuff in no particular order, let me know that this is a topic of interest. I can also come up with a web app idea, and show my process in creating it. Web development in Python holds a special place in my heart, and I hope that I can spread this joy to you as well :)
 
 If you're interested in how the internet works in general, check out my friend [Seth Rait](https://sethrait.com)'s two part blog post on how the internet works - [Part 1](https://sethrait.com/How-the-Internet-Works-Part-I.html) & [Part 2](https://sethrait.com/How-the-Internet-Works-Part-II.html)
 
@@ -401,7 +401,7 @@ If you found this post useful, please share it with any friends who may like it,
 
 Let me know if you like blogs like this, where I talk about more applicable programming topics in a friendly/easy way! I want to write another post about APIs that can make your programs text phone numbers and do sentiment analysis, so let me know if this would interest you.
 
-Thank you to my girlfriend [Christa](https://twitter.com/christacaggiano?lang=en) for making the sweet watercolor logo for this post!
+Thank you to my girlfriend [Christa](https://twitter.com/christacaggiano?lang=en) for making the sweet watercolor logo for this post! Thank you to her as well as reader Chanwoo Park for proofreading this post beforehand!
 
 Thank you, and until next time!
 
