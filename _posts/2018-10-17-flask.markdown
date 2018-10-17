@@ -144,7 +144,7 @@ if __name__ == '__main__':
   app.run(host='0.0.0.0')
 {% endhighlight %}
 
-`if __name__ == '__main__'` is basically just [Python's way of saying](https://stackoverflow.com/questions/419163/what-does-if-name-main-do) "run this code only if I ran it." As I said before, `__name__` is a variable that Python [automatically creates](https://www.geeksforgeeks.org/__name__-special-variable-python/), and it's equal to `"__main__"` when it's you that ran the code (as opposed to another script running the code). You'll see this line a lot while doing Python, so it's good to get used to it.
+`if __name__ == '__main__':` is basically just [Python's way of saying](https://stackoverflow.com/questions/419163/what-does-if-name-main-do) "run this code only if I ran it." As I said before, `__name__` is a variable that Python [automatically creates](https://www.geeksforgeeks.org/__name__-special-variable-python/), and it's equal to `"__main__"` when it's you that ran the code (as opposed to another script running the code). You'll see this line a lot while doing Python, so it's good to get used to it.
 
 `app.run(host='0.0.0.0')` basically runs the app variable that you've created in line 2, and the host we passed in makes it run on localhost.
 
