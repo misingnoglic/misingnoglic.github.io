@@ -95,7 +95,7 @@ And here is the repl.it embed - click the run button, and then open the given UR
 
 <iframe height="400px" width="100%" src="https://repl.it/@misingnoglic/flask-1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-From now on I'll refer to the URL as localhost, but each REPL will have a different URL if you decide to use those.
+From now on I'll refer to the URL as localhost, but each REPL will have a different URL if you decide to use those. I strongly recommend you try running the code on your own computer, but if you don't have time for that the REPLs are a great resource!
 
 Let me go through each of these lines, to properly explain what exactly is going on. Besides lines 3-5 though, it's mostly [boilerplate](https://en.wikipedia.org/wiki/Boilerplate_code).
 
