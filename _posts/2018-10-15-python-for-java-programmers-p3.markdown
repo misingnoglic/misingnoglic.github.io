@@ -274,6 +274,8 @@ You can play with it here - try to match the print statements to the calls to po
 
 Now imagine you had a list of people you wanted to hire, but didn't have room for. You have now a list of `potential_employees`, and whenever you have room to hire someone, you want to hire the person who's been waiting the longest. You could do `potential_employees.pop(0)` to remove them from the front of potential_employees, and then add them to `employees`! That's a much better example! If you use a list in the `Last In First Out` (LIFO) model, it's called a `Stack`, and the list is used in the `First in First Out` (FIFO) model, it's called a `Queue`. These are good CS words to know, if you aren't already familiar. If you're studying for software interviews, correct usage of pop() will be extremely helpful in certain problems!
 
+If this `pop` section didn't make much sense to you, don't worry! Just know that you can use `pop` on a list to remove an item from a specific index. That's it! 
+
 ### remove(item)
 
 nums.remove(item) will remove the first instance of `item` from `nums`. This is fairly self explanatory.
@@ -294,11 +296,11 @@ nums.sort()
 print(nums)  # [1, 2, 3, 5, 6, 7, 8]
 {% endhighlight %}
 
-`sort` can take an optional argument `reversed`, that when set True will sort the list from largest to smallest.
+`sort` can take an optional argument `reverse`, that when set True will sort the list from largest to smallest.
 
 {% highlight python %}
 nums = [8, 5, 6, 7, 1, 2, 3]
-nums.sort(reversed=True)
+nums.sort(reverse=True)
 print(nums)  # [8, 5, 6, 7, 1, 2, 3]
 {% endhighlight %}
 
@@ -398,9 +400,8 @@ So it hasn't actually computed anything. So why did the creators of Python decid
 
 ### reversed(nums)
 
-Sort of like range, `reversed` takes in a list, and returns an `iterator` with the reverse of a list. an `iterator` is another kind of lazy object, that you can look over. I'll talk more about looping at the end of this post, but here's an example:
+Sort of like range, `reversed` takes in a list, and returns an `iterator` with the reverse of a list. an `iterator` is another kind of lazy object that you can loop over. I'll talk more about looping at the end of this post, but here's an example:
 
-an iterator for the reverse of the list. So you can loop over it as normal, or turn cast it into a list like this:
 {% highlight python %}
 nums = [1, 2, 3]
 for i in reversed(nums):

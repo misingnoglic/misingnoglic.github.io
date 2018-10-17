@@ -325,7 +325,9 @@ Now we made our website, and can create a nice looking page for any Python funct
 
 But what if we want to do something else. What if you want to make some kind of game that requires intermittent user input, and you need to somehow keep track of the user's state. This will allow us to have some data stored throughout the user's session on the website, as sort of a "memory" of what's happened before.
 
-To keep track of previous data, you can use a [`session`](https://en.wikipedia.org/wiki/Session_(computer_science)), which is a temporary storage connected to a certain user's current session. Flask stores the data of a session client-side in a cookie on the browser ([source](https://stackoverflow.com/questions/32084646/flask-session-extension-vs-default-session)). You can use a session object to store data related to that user, which persists through page refreshes and browser crashes. Here's what you have to do to set that up:
+To keep track of previous data, you can use a [`session`](https://en.wikipedia.org/wiki/Session_(computer_science)), which is a temporary storage connected to a certain user's current session. Flask stores the data of a session client-side in a cookie on the browser ([source](https://stackoverflow.com/questions/32084646/flask-session-extension-vs-default-session)). 
+
+Flask does something incredibly nice though. You can import `session`, and then you can basically use this session object like a dictionary that's associated with each user of your website. You can use a session object to store data related to that user, which persists through page refreshes and browser crashes. Here's what you have to do to set that up:
 
 At the top of the file, import `session`, and then after creating your app, you should add these additional two lines:
 
@@ -339,7 +341,7 @@ app.config['SESSION_TYPE'] = 'filesystem'
 
 ***WARNING***: In an actual production, you want to use an ACTUAL secret key that nobody knows. In this case it's fine, since we're just making toy apps, but in a real product, it needs to be an actual secret. This is because the session data could contain private information for a user, and if someone gets access to the cookie AND knows the secret, they'll be able to look at all your users' session data. Do not use this to store any sensitive data such as passwords. If you're curious how Flask uses this secret key, there's a good explanation [here](https://stackoverflow.com/questions/22463939/demystify-flask-app-secret-key) as well as [here](https://www.reddit.com/r/flask/comments/5l2gmf/af_eli5_how_sessions_work_in_flask/).
 
-Once you have that set up, you can use the `session` object just like a python dictionary. Here's an example, where every time you load the home page, it will count up until 10. After 10, it will delete itself and start over.
+Once you have that set up, you can use the `session` object just like a python dictionary. And the beauty of Flask is that you can think of it exactly like a regular Python dictionary. Here's an example, where every time you load the home page, it will count up until 10. After 10, it will delete itself and start over.
 
 {% highlight python %}
 @app.route('/')
@@ -364,7 +366,7 @@ You can see it in action here:
 
 <iframe height="400px" width="100%" src="https://repl.it/@misingnoglic/session-flask-test?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-If you open up the Chrome Developer tools (More Tools->Developer Tools) and click the Application window, then click on "cookies", you can see that the session data is saved as a cookie in your browser, but encrypted with the key you set. When the server reads the cookie, it can use the key to decrypt the cookie and read/modify the information. That way, one user's session does not affect another user's. You can test this by opening another incognito window with the URL. Pretty cool to see how that works!
+If you open up the Chrome Developer tools (More Tools->Developer Tools) and click the Application window, then click on "cookies", you can see that the session data is saved as a cookie in your browser, but encrypted with the key you set. When the server reads the cookie, it can use the key to decrypt the cookie and read/modify the information. That way, one user's session does not affect another user's. You can test this by opening another incognito window with the URL. Pretty cool to see how that works, and that Flask takes care of all the annoying parts for you!
 
 ![Session ID Cookie](/assets/blog_images/flask/session.png)
 
