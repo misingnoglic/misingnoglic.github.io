@@ -176,7 +176,13 @@ The `<name>` in the route URL is a placeholder - any name you put there will be 
   * In this case, the function is hello_name(), with the value "arya" passed through the variable `name`.
 * The server returns the string "Hello arya!" which is returned from hello_name("arya") which is displayed in the browser.
 
-And then if you go to localhost:5000/hello/Christa - the same thing will happen with the name "Christa" being passed in.
+![URL /hello/arya](/assets/blog_images/flask/localhost_name.png)
+
+And then if you go to localhost:5000/hello/christa - the same thing will happen with the name "christa" being passed in.
+
+![URL /hello/arya](/assets/blog_images/flask/localhost_name2.png)
+
+As a test, try modifying the route to always return the first letter of the name capitalized.
 
 Please excuse my awful art skills, but here is the above in drawn form.
 
@@ -327,7 +333,7 @@ Now we made our website, and can create a nice looking page for any Python funct
 
 But what if we want to do something else. What if you want to make some kind of game that requires intermittent user input, and you need to somehow keep track of the user's state. This will allow us to have some data stored throughout the user's session on the website, as sort of a "memory" of what's happened before.
 
-To keep track of previous data, you can use a [`session`](https://en.wikipedia.org/wiki/Session_(computer_science)), which is a temporary storage connected to a certain user's current session. Flask stores the data of a session client-side in a cookie on the browser ([source](https://stackoverflow.com/questions/32084646/flask-session-extension-vs-default-session)). 
+To keep track of previous data, you can use a [`session`](https://en.wikipedia.org/wiki/Session_(computer_science)), which is a temporary storage connected to a certain user's current session. Flask stores the data of a session client-side in a cookie on the browser ([source](https://stackoverflow.com/questions/32084646/flask-session-extension-vs-default-session)).
 
 Flask does something incredibly nice though. You can import `session`, and then you can basically use this session object like a dictionary that's associated with each user of your website. You can use a session object to store data related to that user, which persists through page refreshes and browser crashes. Here's what you have to do to set that up:
 
