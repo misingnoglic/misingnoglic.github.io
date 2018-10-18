@@ -188,7 +188,7 @@ Note that the variable passed though the URL is a string. If you want it to be a
 @app.route('/square/<int:num>')
 def f(num):
   # No conversion of x needed.
-  return str(x**2)
+  return str(num**2)
 {% endhighlight %}
 
 Notice that `<int:num>` will cast the `num` passed in the URL as an int.
