@@ -84,6 +84,8 @@ You can save this file as flask_test.py and run it in your terminal, and it shou
 
 ![Command prompt showing that I ran flask](/assets/blog_images/flask/running_flask.png)
 
+**WARNING**: Do not save this file as flask.py. This will confuse Python, since that's the name of the Flask library it's trying to import. See [here](https://www.reddit.com/r/learnprogramming/comments/9p0k9g/creating_a_python_website_from_the_bottom_up/e7zvedf/)
+
 
  Once it's running, open your browser, and go to "localhost:5000" in your browser to prove that this does actually what I said it would do. [localhost](https://www.quora.com/What-is-a-local-host) is not a real website address, but rather an address referring to the "local" code running on your computer.
 
@@ -416,3 +418,5 @@ Thank you to my girlfriend [Christa](https://twitter.com/christacaggiano?lang=en
 Thank you, and until next time!
 
 -Arya
+
+Edit Oct 18 2018: OMG, I'm so happy with how much attention this got, with [900+ upvotes on /r/learnprogramming](https://www.reddit.com/r/learnprogramming/comments/9p0k9g/creating_a_python_website_from_the_bottom_up/), [160+ on /r/learnprogramming](https://www.reddit.com/r/learnpython/comments/9p06vj/creating_a_python_website_from_the_bottom_up/) (before the mods deleted it for some reason), and 2000+ page views on the first day it was live. Thank you all so much for the support, and I can't wait to make my next post :)
