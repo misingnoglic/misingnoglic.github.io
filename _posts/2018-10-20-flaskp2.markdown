@@ -1,0 +1,49 @@
+---
+layout: post
+title:  "Make a Web App Using Python & Flask - Part 2!"
+subtitle: "Grabbing Data from Forms"
+date:   2018-10-20 00:00:00
+categories: [Python, Technical, Educational, Web, Flask]
+hide: false
+image_asset: assets/blog_images/flask/cover_graphic.png
+---
+
+# Introduction
+
+- Making HTML Forms
+- Using values from those forms in a GET request/With URL params
+- GET vs POST requests
+- Making a sample RPG game with sessions, GET requests and POST requests
+- Adding bootstrap to make it look nicer for free
+
+Hey everyone!
+
+If you're here for the first time, please check out part 1, where I talk about what Flask is, and how to use it to put Python on the web. I also talked about how to enter data in the URL, as well as how to store the user's state. Be sure to read this part 1, so that you won't feel lost reading this post! It will be
+
+In this post, I'm gonna go further into more Flask tips, and show you how to send data through forms. In part 1, we entered data through the URL, but it's fairly uncommon for sites to have you modify the URL to send them data. Forms however are used all over the web to send data to websites, and Flask makes it easy to do both tasks. I'll talk about how to create the forms, and different ways to send the data to the server.
+
+I was so happy with how well the first Flask post was received, so I hope that this one is just as useful 🙂
+
+# How To Make a Form
+
+Making a form in HTML is pretty simple! The first thing you need to do is to create an HTML block with a form tag. You start it with <form action="/url">, where /url is the URL for the route you want to send the data to.
+
+<form action="/page_to_go_to">
+(Your form will go in here)
+</form>
+
+Inside the form tag, you will insert any number of input tags, depending on what type of input you want. The most common type is a text field, so here is an example:
+
+<input type="text" name="yourname"><br>
+
+Every input type should have a type (which is the type of input you're making), and a name which you can use to refer to the value submitted in that field.
+
+(Include Screenshot & JSFiddle)
+
+You can optionally include a placeholder attribute, which will have some placeholder text in the textbox, so that users can know what to put into the textboxes.
+
+(Include Screenshot & JSFiddle)
+
+There are other input types too, which you've probably seen. Another example is the checkbox, which translates to a boolean
+
+Form Types: https://www.w3schools.com/html/html_form_input_types.asp
