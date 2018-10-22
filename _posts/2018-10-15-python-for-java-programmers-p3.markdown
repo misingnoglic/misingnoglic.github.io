@@ -365,6 +365,18 @@ else:
 
 `x in nums` will return a boolean that describes whether the variable `x` is in `nums` or not. This is one of my favorite python things to show new programmers, since it's amazing how readable this syntax is once you get used to it.
 
+### not in
+
+`not in` is the super readable cousin of in. You can use it to test if an element is not in a list.
+
+{% highlight python %}
+nums = [5, 7, 9, 11]
+if 5 not in nums:
+  print("There's no 5 in this list")
+{% endhighlight %}
+
+Functionally it's the same as doing `if not x in nums`, but `if x not in nums` reads better, so use that instead. 
+
 ### range(stop)
 
 `range()` is definitely one of the most important list functions, as it can create lists of numbers in a certain range, meaning you don't have to write the loops to do it. `range()` is a function that returns an "range object", which is kind of like a list that isn't evaluated until you actually need the item you're asking from it. It basically works the same as a list in terms of indexing and looping. This type of object is called an `iterable`, meaning it can be iterated over.
