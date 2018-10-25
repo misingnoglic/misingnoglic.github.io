@@ -1,13 +1,14 @@
 ---
 layout: post
-title:  "Why a Humanities Education is Important for Software Engineers"
-subtitle: "In defense of soft skills for Software Engineers"
+title:  "Why the Humanities are Important for Software Engineers"
+subtitle: "In defense of soft skills for STEM minded people"
 date:   2018-10-20 00:00:00
 categories: [Technical, Educational, Humanities]
 hide: false
 ---
 
-(Table of contents)
+* TOC
+{:toc}
 
 # Introduction
 
@@ -16,6 +17,8 @@ Within the STEM community, it's fairly common to see people hold their education
 ![TODO: Add alt-text](https://assets.rbl.ms/14262440/980x.jpg)
 
 ![TODO: Add alt-text](https://i.redd.it/d574apmjfqmy.png)
+
+![TODO: Add alt-text](https://i.redd.it/ldipjkqr9sxy.jpg)
 
 It's also common to assume that for jobs such as software engineering, the hard technical skills are the most important, and to be competitive at your job you should focus on taking the hardest STEM classes you possibly can. Some technical schools double down on this ideology by making their CS students take classes in physics and chemistry, to instill a hardcore engineering mindset into their students. Even if schools do not require students to be rigorously involved in computer science, students in STEM and computer science often self select to take more CS classes over classes in other departments. Presumably, they do this because they think the hard science classes will improve their skills, they will impress recruiters and tech companies, and that the humanities classes will be a waste of time and tuition money.
 
@@ -31,7 +34,7 @@ So basically, the humanities can be described as the study of fields which relat
 
 # My Background
 
-Also before I begin explaining my argument, I just wanted to share a bit about my background, since it's always good to see where people come from before listening to them :)
+Also before I begin explaining my argument, I just wanted to share a bit about my background, since it's always good to see where people come from before listening to them!
 
 I come from a unique position - my education at [Brandeis University](http://cs.brandeis.edu) was a bit different than what most people seemed to get for computer science. While other schools have fairly intense requirements for CS majors to take science, math, and hardcore CS classes, Brandeis' requirements were [fairly lax](Add link to Appendix). For a Bachelor of Arts, the only math class that was required was Discrete Math, and for a BS you just needed to add a few more to that. If someone wanted a rigorous CS education, it was mostly up to them to seek out the hard classes in machine learning, algorithms, systems, or whatever other advanced topics interested them.
 
@@ -41,7 +44,7 @@ Instead, Brandeis really encouraged interdisciplinary thinking, by having very b
 
 Since it was so encouraged, and because I was a band geek in high school, I decided to pursue a double major in computer science as well as music. This was a very cool opportunity for me, as I definitely would not have been able to put as much effort into understanding and performing music otherwise. I got to play lute and recorder in an early music ensemble at Brandeis (which was one of the best experiences of my life), and got to take extra classes in music history, theory, and composition. I definitely put more effort into my computer science degree, and would not stand a fighting chance competing against other music majors from other universities, but I really appreciated this rounding out of my education. In a way, the two majors really complimented each other - when I was sick of CS I could work on music, and vice versa. Additionally, I could use my knowledge of music to work on personal projects related to music, or work with professors for cross collaborative work. These projects were always my favorite to work on, and my passion really showed in the end results. For example, [here]() is a 24 hour project from HackMIT where my team made a touchpad that played music, and [this]() is my final project for an electronic composition class where I made a JavaScript improvisation algorithm.
 
-Now that I'm graduated from college, and have entered the workforce (dun dun dun), I'm really starting to appreciate having taken these extra classes in the humanities, which have strengthened my writing abilities and communication skill. I wish I had taken some more classes in college such as machine learning or linear algebra, but I'm happy with the tradeoffs I made. It's a very different part of the brain that's exercised in these classes, but that part of the brain is extremely important for the work I do now. So without further ado, here are my reasons why humanities skills are important for software jobs.
+Now that I'm graduated from college, and have entered the workforce (dun dun dun), I'm really starting to appreciate having taken these extra classes in the humanities, which have strengthened my writing abilities and communication skill. I wish I had taken some more classes in college such as machine learning or linear algebra, but I'm happy with the tradeoffs I made. It's a very different part of the brain that's exercised in these classes, but that part of the brain is extremely important for the work I do now. I'm also not claiming that I'm some humanities god, with amazing writing and communication skills - I'm far from it actually. I actually started this blog because I wanted to try to improve my technical communication skills, since I noticed that they were lacking. I'm just sharing what I've found to be useful skills for software engineers that are not often talked about. So without further ado, here are my reasons why humanities skills are important for software jobs.
 
 # Communicating With Others
 
