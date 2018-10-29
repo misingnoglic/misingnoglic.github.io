@@ -4,7 +4,7 @@ title:  "Why the Humanities are Important for Software Engineers"
 subtitle: "In defense of soft skills for STEM minded people"
 date:   2018-10-20 00:00:00
 categories: [Technical, Educational, Humanities]
-hide: false
+hide: true
 ---
 
 * TOC
