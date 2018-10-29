@@ -51,7 +51,7 @@ blockquote {
     p {
         display: inline;
         font-size: 20px;
-        color: $cloudy;
+        color: #c72f2f;
         font-weight: 400;
         &:before { content: open-quote; }
         &:after { content: close-quote; }
