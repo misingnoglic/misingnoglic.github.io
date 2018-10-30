@@ -224,7 +224,8 @@ Finally, if you're a humanities minded person who is interested in tech, I hope 
 
 Hey everyone! This post is a little bit of a deviation from what I normally talk about on this blog, but I hope you enjoyed it nonetheless. Hopefully, I've convinced you that it's important to have a healthy mix of humanities into your computer science degree to improve your communication skills, help you be informed about the possible larger implications of your software projects, and to help you be a more well rounded person.
 
-As always, I'll really appreciate your comments, either in [emails](mailto:arya@aryaboudaie.com) or in whatever discussion forums you post this to (I've deleted the Disqus comments, since tjhey have clickbait ads). Especially since I don't have much experience writing about these kinds of things, I'd love to know what you think. If people really like this, I can write more about topics in ethics and humanities as they relate to CS. And as always, please share with friends and coworkers as well, and help get the word out.
+As always, I'll really appreciate your comments, either in [emails](mailto:arya@aryaboudaie.com) or in whatever discussion forums you post this to (I've deleted the Disqus comments, since tjhey have clickbait ads). Especially since I don't have much experience writing about these kinds of things, I'd love to know what you think. If people really like this, I can write more about topics in ethics and humanities as they relate to CS. And as always, please share with friends and coworkers as well, and help get the word out. You can always [retweet](https://twitter.com/misingnoglic/status/1057318787114917888) me as well, or just [tag me](https://twitter.com/misingnoglic)!
+
 
 Thank you all so much for your support!
 
