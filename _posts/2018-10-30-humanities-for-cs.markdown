@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Why the Humanities are Important for Software Engineers"
+title:  "Why Humanities are Essential for Software Engineers"
 subtitle: "In defense of soft skills for STEM minded people"
 date:   2018-10-30 00:00:00
 categories: [Technical, Educational, Humanities]
@@ -14,7 +14,7 @@ hide: false
 
 Within the STEM community, it's fairly common to see people hold their education as more important than people who study humanities. These "STEM Majors" have an aura of superiority to them, asserting that their classes are the hardest, and making sure everyone around them knows. You've probably seen memes like the one below mocking non STEM majors, and the one below that mocking STEM majors who mock non STEM majors.
 
-![TODO: Add alt-text](https://assets.rbl.ms/14262440/980x.jpg)
+![Meme ranking majors - with STEM ones higher than humanities ones](https://assets.rbl.ms/14262440/980x.jpg)
 
 ![TODO: Add alt-text](https://i.redd.it/d574apmjfqmy.png)
 
@@ -180,7 +180,7 @@ The other way to think of this problem is to think of software that will increas
 
 # Being a Well Rounded Person
 
-Finally, I believe that a humanities education should be pursued just because it makes people more well rounded. This of course plays into the other benefits of communicating better and understanding the world better, but it's also just good to learn about the humanities for the sake of learning about them. We as people are an extremely interesting species, and there is so much to learn about us that its overwhelming. It's not good for people to learn about more than just science and technology, to have a more nuanced background and understanding of the world. Your further studies into the humanities could even spark an interest in literature, music, politics, history, or any of the many other humanities fields.
+Finally, I believe that a humanities education should be pursued just because it makes people more well rounded. This of course plays into the other benefits of communicating better and understanding the world better, but it's also just good to learn about the humanities for the sake of learning about them. We as people are an extremely interesting species, and there is so much to learn about us that its overwhelming. It's not good for people to learn about more than just science and technology, to have a more nuanced background and understanding of the world. Your further studies into the humanities could even spark an interest in literature, music, politics, history, or any of the many other humanities fields. Learning about these things is a great way to become more well rounded, have conversations with others about complex topics, and not just be someone who knows only about STEM related topics.
 
 You can even use your new experience learned from these studies, and leverage your software engineering skills to make unique projects related to the intersection of the two fields. These types of projects tend to be the most unique and interesting to people, even if they're just used for your own practice or to boast about on a resume. Learning these skills can also make you more sympathetic to the users of your software, as you'll be able to understand the perspectives of people who do not dedicate their lives to technology.
 
@@ -188,21 +188,21 @@ Finally, learning about the humanities is a great way to expand your mind, and e
 
 In the end, learning about the humanities is great for your software abilities, but these subjects also great to learn for the sake of learning about us as humans. By being a well rounded person, you'll learn more about the world, and can think about your software as it fits into this larger world of ours.
 
-# What to do now
+# What To Do Now
 
 So now you're gone through this post, and are hopefully convinced that a humanities education is important for engineers, both for your own benefit as well as the benefit of the users of your software. But what should you do now?
 
-## If you're still in school
+## If You're Still In School
 
 If you're still in school, take my advice to heart and take a humanities class that interests you, and that that you think will improve your communication skills. Essays may be hard and confusing when you're not used to them and when you're the only engineer in a class of humanities majors, but the difficulty will be good for you. If it's a subject you're interested in, such as a specific period of history, or a specific topic in politics. It would be good to take a class that helps understand the struggles of minorities and other disadvantaged people in the world, so you can learn further about their struggles and how you can use that information to improve your software engineering. You don't to pick up an entire new major or minor, but taking a few classes outside your realm of expertise will go a long way.
 
 Additionally, when designing a new project, try to write up a design document to go with that, and [add that documentation to your Github](https://help.github.com/articles/about-readmes/). This will help you learn how to discuss technical ideas in English, and will also be a great way to show your project off. You can also create a blog like mine, or volunteer to give presentations at your school about various technical topics to help others with computer science.
 
-## If you're out of school
+## If You're Out Of School
 
 If you're out of school, that does not mean that you still can't learn on your own! Watch some videos on YouTube on some topics that interest you. History is a great place to start, but there are lectures on literally anything online nowadays. Find a subject you're interested in, and do a deep dive into it.
 
-Also, GET A KINDLE! A Kindle costs about $100, and basically lets you store as many books on it as you'd like. The Kindle has literally changed my reading life, and I went from reading ~0 books a year to reading several this year. If you're interested in any recommendations, check out my [Goodreads](https://www.goodreads.com/user/show/21411664-arya) account. Besides books, find some bloggers and read their posts. Follow them on Twitter as well!
+Also, *get a kindle!* A Kindle costs about $100, and basically lets you store as many books on it as you'd like. The Kindle has literally changed my reading life, and I went from reading ~0 books a year to reading several this year. Ebooks are generally fairly cheap, but there are a ton of public domain books as well. If you're interested in any recommendations, check out my [Goodreads](https://www.goodreads.com/user/show/21411664-arya) account. Besides books, find some bloggers and read their posts. Follow them on Twitter as well!
 
 Finally, try to find ways to communicate about ideas in tech. Like above, you can write documentation for your own personal projects, or you can even go my route and create a blog to write about topics like these. Not only will it help you, but you'll also help everyone who learns from your blog!
 
