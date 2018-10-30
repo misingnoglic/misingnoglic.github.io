@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Why Humanities are Essential for Software Engineers"
+title:  "Why Humanities Skills are Essential for Software Engineers"
 subtitle: "In defense of soft skills for STEM minded people"
 date:   2018-10-30 00:00:00
 categories: [Technical, Educational, Humanities]
