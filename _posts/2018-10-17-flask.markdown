@@ -8,7 +8,7 @@ hide: false
 image_asset: assets/blog_images/flask/cover_graphic.png
 ---
 
-![logo for this post]({{ page.image_asset | absolute_url }})
+![logo for this post](https://images.weserv.nl/?url=https://www.aryaboudaie.com/assets/blog_images/flask/cover_graphic.png&w=800)
 
 Note: This post requires you know some basic Python. You should be comfortable with what functions are and how to write them. [Here](https://www.w3schools.com/python/python_functions.asp) is a quick refresher! It would also be nice if you understood the basics of dictionaries: what they are, how to access elements of one, and how to store information into one. [Here's](http://learnpython.org/en/Dictionaries) a quick guide for that. If you're comfortable with Java, you can read my [Python for Java Programmers](https://aryaboudaie.com/java/python/technical/educational/2017/11/13/python-for-java-programmers.html) series to get up to speed. You should have Python 3 installed on your computer if you want to follow along (download it [here](https://www.python.org/downloads/release/python-370/)), but you can also follow along with the interactive repl.it embeds on the page. Finally, you should know some basic HTML, which is a markup language for creating web pages. It's super easy to get started, and you can get a short refresher to HTML [here](https://www.w3schools.com/html/html_basic.asp).
 
