@@ -4,7 +4,7 @@ title:  "Make a Web App Using Python & Flask - Part 2!"
 subtitle: "Grabbing Data from Forms"
 date:   2018-10-20 00:00:00
 categories: [Python, Technical, Educational, Web, Flask]
-hide: false
+hide: true
 image_asset: assets/blog_images/flask/cover_graphic.png
 ---
 
