@@ -467,13 +467,13 @@ for i in range(1,10): # for each loop
 	print(i)
 {% endhighlight %}
 
-Range is a special function in python that returns a list from the first argument to (not including) the last argument. So range(1,10) is the same as [1,2,3,4,5,6,7,8,9]. This allows us to have a for loop that's similar to Java's.
+Range is a special function in python that returns an iterable from the first argument to (not including) the last argument. So range(1,10) is basically the same as [1,2,3,4,5,6,7,8,9] (though it's a bit more nuanced than just a list, see details in [part 3](https://aryaboudaie.com/java/python/technical/educational/2018/10/15/python-for-java-programmers-p3.html#rangestop)). This allows us to have a for loop that's similar to Java's.
 
 Range can actually take either one, two, or three parameters:
 
 `range(10)` - list from zero to 10, not including 10.
 `range(2,10)` - list from 2 to 10, not including 10
-`range(1,10, 2)` - list from 2 to 10, not including 10 and skipping by 2
+`range(1,10,2)` - list from 2 to 10, not including 10 and skipping by 2
 
 
 <iframe height="400px" width="100%" src="https://repl.it/@misingnoglic/For-with-Range?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals" width="100%" ></iframe>
