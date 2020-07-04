@@ -17,8 +17,7 @@ hide: false
 So this whole story started because my girlfriend asked me for a KitchenAid
 stand mix for her birthday. We saw that Costco had a really nice one on sale
 for $90 off, which was enough to trigger my "we need to get that price no matter
-what it takes" instinct. Unfortunately, the first day the item was available,
-it was sold out in store and online. I tried calling every day to see if they
+what it takes" instinct. Unfortunately, on the first day the item was available, it was sold out in-store and online. I tried calling every day to see if they
 would get it back, but every day they said they had no more. One day I called,
 and the employee mentioned that he saw it available online, which surprised me
 since I've checked and it previously wasn't available. This is when I realized
@@ -73,8 +72,7 @@ it?
 # Getting the page HTML
 
 So how to we load the data from the Costco listing? Normally for getting HTML,
-my first instinct is to use the [requests](https://requests.readthedocs.io/en/master/) library. `requests` an extremely well developed library which makes it
-easy to make web requests from the internet. For example, if you wanted to get
+my first instinct is to use the [requests](https://requests.readthedocs.io/en/master/) library. `requests` is an extremely well-developed library, which makes it easy to make web requests from the internet. For example, if you wanted to get
 the HTML for my website, you would just have to do the following (shown in REPL
 format):
 
@@ -91,7 +89,7 @@ You can install the requests library by doing `pip install requests` in your ter
 
 So that is pretty easy. 200 is the status code in HTTP which means "everything
 went as expected," so if we get back a 200, we know we can get the HTML from the
-`content` variable. So what happens if we try it on Cosco's page?
+`content` variable. So what happens if we try it on Costco's page?
 
 {% highlight python %}
 import requests
