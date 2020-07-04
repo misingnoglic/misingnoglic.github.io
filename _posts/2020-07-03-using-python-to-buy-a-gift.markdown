@@ -310,6 +310,8 @@ def send_notification():
         from_=secrets.TWILIO_FROM_NUMBER,
         to=secrets.MY_PHONE_NUMBER
     )
+    while True:
+        playsound('alarm.mp3')
 
 def check_inventory():
     url = "https://www.costco.com/kitchenaid-professional-series-6-quart-bowl-lift-stand-mixer-with-flex-edge.product.100485356.html"
