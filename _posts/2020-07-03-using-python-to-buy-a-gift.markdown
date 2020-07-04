@@ -325,8 +325,8 @@ while True:
 
 {% endhighlight %}
 
-And that's it! I hope you appreciated the walkthrough of how I got to this solution, and I hope you learned a thing or two!
+And that's it! Just run this code on your computer, and eventually you'll be startled by the alarm once the item is back in stock. I hope you appreciated the walkthrough of how I got to this solution, and I hope you learned a thing or two!
 
 # So what happened?
 
-Well I ran the script, and a day later I heard the loud alarm sound! I went on my computer, and got the stand mix! I even told an online friend who was also interested in it, so we both got to score on the deal :) - so I'm glad that in the end the effort ended paying off. Hopefully it's useful for y'all as well in the projects you try to create.
+Well I ran the script, and a day later I heard the loud alarm sound! I went on my computer, and got the stand mix! I even told a friend who was also interested in it, so we both got to score on the deal :) - so I'm glad that in the end the effort ended paying off. Hopefully it's useful for y'all as well in the projects you try to create.
