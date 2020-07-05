@@ -28,6 +28,8 @@ As with most web scraping projects, this one got pretty messy. Whenever I see te
 
 ![XKCD comic about automation](https://imgs.xkcd.com/comics/automation_2x.png)
 
+[Source for comic](https://xkcd.com/1319/)
+
 # The Problem
 
 The first thing I like to do when writing code is to abstractly think about what
