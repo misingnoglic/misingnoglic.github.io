@@ -71,7 +71,7 @@ it?
 
 # Getting the page HTML
 
-So how to we load the data from the Costco listing? Normally for getting HTML,
+So how do we load the data from the Costco listing? Normally for getting HTML,
 my first instinct is to use the [requests](https://requests.readthedocs.io/en/master/) library. `requests` is an extremely well-developed library, which makes it easy to make web requests from the internet. For example, if you wanted to get
 the HTML for my website, you would just have to do the following (shown in REPL
 format):
