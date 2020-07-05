@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "How I used Python and Web Scraping to buy a stand mixer"
-subtitle: "A story about web scraping and banging my head against the wall"
-date:   2020-07-03 00:10:00
+title:  "How I used Python to buy an out of stock Costco stand mixer and be a good boyfriend"
+subtitle: "A story telling tutorial about Python web scraping."
+date:   2020-07-05 00:10:00
 categories: [Python, Technical, Educational]
 hide: false
 ---
@@ -15,7 +15,7 @@ hide: false
 # Prelude
 
 So this whole story started because my girlfriend asked me for a KitchenAid
-stand mix for her birthday. We saw that Costco had a really nice one on sale
+stand mixer for her birthday. We saw that Costco had a really nice one on sale
 for $90 off, which was enough to trigger my "we need to get that price no matter
 what it takes" instinct. Unfortunately, on the first day the item was available, it was sold out in-store and online. I tried calling every day to see if they
 would get it back, but every day they said they had no more. One day I called,
@@ -143,7 +143,7 @@ def get_page_html():
 # Checking if it's in stock.
 
 So now that we have the page HTML, how can we tell if the item is in stock or not?
-Well, as you can see from the above screenshot, there's a huge "out of stock" banner on the stand mix image. So let's see if we can use that. In Chrome, right
+Well, as you can see from the above screenshot, there's a huge "out of stock" banner on the stand mixer image. So let's see if we can use that. In Chrome, right
 click on the "out of stock" banner, and select "inspect" to look at where is is in the HTML.
 
 ![screenshot](https://i.imgur.com/F3pphxb.png)
@@ -165,14 +165,14 @@ def check_item_in_stock(page_html):
     return len(out_of_stock_divs) == 0
 {% endhighlight %}
 
-Let's see if this works on the Stand Mix page, in conjunction with our `get_page_html()` function.
+Let's see if this works on the stand mixer page, in conjunction with our `get_page_html()` function.
 
 {% highlight python %}
 >>> check_item_in_stock(get_page_html())
 False
 {% endhighlight %}
 
-Cool! Looks like our code can tell that the stand mix is out of stock! Ideally
+Cool! Looks like our code can tell that the stand mixer is out of stock! Ideally
 we would like to make sure that if it was in stock, that the function would return `True`. But obviously we can't do that, or else we wouldn't be in this situation. But we can instead give it another product's page and see what happens. Let's make the URL for `get_page_html` a parameter so we can easily swap it.
 
 {% highlight python %}
@@ -329,4 +329,4 @@ And that's it! Just run this code on your computer, and eventually you'll be sta
 
 # So what happened?
 
-Well I ran the script, and a day later I heard the loud alarm sound! I went on my computer, and got the stand mix! I even told a friend who was also interested in it, so we both got to score on the deal :) - so I'm glad that in the end the effort ended paying off. Hopefully it's useful for y'all as well in the projects you try to create.
+Well I ran the script, and a day later I heard the loud alarm sound! I went on my computer, and got the stand mixer! I even told a friend who was also interested in it, so we both got to score on the deal :) - so I'm glad that in the end the effort ended paying off. Hopefully it's useful for y'all as well in the projects you try to create.
