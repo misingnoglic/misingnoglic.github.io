@@ -4,7 +4,7 @@ sitemap:
   priority: 1.0
 ---
 
-Hello, welcome to my website! I can't afford a home in the Bay Area, but I can afford a home page ;)
+Hello, welcome to my website! I CAN afford a home in the Bay Area, but I can afford a home page ;)
 
 [Click here](https://goo.gl/forms/jzaFhUpZ6x17oOJh2) to sign up for email updates.
 
