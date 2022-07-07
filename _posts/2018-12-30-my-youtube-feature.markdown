@@ -4,8 +4,9 @@ title:  "My YouTube Feature!"
 subtitle: "One of my big project from YouTube"
 date:   2018-12-30 12:00:00
 categories: [Technical]
-hide: false
 ---
+
+Sorry for the low effort post, this was originally hidden but I have brought it back just so I can show others when they ask. 
 
 One of my big accomplishments while on the YouTube Web Embedded Player team was a
 full-stack complete redesign of the embedded player error screen redesign.
