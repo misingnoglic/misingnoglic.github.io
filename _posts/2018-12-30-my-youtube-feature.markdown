@@ -4,7 +4,7 @@ title:  "My YouTube Feature!"
 subtitle: "One of my big project from YouTube"
 date:   2018-12-30 12:00:00
 categories: [Technical]
-hide: true
+hide: false
 ---
 
 One of my big accomplishments while on the YouTube Web Embedded Player team was a
