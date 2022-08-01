@@ -8,7 +8,11 @@ sitemap:
 
 ---
 
-Hey everyone, my name is Arya. To introduce my tech background, currently I'm a software engineer at Oscar Health (a startup trying to make healthcare not suck by having good tech) in Los Angeles, working on one of the communications infrastructure teams. Previously I was a software engineer @ Google, working on the YouTube Web Embedded Player (like the one below):
+Hey everyone, my name is Arya. I'm a software engineer currently working for Amazon based in Los Angeles. I am working with Amazon Studios to create software to inform decisions about when to release shows. If you're looking for a job, let me know :)
+
+Previously I was a software engineer at Oscar Health. I was on the communications infrastructure team (internally known as the HyperChannel team), working with really awesome people to bring health insurance to the present, specifically in regards to communications software. I worked with my team to build and maintain full-stack services related to video chatting, designing and sending emails, designing and sending snail-mail, and configuring documents with complex logic. I am probably most proud of creating software that people today use to get $0 virtual primary care, but I am also proud of the dead-name alerts I created to alert teams when their emails were sending emails with members legal name instead of preferred name.
+
+Previous to that, I was a software engineer @ Google, working on the YouTube Web Embedded Player (like the one below):
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cc2fm1kn6RQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
